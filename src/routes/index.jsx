@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
+import Layout from '../components/layout/Layout.component';
 import App from './Home/App';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
@@ -13,7 +14,7 @@ const publicRoute = [
     },
     {
         path: 'home2',
-        component: <App />,
+        component: <Layout />,
         exact: true,
         restrict: true,
     },
@@ -32,7 +33,7 @@ const RouterComponent = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route exact path="/" element={<Navigate to="/home" />} />
+                <Route exact path="/" element={<Navigate to="/home2" />} />
                 <Route exact path="/" element={<PrivateRoute />}>
                     {privateRoute.map((route) => (
                         <Route
