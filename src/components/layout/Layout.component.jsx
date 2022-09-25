@@ -1,20 +1,23 @@
-import HeroSection from '../hero/Hero.component';
 import Navbar from '../navBar/Navbar.component';
+import { Section, Background } from '../navBar/style';
 import { ContainerStyle } from './style';
 
 import CssBaseline from '@mui/material/CssBaseline';
 
-// import { Container } from '@mui/system';
-
 const Layout = () => {
     return (
-        <div className="background">
+        <Background>
             <ContainerStyle maxWidth="xl">
                 <CssBaseline />
                 <Navbar />
-                <HeroSection />
+                <Section>Hero section here</Section>
+                <Section>About F-code</Section>
+                <Section>About F-code</Section>
+                <Section>About F-code</Section>
+                <Section>About F-code</Section>
+                <Section>About F-code</Section>
             </ContainerStyle>
-        </div>
+        </Background>
     );
 };
 

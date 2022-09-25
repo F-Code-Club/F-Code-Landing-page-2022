@@ -7,4 +7,4 @@ export const ContainerStyle = styled(Container)`
     align-items: center;
 `;
 
-export const Background = styled.div``;
+// export const Background = styled.div``;
