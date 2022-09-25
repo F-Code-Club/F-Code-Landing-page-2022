@@ -12,10 +12,10 @@ const Layout = () => {
                 <Navbar />
                 <Section>Hero section here</Section>
                 <Section>About F-code</Section>
-                <Section>About F-code</Section>
-                <Section>About F-code</Section>
-                <Section>About F-code</Section>
-                <Section>About F-code</Section>
+                <Section>Activities F-code</Section>
+                <Section>F-code spirit</Section>
+                <Section>F-code Time line</Section>
+                <Section>footer</Section>
             </ContainerStyle>
         </Background>
     );

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import bg from '../../assets/background.png';
+import bg from '../../assets/background/background.png';
 import px2vw from '../../utils/px2vw';
 
 export const Nav = styled.div`
@@ -24,7 +24,7 @@ export const Background = styled.div`
     width: 100%;
     min-height: 100vh;
     background: url(${bg});
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     // backgournd-position: full;
 `;
