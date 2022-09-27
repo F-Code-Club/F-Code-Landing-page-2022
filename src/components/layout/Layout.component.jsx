@@ -1,22 +1,19 @@
+import Footer from '../footer/Footer.component';
 import Navbar from '../navBar/Navbar.component';
-import { Section, Background } from '../navBar/style';
+import { Background } from '../navBar/style';
 import { ContainerStyle } from './style';
 
 import CssBaseline from '@mui/material/CssBaseline';
 
-const Layout = () => {
+const Layout = ({ children }) => {
     return (
         <Background>
+            <Navbar />
             <ContainerStyle maxWidth="xl">
                 <CssBaseline />
-                <Navbar />
-                <Section>Hero section here</Section>
-                <Section>About F-code</Section>
-                <Section>Activities F-code</Section>
-                <Section>F-code spirit</Section>
-                <Section>F-code Time line</Section>
-                <Section>footer</Section>
+                {children}
             </ContainerStyle>
+            <Footer />
         </Background>
     );
 };

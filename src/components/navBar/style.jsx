@@ -6,6 +6,8 @@ import px2vw from '../../utils/px2vw';
 export const Nav = styled.div`
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     max-width: 1000px;
     height: 70px;
     width: 100%;
@@ -26,5 +28,4 @@ export const Background = styled.div`
     background: url(${bg});
     background-size: cover;
     background-repeat: no-repeat;
-    // backgournd-position: full;
 `;
