@@ -1,20 +1,20 @@
-import HeroSection from '../hero/Hero.component';
+import Footer from '../footer/Footer.component';
 import Navbar from '../navBar/Navbar.component';
+import { Background } from '../navBar/style';
 import { ContainerStyle } from './style';
 
 import CssBaseline from '@mui/material/CssBaseline';
 
-// import { Container } from '@mui/system';
-
-const Layout = () => {
+const Layout = ({ children }) => {
     return (
-        <div className="background">
+        <Background>
+            <Navbar />
             <ContainerStyle maxWidth="xl">
                 <CssBaseline />
-                <Navbar />
-                <HeroSection />
+                {children}
             </ContainerStyle>
-        </div>
+            <Footer />
+        </Background>
     );
 };
 
