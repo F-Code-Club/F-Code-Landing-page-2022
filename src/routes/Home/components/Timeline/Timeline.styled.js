@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
     padding: 50px 0px;
     gap: 10px;
 
-    width: 1440px;
     height: 1204px;
 `;
 
