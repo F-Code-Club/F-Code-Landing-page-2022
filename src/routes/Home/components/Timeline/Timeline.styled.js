@@ -28,7 +28,7 @@ export const Container = styled.div`
     flex-grow: 0;
 `;
 
-export const Heading = styled.div`
+export const Header = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,7 +36,6 @@ export const Heading = styled.div`
     padding: 0px;
     gap: 16px;
 
-    width: 640px;
     height: 88px;
 
     /* Inside auto layout */
@@ -44,34 +43,35 @@ export const Heading = styled.div`
     flex: none;
     order: 0;
     flex-grow: 0;
+`;
 
-    & h1 {
-        font-weight: 800;
-        font-size: 36px;
-        line-height: 125%;
-        /* identical to box height, or 45px */
+export const Heading = styled.h1`
+    font-family: 'GT Walsheim Pro Black';
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 125%;
+    /* identical to box height, or 45px */
 
-        display: flex;
-        align-items: center;
-        text-align: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
 
-        /* Black/400 */
+    /* Black/400 */
 
-        color: #1b1b1b;
-    }
+    color: #1b1b1b;
+`;
 
-    & p {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 18px;
-        line-height: 150%;
-        /* identical to box height, or 27px */
+export const Subheading = styled.h1`
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
 
-        /* gray/500 */
+    /* gray/500 */
 
-        color: #6b7280;
-    }
+    color: #6b7280;
 `;
 
 export const CardContainer = styled.div`

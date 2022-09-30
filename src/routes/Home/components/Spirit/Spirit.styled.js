@@ -25,6 +25,7 @@ export const Container = styled.div`
 `;
 
 export const Heading = styled.h1`
+    font-family: 'GT Walsheim Pro Black';
     font-style: normal;
     font-weight: 800;
     font-size: 36px;

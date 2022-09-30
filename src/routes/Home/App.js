@@ -1,5 +1,4 @@
 import './App.css';
-import Footer from './components/Footer';
 import Spirit from './components/Spirit';
 import Timeline from './components/Timeline';
 
@@ -8,7 +7,6 @@ function App() {
         <>
             <Spirit />
             <Timeline />
-            <Footer />
         </>
     );
 }

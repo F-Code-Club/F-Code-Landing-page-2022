@@ -32,10 +32,12 @@ const Timeline = () => {
     return (
         <Styled.Wrapper>
             <Styled.Container>
-                <Styled.Heading>
-                    <h1>Timeline</h1>
-                    <p>To become an official member of F-Code, you need to go through 4 stages.</p>
-                </Styled.Heading>
+                <Styled.Header>
+                    <Styled.Heading>Timeline</Styled.Heading>
+                    <Styled.Subheading>
+                        To become an official member of F-Code, you need to go through 4 stages.
+                    </Styled.Subheading>
+                </Styled.Header>
                 <Styled.CardContainer>
                     {CARD_LIST.map((item) => (
                         <Styled.Card key={item.heading} status={item.status}>
