@@ -1,8 +1,7 @@
-import './App.css';
 import Spirit from './components/Spirit';
 import Timeline from './components/Timeline';
 
-function App() {
+function Home() {
     return (
         <>
             <Spirit />
@@ -11,4 +10,4 @@ function App() {
     );
 }
 
-export default App;
+export default Home;
