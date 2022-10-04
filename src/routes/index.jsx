@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Layout from '../components/layout/Layout.component';
 import Activities from './Activities';
@@ -9,19 +9,19 @@ import Timeline from './Timeline';
 
 const publicRoute = [
     {
-        path: 'home',
+        path: '/',
         component: <Home />,
         exact: true,
         restrict: true,
     },
     {
-        path: 'activities',
+        path: '/activities',
         component: <Activities />,
         exact: true,
         restrict: true,
     },
     {
-        path: 'timline',
+        path: '/timeline',
         component: <Timeline />,
         exact: true,
         restrict: true,
@@ -30,7 +30,7 @@ const publicRoute = [
 
 const privateRoute = [
     {
-        path: 'private',
+        path: '/private',
         component: <Home />,
         exact: true,
         restrict: true,
@@ -42,8 +42,7 @@ const RouterComponent = () => {
         <BrowserRouter>
             <Layout>
                 <Routes>
-                    <Route exact path="/" element={<Navigate to="/home" />} />
-                    <Route exact path="/" element={<PrivateRoute />}>
+                    <Route exact element={<PrivateRoute />}>
                         {privateRoute.map((route) => (
                             <Route
                                 key={route.path}
@@ -54,7 +53,7 @@ const RouterComponent = () => {
                             />
                         ))}
                     </Route>
-                    <Route exact path="/" element={<PublicRoute />}>
+                    <Route exact element={<PublicRoute />}>
                         {publicRoute.map((route) => (
                             <Route
                                 key={route.path}
