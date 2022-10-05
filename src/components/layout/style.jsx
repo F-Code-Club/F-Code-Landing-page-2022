@@ -6,5 +6,3 @@ export const ContainerStyle = styled(Container)`
     flex-direction: column;
     align-items: center;
 `;
-
-// export const Background = styled.div``;

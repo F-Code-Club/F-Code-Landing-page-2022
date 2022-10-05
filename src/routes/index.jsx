@@ -5,6 +5,7 @@ import Activities from './Activities';
 import Home from './Home';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
+import RegistrationForm from './Registration Form';
 import Timeline from './Timeline';
 
 const publicRoute = [
@@ -23,6 +24,12 @@ const publicRoute = [
     {
         path: '/timeline',
         component: <Timeline />,
+        exact: true,
+        restrict: true,
+    },
+    {
+        path: '/register',
+        component: <RegistrationForm />,
         exact: true,
         restrict: true,
     },
