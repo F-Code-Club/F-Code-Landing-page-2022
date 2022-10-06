@@ -1,3 +1,4 @@
+import Checkbox from './CheckBox';
 import Input from './Input';
 
 const FormikControl = (props) => {
@@ -5,12 +6,8 @@ const FormikControl = (props) => {
     switch (control) {
         case 'input':
             return <Input {...rest} />;
-        // case 'textarea':
-        //   return <Textarea {...rest} />
-        // case 'checkbox':
-        //   return <CheckboxGroup {...rest} />
-        // case 'date':
-        //   return <DatePicker {...rest} />
+        case 'checkbox':
+            return <Checkbox {...rest} />;
         default:
             return null;
     }
