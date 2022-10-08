@@ -12,6 +12,7 @@ export const Nav = styled.div`
     height: 70px;
     width: 100%;
     background: gray;
+    z-index: 100;
 `;
 export const Section = styled.section`
     background-color: transparent;

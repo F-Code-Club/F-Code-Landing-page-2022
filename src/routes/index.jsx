@@ -1,20 +1,28 @@
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Layout from '../components/layout/Layout.component';
-import App from './Home/App';
+import Activities from './Activities';
+import Home from './Home';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
+import Timeline from './Timeline';
 
 const publicRoute = [
     {
-        path: 'home',
-        component: <App />,
+        path: '/',
+        component: <Home />,
         exact: true,
         restrict: true,
     },
     {
-        path: 'home2',
-        component: <App />,
+        path: '/activities',
+        component: <Activities />,
+        exact: true,
+        restrict: true,
+    },
+    {
+        path: '/timeline',
+        component: <Timeline />,
         exact: true,
         restrict: true,
     },
@@ -22,8 +30,8 @@ const publicRoute = [
 
 const privateRoute = [
     {
-        path: 'private',
-        component: <App />,
+        path: '/private',
+        component: <Home />,
         exact: true,
         restrict: true,
     },
@@ -34,8 +42,7 @@ const RouterComponent = () => {
         <BrowserRouter>
             <Layout>
                 <Routes>
-                    <Route exact path="/" element={<Navigate to="/home2" />} />
-                    <Route exact path="/" element={<PrivateRoute />}>
+                    <Route exact element={<PrivateRoute />}>
                         {privateRoute.map((route) => (
                             <Route
                                 key={route.path}
@@ -46,7 +53,7 @@ const RouterComponent = () => {
                             />
                         ))}
                     </Route>
-                    <Route exact path="/" element={<PublicRoute />}>
+                    <Route exact element={<PublicRoute />}>
                         {publicRoute.map((route) => (
                             <Route
                                 key={route.path}
