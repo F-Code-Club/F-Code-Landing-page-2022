@@ -4,6 +4,7 @@ import Layout from '../components/layout/Layout.component';
 import App from './Home/App';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
+import TimeLine from './TimeLine';
 
 const publicRoute = [
     {
@@ -15,6 +16,12 @@ const publicRoute = [
     {
         path: 'home2',
         component: <App />,
+        exact: true,
+        restrict: true,
+    },
+    {
+        path: 'timeline',
+        component: <TimeLine />,
         exact: true,
         restrict: true,
     },
