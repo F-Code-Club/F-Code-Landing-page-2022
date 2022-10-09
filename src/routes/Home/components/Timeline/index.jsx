@@ -38,7 +38,7 @@ const Timeline = () => {
                         To become an official member of F-Code, you need to go through 4 stages.
                     </Styled.Subheading>
                 </Styled.Header>
-                <Styled.CardContainer>
+                <div>
                     {CARD_LIST.map((item) => (
                         <Styled.Card key={item.heading} status={item.status}>
                             <Styled.Left>
@@ -53,7 +53,7 @@ const Timeline = () => {
                             )}
                         </Styled.Card>
                     ))}
-                </Styled.CardContainer>
+                </div>
             </Styled.Container>
         </Styled.Wrapper>
     );
