@@ -33,14 +33,21 @@ const Timeline = () => {
         <Styled.Wrapper>
             <Styled.Container>
                 <Styled.Header>
-                    <Styled.Heading>Timeline</Styled.Heading>
-                    <Styled.Subheading>
+                    <Styled.Heading data-aos="fade-left" data-aos-anchor="bottom-bottom">
+                        Timeline
+                    </Styled.Heading>
+                    <Styled.Subheading data-aos="fade-left">
                         To become an official member of F-Code, you need to go through 4 stages.
                     </Styled.Subheading>
                 </Styled.Header>
                 <div>
                     {CARD_LIST.map((item) => (
-                        <Styled.Card key={item.heading} status={item.status}>
+                        <Styled.Card
+                            key={item.heading}
+                            status={item.status}
+                            data-aos="fade-up"
+                            data-aos-anchor-placement="bottom-bottom"
+                        >
                             <Styled.Left>
                                 <Styled.CardHeading>{item.heading}</Styled.CardHeading>
                                 <Styled.CardSubheading>{item.subheading}</Styled.CardSubheading>

@@ -16,6 +16,10 @@ export const Container = styled.div`
     ${up('xl')} {
         min-width: 1100px;
     }
+
+    ${down('lg')} {
+        max-width: 600px;
+    }
 `;
 
 export const Heading = styled.h1`
@@ -46,11 +50,11 @@ export const CardContainer = styled.ul`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    ${up('md')} {
+    ${up('xl')} {
         justify-content: space-between;
     }
 
-    ${up('lg')} {
+    ${up('xl')} {
         padding: 30px 70px;
     }
 
@@ -85,11 +89,7 @@ export const Card = styled.li`
 `;
 
 export const Icon = styled.div`
-    width: 42px;
-    min-height: 42px;
-    color: #fff;
-    background: #00c464;
-    display: block;
+    color: #00c464;
 `;
 
 export const CardHeading = styled.div`
