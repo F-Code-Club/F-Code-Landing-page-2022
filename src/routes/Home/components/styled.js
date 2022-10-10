@@ -13,11 +13,12 @@ export const Container = styled.section`
 `;
 export const LeftHero = styled.div`
     h1 {
-        font-family: 'GT Walsheim Pro';
+        font-family: 'GT Walsheim Pro Black';
         font-style: normal;
         font-weight: 900;
         font-size: 60px;
         line-height: 65px;
+        margin-bottom: 24px;
     }
     p {
         font-family: 'GT Walsheim Pro';
@@ -26,6 +27,7 @@ export const LeftHero = styled.div`
         font-size: 20px;
         line-height: 150%;
         max-width: 542px;
+        margin-bottom: 24px;
     }
     span {
         color: #45ce7c;
@@ -43,6 +45,7 @@ export const Button = styled.div`
     justify-content: center;
     align-items: center;
     padding: 12px 20px;
+    color: white;
     min-width: 131px;
     height: 35px;
     cursor: pointer;
@@ -104,20 +107,33 @@ export const Direct = styled.div`
     h4 {
         display: flex;
         align-items: center;
+        margin-bottom: 12px;
     }
 `;
 export const RightPart = styled.div`
-    font-family: 'Inter';
-    font-style: normal;
+    font-family: 'GT Walsheim Pro';
+    font-size: 22px;
+    line-height: 150%;
     margin: 0;
     h3 {
+        font-weight: 300;
+        color: #6b7280;
         max-width: 640px;
+        span {
+            color: #45ce7c;
+        }
+        strong {
+            font-weight: 900;
+        }
     }
     h4 {
         font-weight: 500;
         font-size: 18px;
         line-height: 18px;
         color: #45ce7c;
+    }
+    h1 {
+        font-family: 'GT Walsheim Pro Black';
     }
 `;
 export const SlideArrow = styled.div`

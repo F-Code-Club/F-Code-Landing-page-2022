@@ -15,11 +15,12 @@ function AboutUs() {
                 <h4>About Us</h4>
                 <h1>F-Code Club</h1>
                 <h3>
-                    F-Code, established in 2014, is the first academic club of FPT University at Ho
-                    Chi Minh City. With the initial aim of creating a community for Software
-                    Engineering major’s students, F-Code allows them to share and improve skills
-                    that are neccesary for developers. After 5 years, F-Code has offered various
-                    activites to students.
+                    <span>F-Code</span>, established in 2014, is the first academic club of
+                    <strong> FPT University</strong> at Ho Chi Minh City. With the initial aim of
+                    creating a community for Software Engineering major’s students,
+                    <strong>F-Code</strong> allows them to share and improve skills that are
+                    neccesary for developers. After 5 years,<strong>F-Code</strong> has offered
+                    various activites to students.
                 </h3>
                 <Direct>
                     <h4>
