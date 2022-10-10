@@ -1,5 +1,6 @@
 import Footer from '../footer/Footer.component';
 import Navbar from '../navBar/Navbar.component';
+// import Navbar from '../navBar/Navbar.component';
 import { Background } from '../navBar/style';
 import { ContainerStyle } from './style';
 
