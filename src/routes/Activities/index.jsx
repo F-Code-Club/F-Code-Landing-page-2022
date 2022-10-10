@@ -8,8 +8,9 @@ const Activities = () => {
         <>
             <Hero />
             <Telescope />
-            <RODE />
             <Teambuilding />
+            <RODE />
+            <h1 style={{ textAlign: 'center' }}>And more activities are waiting for you!!!</h1>
         </>
     );
 };

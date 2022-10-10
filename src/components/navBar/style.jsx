@@ -24,6 +24,8 @@ export const Section = styled.section`
 `;
 
 export const Background = styled.div`
+    overflow-x: hidden;
+
     width: 100%;
     min-height: 100vh;
     background: url(${bg});

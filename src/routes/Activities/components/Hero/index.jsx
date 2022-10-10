@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import Button from '../../../Home/components/Button';
 import Glass from '../Glass';
 import * as Styled from './Hero.styled';
@@ -13,20 +15,22 @@ const Hero = () => {
         <Styled.Container>
             <Styled.Content>
                 <Styled.LeftContent>
-                    <Styled.Titie>
-                        Some highlight activities of <Styled.HighLight>F-Code.</Styled.HighLight>
+                    <Styled.Titie data-aos="fade-up">
+                        Some <br /> highlight activities of
+                        <Styled.HighLight> F-Code.</Styled.HighLight>
                     </Styled.Titie>
 
-                    <Styled.SupportingText>
-                        Many interesting activites are waiting for you at{' '}
-                        <Styled.HighLight>F-Code.</Styled.HighLight> Let’s become a member and
+                    <Styled.SupportingText data-aos="fade-up">
+                        Many interesting activites are waiting for you at
+                        <Styled.HighLight> F-Code.</Styled.HighLight> Let’s become a member and
                         participate these activities now.
                     </Styled.SupportingText>
-
-                    <Button>Register Now</Button>
+                    <Link to="/register" style={{ textDecoration: 'none' }}>
+                        <Button data-aos="fade-up">Register Now</Button>
+                    </Link>
                 </Styled.LeftContent>
 
-                <Styled.RightContent>
+                <Styled.RightContent data-aos="fade-left">
                     <Styled.GlassTop>
                         <Glass length="100px" />
                     </Styled.GlassTop>

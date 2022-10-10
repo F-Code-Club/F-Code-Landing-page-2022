@@ -1,4 +1,4 @@
-import { up } from 'styled-breakpoints';
+import { up, down } from 'styled-breakpoints';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -11,8 +11,7 @@ export const Container = styled.div`
 export const Content = styled.div`
     display: flex;
     align-items: center;
-    padding: 0px;
-    gap: 96px;
+    justify-content: space-between;
     ${up('xl')} {
         width: 1100px;
     }
@@ -23,11 +22,13 @@ export const LeftContent = styled.div``;
 export const RightContent = styled.div`
     display: flex;
     position: relative;
-    gap: 40px;
-
     min-width: 595px;
     height: 491px;
     box-sizing: border-box;
+
+    ${down('lg')} {
+        display: none;
+    }
 `;
 
 export const Titie = styled.h1`
@@ -36,6 +37,10 @@ export const Titie = styled.h1`
     font-size: 60px;
     line-height: 65px;
     color: #1b1b1b;
+
+    ${down('sm')} {
+        width: auto;
+    }
 `;
 
 export const HighLight = styled.span`
@@ -54,6 +59,10 @@ export const SupportingText = styled.p`
     color: #6b7280;
 
     margin-bottom: 60px;
+
+    ${down('sm')} {
+        width: auto;
+    }
 `;
 
 export const GlassTop = styled.div`
