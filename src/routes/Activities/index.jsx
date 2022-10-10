@@ -1,7 +1,5 @@
 const Activities = () => {
-    return <div>Activities</div>;
+    return <>Activities</>;
 };
-
-Activities.propTypes = {};
 
 export default Activities;
