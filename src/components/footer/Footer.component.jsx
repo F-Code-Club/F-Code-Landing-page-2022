@@ -6,10 +6,10 @@ import { IoLogoFacebook, IoDocumentText, IoLogoYoutube, IoLogoDiscord } from 're
 const Footer = () => {
     return (
         <Styled.Wrapper>
-            <Styled.Logo>
+            <Styled.Info>
                 <Styled.Icon src={FCode} alt="F-Code" />
                 <Styled.LogoTitle>F-Code Information Portal</Styled.LogoTitle>
-            </Styled.Logo>
+            </Styled.Info>
 
             <Styled.Copyright>
                 <p>
