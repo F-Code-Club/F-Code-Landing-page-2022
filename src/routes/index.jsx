@@ -5,6 +5,7 @@ import Activities from './Activities';
 import Home from './Home';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
+import Qna from './Qna';
 import SignUp from './SignUp';
 
 const publicRoute = [
@@ -23,6 +24,12 @@ const publicRoute = [
     {
         path: '/signup',
         component: <SignUp />,
+        exact: true,
+        restrict: true,
+    },
+    {
+        path: '/qna',
+        component: <Qna />,
         exact: true,
         restrict: true,
     },

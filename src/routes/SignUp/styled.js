@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-    max-width: 90vw;
+    max-width: 700px;
     width: 100%;
     margin-top: 120px;
 `;
 export const Hero = styled.h1`
     text-align: center;
-    font-family: 'GT Walsheim Pro';
+    font-family: 'GT Walsheim Pro Black';
     font-style: normal;
     font-weight: 900;
     font-size: 60px;
@@ -85,6 +85,7 @@ export const Button = styled.button`
     padding: 12px 20px;
     width: 194.5px;
     height: 48px;
+    border: 0;
     cursor: pointer;
 `;
 export const Img = styled.img`
