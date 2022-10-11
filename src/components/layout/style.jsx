@@ -8,5 +8,3 @@ export const ContainerStyle = styled(Container)`
     max-width: 1100px;
     margin-top: 120px;
 `;
-
-// export const Background = styled.div``;
