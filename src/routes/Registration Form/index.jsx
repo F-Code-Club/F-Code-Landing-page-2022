@@ -1,5 +1,5 @@
 import FormRegister from './components/Form';
-import Picture from './components/Picture';
+import RightContent from './components/RightContent';
 import { Section, Wrapper } from './style';
 
 // import Grid from '@mui/material/Grid';
@@ -17,7 +17,7 @@ const RegistrationForm = () => {
         <Section>
             <Wrapper>
                 <FormRegister />
-                <Picture />
+                <RightContent />
             </Wrapper>
         </Section>
     );

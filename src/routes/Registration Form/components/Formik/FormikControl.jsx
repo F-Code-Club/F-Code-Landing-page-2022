@@ -1,4 +1,4 @@
-import Checkbox from './CheckBox';
+import CheckBox from './CheckBox';
 import Input from './Input';
 import MuiInput from './MuiInput';
 import SelectItem from './Select';
@@ -9,7 +9,7 @@ const FormikControl = (props) => {
         case 'input':
             return <Input {...rest} />;
         case 'checkbox':
-            return <Checkbox {...rest} />;
+            return <CheckBox {...rest} />;
         case 'MuiInput':
             return <MuiInput {...rest} />;
         case 'Select':

@@ -1,8 +1,10 @@
 import { Formik, Form } from 'formik';
 import styled from 'styled-components';
-import * as Yup from 'yup';
 
+import Button from '../../Home/components/Button';
 import FormikControl from './Formik/FormikControl';
+// import * as Yup from 'yup';
+import { ValidationSchema } from './Schema/validation';
 
 import Grid from '@mui/material/Grid';
 
@@ -48,16 +50,6 @@ const FormRegister = () => {
         { key: 'Multimedia', value: 'Japanese language' },
         { key: 'Korean language', value: 'Korean language' },
     ];
-    const validationSchema = Yup.object({
-        firstName: Yup.string().required('required'),
-        lastName: Yup.string().required('required'),
-        Major: Yup.string().required('required'),
-        currentSemester: Yup.string().required(),
-        phoneNumber: Yup.string()
-            .required('phonenumber cannot be empty')
-            .matches(/^(01|03|05|07|08|09)+([0-9]{8})\b/, 'Your phone does not right'),
-        accpetChallenge: Yup.boolean().oneOf([true], 'Please accept the terms of service'),
-    });
 
     const onSubmit = (values) => {
         console.log('Form data', values);
@@ -66,7 +58,7 @@ const FormRegister = () => {
         <Formik
             initialValues={initialValues}
             onSubmit={onSubmit}
-            validationSchema={validationSchema}
+            validationSchema={ValidationSchema}
         >
             {() => {
                 return (
@@ -103,12 +95,7 @@ const FormRegister = () => {
                                 <FormikControl
                                     control="Select"
                                     label="Major"
-                                    sx={{
-                                        width: '433px',
-                                        '& .MuiOutlinedInput-root': {
-                                            borderRadius: '10px',
-                                        },
-                                    }}
+                                    sx={{ width: '433px', borderRadius: '10px' }}
                                     options={optionsMajor}
                                     name="Major"
                                 />
@@ -132,12 +119,7 @@ const FormRegister = () => {
                             <Grid item xs={12} sm={6}>
                                 <FormikControl
                                     control="Select"
-                                    sx={{
-                                        width: '200px',
-                                        '& .MuiOutlinedInput-root-MuiSelect-root': {
-                                            borderRadius: '10px',
-                                        },
-                                    }}
+                                    sx={{ width: '200px', borderRadius: '10px' }}
                                     options={optionSemester}
                                     label="Current Semester"
                                     name="currentSemester"
@@ -164,7 +146,7 @@ const FormRegister = () => {
                                 />
                             </Grid>
                         </Grid>
-                        <button type="submit">Register Now</button>
+                        <Button type="submit">Register Now</Button>
                     </FormContainer>
                 );
             }}

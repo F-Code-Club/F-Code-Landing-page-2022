@@ -1,25 +1,37 @@
-import { Field, ErrorMessage } from 'formik';
+import { Field } from 'formik';
 
-import TextError from './TextError';
+// import TextError from './TextError';
+import Checkbox from '@mui/material/Checkbox';
+// import FormHelperText from '@mui/material/FormHelperText';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
-function Checkbox(props) {
-    const { name, label, ...rest } = props;
+const CheckBox = ({ name, label, ...rest }) => {
     return (
+        // <FormHelperText error={form.errors[name] ? true : false}>
+        //     // // {form.errors[name]}
+        //     // // //{' '}
+        // </FormHelperText>
+        // <input type="checkbox" {...field} {...rest} />
+        // <Checkbox checked={gilad} onChange={handleChange} name="gilad" />
+        // <label>{label}</label>
         <div className="form-control">
             <Field name={name}>
                 {({ field, meta }) => {
                     console.log(meta);
                     return (
                         <>
-                            <input type="checkbox" {...field} {...rest} />
-                            <label>{label}</label>
+                            <FormControlLabel
+                                control={
+                                    <Checkbox defaultChecked color="success" {...field} {...rest} />
+                                }
+                                label={label}
+                            />
                         </>
                     );
                 }}
             </Field>
-            <ErrorMessage component={TextError} name={name} />
         </div>
     );
-}
+};
 
-export default Checkbox;
+export default CheckBox;
