@@ -5,7 +5,7 @@ import Activities from './Activities';
 import Home from './Home';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
-import Timeline from './TimeLine';
+import SignUp from './SignUp';
 
 const publicRoute = [
     {
@@ -21,8 +21,8 @@ const publicRoute = [
         restrict: true,
     },
     {
-        path: '/timeline',
-        component: <Timeline />,
+        path: '/signup',
+        component: <SignUp />,
         exact: true,
         restrict: true,
     },
