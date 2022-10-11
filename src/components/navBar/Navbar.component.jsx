@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 import logo from '../../assets/logo/logo.svg';
 import { Nav, LeftNav, RightNav, Button } from './style';
 
@@ -10,10 +12,10 @@ const Navbar = () => {
             </LeftNav>
             <RightNav>
                 <ul>
-                    <li>Home</li>
-                    <li>Activites</li>
-                    <li>TimeLine</li>
-                    <li>FAQ</li>
+                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/activities">Activites</NavLink>
+                    <NavLink to="/timeline">Timeline</NavLink>
+                    <NavLink to="/faq">FAQ</NavLink>
                     <Button>Register</Button>
                 </ul>
             </RightNav>
