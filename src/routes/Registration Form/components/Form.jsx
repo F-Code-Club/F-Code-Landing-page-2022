@@ -6,6 +6,7 @@ import FormikControl from './Formik/FormikControl';
 // import * as Yup from 'yup';
 import { ValidationSchema } from './Schema/validation';
 
+import { Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
 
 const FormRegister = () => {
@@ -62,14 +63,35 @@ const FormRegister = () => {
         >
             {() => {
                 return (
-                    <FormContainer>
-                        <h2>Registration Form</h2>
+                    <FormContainer data-aos="fade-right">
+                        <Typography
+                            sx={{
+                                fontFamily: 'GT Walsheim Pro Black',
+                                fontSize: '60px',
+                                lineHeight: '65px',
+                            }}
+                        >
+                            Registration Form
+                        </Typography>
+                        <Typography
+                            sx={{
+                                fontFamily: 'Inter',
+                                fontWeight: 400,
+                                fontSize: '16px',
+                                lineHeight: '150%',
+                                color: '#6B7280',
+                                marginBottom: '10px',
+                            }}
+                        >
+                            Fill in all the information to receive challenges from us!
+                        </Typography>
                         <Grid container spacing={2}>
                             <Grid item xs={12} sm={6}>
                                 <FormikControl
                                     control="MuiInput"
                                     sx={{
-                                        width: '200px',
+                                        width: { xs: '433px', sm: '200px' },
+                                        borderWidth: '2px',
                                         '& .MuiOutlinedInput-root': {
                                             borderRadius: '10px',
                                         },
@@ -82,7 +104,8 @@ const FormRegister = () => {
                                 <FormikControl
                                     control="MuiInput"
                                     sx={{
-                                        width: '200px',
+                                        width: { xs: '433px', sm: '200px' },
+
                                         '& .MuiOutlinedInput-root': {
                                             borderRadius: '10px',
                                         },
@@ -106,7 +129,8 @@ const FormRegister = () => {
                                     control="MuiInput"
                                     label="Roll Number"
                                     sx={{
-                                        width: '200px',
+                                        width: { xs: '433px', sm: '200px' },
+
                                         '& .MuiOutlinedInput-root': {
                                             borderRadius: '10px',
                                         },
@@ -119,7 +143,10 @@ const FormRegister = () => {
                             <Grid item xs={12} sm={6}>
                                 <FormikControl
                                     control="Select"
-                                    sx={{ width: '200px', borderRadius: '10px' }}
+                                    sx={{
+                                        width: { xs: '433px', sm: '200px' },
+                                        borderRadius: '10px',
+                                    }}
                                     options={optionSemester}
                                     label="Current Semester"
                                     name="currentSemester"
@@ -158,7 +185,6 @@ export default FormRegister;
 
 export const FormContainer = styled(Form)`
     width: 450px;
-    height: 745px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

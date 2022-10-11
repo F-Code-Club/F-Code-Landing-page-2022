@@ -4,7 +4,6 @@ import px2vw from '../../utils/px2vw';
 
 export const Section = styled.section`
     background-color: transparent;
-    margin-top: 120px;
     width: 100%;
     min-height: 100vh;
     @media (min-width: 1200px) {
