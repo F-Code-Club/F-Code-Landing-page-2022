@@ -29,6 +29,8 @@ export const Section = styled.section`
 `;
 
 export const Background = styled.div`
+    overflow-x: hidden;
+
     width: 100%;
     min-height: 100vh;
     background: url(${bg});
@@ -38,23 +40,26 @@ export const Background = styled.div`
 export const LeftNav = styled.div`
     display: flex;
     align-items: center;
+
     h2 {
-        font-family: 'GT Walsheim Pro';
-        font-style: normal;
         font-weight: 700;
         font-size: 24px;
         line-height: 150%;
     }
 `;
 export const RightNav = styled.div`
-    color: #111928;
+    color: #fff;
     display: flex;
     align-items: center;
+
     ul {
         text-align: center;
         display: flex;
         align-items: center;
-        li {
+
+        a {
+            text-decoration: none;
+            color: #000;
             font-family: 'Inter';
             display: flex;
             font-style: normal;
@@ -64,6 +69,7 @@ export const RightNav = styled.div`
             cursor: pointer;
             list-style: none;
             margin-right: 32px;
+
             &:hover {
                 color: #1c1c1c;
             }

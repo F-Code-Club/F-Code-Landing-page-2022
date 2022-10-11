@@ -4,7 +4,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 function AboutUs() {
     return (
-        <Container>
+        <Container data-aos="zoom-out-down">
             <LeftHero>
                 <Box>
                     <h2>2014</h2>

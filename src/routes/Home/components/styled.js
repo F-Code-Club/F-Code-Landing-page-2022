@@ -4,13 +4,20 @@ import arrows from '../../../assets/components';
 import px2vw from '../../../utils/px2vw';
 
 export const Container = styled.section`
-    max-width: 90vw;
+    max-width: 1100px;
     width: 100%;
     height: ${px2vw(550)};
-    margin-top: 120px;
     display: flex;
     justify-content: space-between;
+    margin: 64px 0;
 `;
+
+export const Highlight = styled.span`
+    color: #45ce7c;
+    font-weight: 600;
+    font-size: 22px;
+`;
+
 export const LeftHero = styled.div`
     h1 {
         font-family: 'GT Walsheim Pro Black';
@@ -19,15 +26,19 @@ export const LeftHero = styled.div`
         font-size: 60px;
         line-height: 65px;
         margin-bottom: 24px;
+
+        span {
+            font-family: 'GT Walsheim Pro Black';
+        }
     }
     p {
         font-family: 'GT Walsheim Pro';
         font-style: normal;
-        font-weight: 700;
+        font-weight: 500;
         font-size: 20px;
         line-height: 150%;
         max-width: 542px;
-        margin-bottom: 24px;
+        margin-bottom: 60px;
     }
     span {
         color: #45ce7c;

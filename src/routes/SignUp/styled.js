@@ -13,10 +13,9 @@ export const Hero = styled.h1`
     font-size: 60px;
     line-height: 65px;
 
-    /* Black/400 */
-
     color: #1b1b1b;
     span {
+        font-family: 'GT Walsheim Pro Black';
         color: #45ce7c;
     }
     margin-bottom: 24px;
@@ -31,6 +30,7 @@ export const Description = styled.h5`
     text-align: center;
     color: #6b7280;
     span {
+        font-family: 'GT Walsheim Pro';
         color: #45ce7c;
     }
 `;
@@ -61,7 +61,7 @@ export const Box = styled.div`
     width: 40px;
 `;
 export const Name = styled.div`
-    max-width: 128px;
+    max-width: 150px;
     text-align: center;
     font-family: 'GT Walsheim Pro';
     font-style: normal;
@@ -83,9 +83,10 @@ export const Button = styled.button`
     justify-content: center;
     align-items: center;
     padding: 12px 20px;
-    width: 194.5px;
+    width: 220px;
     height: 48px;
     border: 0;
+    margin-top: 24px;
     cursor: pointer;
 `;
 export const Img = styled.img`
