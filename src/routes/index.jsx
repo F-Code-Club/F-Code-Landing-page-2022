@@ -5,7 +5,7 @@ import Activities from './Activities';
 import Home from './Home';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
-import Timeline from './TimeLine';
+import Timeline from './Timeline';
 
 const publicRoute = [
     {
