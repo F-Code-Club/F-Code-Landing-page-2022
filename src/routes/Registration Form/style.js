@@ -1,3 +1,5 @@
+import { Form } from 'formik';
+import { down } from 'styled-breakpoints';
 import styled from 'styled-components';
 
 import px2vw from '../../utils/px2vw';
@@ -15,4 +17,17 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+`;
+export const FormContainer = styled(Form)`
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    ${down('md')} {
+        max-width: 450px;
+    }
+    ${down('sm')} {
+        max-width: 300px;
+    }
 `;

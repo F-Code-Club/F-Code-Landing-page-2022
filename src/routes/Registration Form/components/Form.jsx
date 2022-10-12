@@ -1,7 +1,7 @@
-import { Formik, Form } from 'formik';
-import styled from 'styled-components';
+import { Formik } from 'formik';
 
 import Button from '../../Home/components/Button';
+import { FormContainer } from '../style';
 import FormikControl from './Formik/FormikControl';
 // import * as Yup from 'yup';
 import { ValidationSchema } from './Schema/validation';
@@ -67,7 +67,7 @@ const FormRegister = () => {
                         <Typography
                             sx={{
                                 fontFamily: 'GT Walsheim Pro Black',
-                                fontSize: '60px',
+                                fontSize: { xs: '50px', sm: '60px' },
                                 lineHeight: '65px',
                             }}
                         >
@@ -90,7 +90,7 @@ const FormRegister = () => {
                                 <FormikControl
                                     control="MuiInput"
                                     sx={{
-                                        width: { xs: '433px', sm: '200px' },
+                                        width: { xs: '300px', sm: '200px' },
                                         borderWidth: '2px',
                                         '& .MuiOutlinedInput-root': {
                                             borderRadius: '10px',
@@ -104,7 +104,7 @@ const FormRegister = () => {
                                 <FormikControl
                                     control="MuiInput"
                                     sx={{
-                                        width: { xs: '433px', sm: '200px' },
+                                        width: { xs: '300px', sm: '200px' },
 
                                         '& .MuiOutlinedInput-root': {
                                             borderRadius: '10px',
@@ -118,7 +118,10 @@ const FormRegister = () => {
                                 <FormikControl
                                     control="Select"
                                     label="Major"
-                                    sx={{ width: '433px', borderRadius: '10px' }}
+                                    sx={{
+                                        width: { xs: '300px', sm: '433px' },
+                                        borderRadius: '10px',
+                                    }}
                                     options={optionsMajor}
                                     name="Major"
                                 />
@@ -129,7 +132,7 @@ const FormRegister = () => {
                                     control="MuiInput"
                                     label="Roll Number"
                                     sx={{
-                                        width: { xs: '433px', sm: '200px' },
+                                        width: { xs: '300px', sm: '200px' },
 
                                         '& .MuiOutlinedInput-root': {
                                             borderRadius: '10px',
@@ -144,7 +147,7 @@ const FormRegister = () => {
                                 <FormikControl
                                     control="Select"
                                     sx={{
-                                        width: { xs: '433px', sm: '200px' },
+                                        width: { xs: '300px', sm: '200px' },
                                         borderRadius: '10px',
                                     }}
                                     options={optionSemester}
@@ -156,7 +159,7 @@ const FormRegister = () => {
                                 <FormikControl
                                     control="MuiInput"
                                     sx={{
-                                        width: '433px',
+                                        width: { xs: '300px', sm: '433px', lg: '433px' },
                                         '& .MuiOutlinedInput-root': {
                                             borderRadius: '10px',
                                         },
@@ -182,16 +185,3 @@ const FormRegister = () => {
 };
 
 export default FormRegister;
-
-export const FormContainer = styled(Form)`
-    width: 450px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-`;
-
-export const GroupInput = styled.div`
-    display: flex;
-    justify-content: space-between;
-`;
