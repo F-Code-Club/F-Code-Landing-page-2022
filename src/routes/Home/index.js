@@ -1,9 +1,8 @@
 import AOS from 'aos';
 
-import './App.css';
-import AboutUs from './components/AboutUs';
-import Hero from './components/Hero';
-import HightLight from './components/HightLight';
+import AboutUs from './components/AboutUs/AboutUs';
+import Hero from './components/Hero/Hero';
+import HightLight from './components/HightLight/HightLight';
 import Spirit from './components/Spirit';
 import Timeline from './components/Timeline';
 
