@@ -96,10 +96,19 @@
     jsesc "^2.5.1"
     source-map "^0.5.0"
 
-"@babel/generator@^7.17.3", "@babel/generator@^7.17.7", "@babel/generator@^7.19.3", "@babel/generator@^7.19.4", "@babel/generator@^7.7.2":
+"@babel/generator@^7.17.3", "@babel/generator@^7.17.7", "@babel/generator@^7.19.3", "@babel/generator@^7.7.2":
   version "7.19.5"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.19.5.tgz#da3f4b301c8086717eee9cab14da91b1fa5dcca7"
   integrity sha512-DxbNz9Lz4aMZ99qPpO1raTbcrI1ZeYh+9NR9qhfkQIbFtVEqotHojEBxHzmxhVONkGt6VyrqVQcgpefMy9pqcg==
+  dependencies:
+    "@babel/types" "^7.19.4"
+    "@jridgewell/gen-mapping" "^0.3.2"
+    jsesc "^2.5.1"
+
+"@babel/generator@^7.19.4":
+  version "7.19.4"
+  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.19.4.tgz#60050cf3f0a593d7b2471b4be4f62a56b949237f"
+  integrity sha512-5T2lY5vXqS+5UEit/5TwcIUeCnwgCljcF8IQRT6XRQPBrvLeq5V8W+URv+GvwoF3FP8tkhp++evVyDzkDGzNmA==
   dependencies:
     "@babel/types" "^7.19.4"
     "@jridgewell/gen-mapping" "^0.3.2"
@@ -427,7 +436,7 @@
     "@babel/helper-plugin-utils" "^7.18.6"
     "@babel/plugin-syntax-numeric-separator" "^7.10.4"
 
-"@babel/plugin-proposal-object-rest-spread@^7.19.4":
+"@babel/plugin-proposal-object-rest-spread@^7.18.9":
   version "7.19.4"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.19.4.tgz#a8fc86e8180ff57290c91a75d83fe658189b642d"
   integrity sha512-wHmj6LDxVDnL+3WhXteUBaoM1aVILZODAUjg11kHqG4cOlfgMQGxw6aCgvrXrmaJR3Bn14oZhImyCPZzRpC93Q==
@@ -651,7 +660,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.18.6"
 
-"@babel/plugin-transform-block-scoping@^7.19.4":
+"@babel/plugin-transform-block-scoping@^7.18.9":
   version "7.19.4"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-block-scoping/-/plugin-transform-block-scoping-7.19.4.tgz#315d70f68ce64426db379a3d830e7ac30be02e9b"
   integrity sha512-934S2VLLlt2hRJwPf4MczaOr4hYF0z+VKPwqTNxyKX7NthTiPfhuKFWQZHXRM0vh/wo/VyXB3s4bZUNA08l+tQ==
@@ -680,7 +689,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.18.9"
 
-"@babel/plugin-transform-destructuring@^7.19.4":
+"@babel/plugin-transform-destructuring@^7.18.13":
   version "7.19.4"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.19.4.tgz#46890722687b9b89e1369ad0bd8dc6c5a3b4319d"
   integrity sha512-t0j0Hgidqf0aM86dF8U+vXYReUgJnlv4bZLsyoPnwZNrGY+7/38o8YjaELrvHeVfTZao15kjR0PVv0nju2iduA==
