@@ -1,7 +1,6 @@
 import Carousel from 'react-multi-carousel';
 
-import Image from './Image';
-import { Wrapper, RightArrow, LeftArrow } from './styled';
+import { Wrapper, RightArrow, LeftArrow, Image } from './styled';
 
 const ACTIVITIES_IMAGES = [
     'https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',

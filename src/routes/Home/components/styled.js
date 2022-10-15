@@ -1,15 +1,18 @@
+import { down } from 'styled-breakpoints';
 import styled from 'styled-components';
 
 import arrows from '../../../assets/components';
-import px2vw from '../../../utils/px2vw';
 
 export const Container = styled.section`
     max-width: 1100px;
     width: 100%;
-    height: ${px2vw(550)};
     display: flex;
     justify-content: space-between;
     margin: 64px 0;
+    ${down('lg')} {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const Highlight = styled.span`
@@ -173,12 +176,7 @@ export const SlideArrow = styled.div`
     }
 `;
 export const VericalContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     position: relative;
-    max-width: 90vw;
 `;
 export const LeftArrow = styled(SlideArrow)`
     left: 15px;
@@ -241,4 +239,106 @@ export const Wrapper = styled.div`
             font-size: 20px;
         }
     }
+`;
+export const SliderContainer = styled.div`
+    position: relative;
+    margin: 0 auto 2.31em;
+    max-width: 1100px;
+    @media screen and (max-width: 1440px) {
+        width: 900px;
+    }
+    @media screen and (max-width: 1000px) {
+        width: 430px;
+        overflow-x: hidden;
+    }
+    @media screen and (max-width: 560px) {
+        width: auto;
+        overflow-x: hidden;
+    }
+`;
+export const SliderContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+    @media screen and (max-width: 1440px) {
+        align-items: center;
+        width: 100%;
+        padding: 0 1rem;
+    }
+`;
+export const Image = styled.img`
+    position: relative;
+    background-size: contain;
+    width: 350px;
+    height: 250px;
+    margin: 12px;
+    border-radius: 15px;
+    @media screen and (max-width: 560px) {
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+`;
+export const Activities = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+`;
+export const SubTitle = styled.h6`
+    display: block;
+    font-family: 'GT Walsheim Pro Black';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 125%;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #111928;
+    margin-bottom: 62px;
+    @media screen and (max-width: 1000px) {
+        margin-bottom: 2rem;
+    }
+`;
+export const Content = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 4em;
+    margin: 0 auto;
+    height: 100%;
+`;
+export const ContentsContainer = styled(Content)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+    @media screen and (max-width: 1440px) {
+        align-items: center;
+        padding: 0 4rem;
+    }
+    @media screen and (max-width: 560px) {
+        font-size: 12px;
+        padding: 0 1.4rem;
+    }
+`;
+export const MiniTitle = styled.p`
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 125%;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.01em;
+
+    color: #45ce7c;
 `;
