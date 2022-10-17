@@ -20,14 +20,6 @@ export const Nav = styled.div`
         width: ${px2vw(71)};
     }
 `;
-export const Section = styled.section`
-    background-color: transparent;
-    width: 100%;
-    min-height: 100vh;
-    @media (min-width: 1200px) {
-        max-width: ${px2vw(1260)};
-    }
-`;
 
 export const Background = styled.div`
     overflow-x: hidden;
@@ -85,10 +77,8 @@ export const Button = styled.div`
     justify-content: center;
     align-items: center;
     padding: 8px 12px;
-
     width: 81px;
     height: 37px;
-
     background-color: #45ce7c;
     border-radius: 8px;
     cursor: pointer;

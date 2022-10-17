@@ -1,0 +1,33 @@
+import { Field } from 'formik';
+
+// import TextError from './TextError';
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormHelperText from '@mui/material/FormHelperText';
+
+const CheckBox = ({ name, label, ...rest }) => {
+    return (
+        // <input type="checkbox" {...field} {...rest} />
+        // <Checkbox checked={gilad} onChange={handleChange} name="gilad" />
+        // <label>{label}</label>
+        <div className="form-control">
+            <Field name={name}>
+                {({ field, form }) => {
+                    return (
+                        <>
+                            <FormControlLabel
+                                control={<Checkbox color="success" {...field} {...rest} />}
+                                label={label}
+                            />
+                            <FormHelperText error={form.errors[name] ? true : false}>
+                                {form.errors[name]}
+                            </FormHelperText>
+                        </>
+                    );
+                }}
+            </Field>
+        </div>
+    );
+};
+
+export default CheckBox;

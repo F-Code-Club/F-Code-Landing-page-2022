@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     return (
         <Background>
             <Navbar />
-            <ContainerStyle maxWidth="xl">
+            <ContainerStyle maxWidth={false}>
                 <CssBaseline />
                 {children}
             </ContainerStyle>

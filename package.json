@@ -24,6 +24,7 @@
         "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-react-hooks": "^4.6.0",
+        "formik": "^2.2.9",
         "prettier": "^2.7.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
@@ -35,7 +36,8 @@
         "redux": "^4.2.0",
         "styled-breakpoints": "^11.1.1",
         "styled-components": "^5.3.5",
-        "web-vitals": "^2.1.0"
+        "web-vitals": "^2.1.0",
+        "yup": "^0.32.11"
     },
     "scripts": {
         "start": "react-scripts start",
