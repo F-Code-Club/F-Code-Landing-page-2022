@@ -6,6 +6,5 @@ export const ContainerStyle = styled(Container)`
     flex-direction: column;
     align-items: center;
     max-width: 1100px;
+    margin-top: 120px;
 `;
-
-// export const Background = styled.div``;

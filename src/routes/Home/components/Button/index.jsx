@@ -1,7 +1,7 @@
 import * as Styled from './Button.styled';
 
-const Button = ({ children }) => {
-    return <Styled.Button>{children}</Styled.Button>;
+const Button = ({ children, ...rest }) => {
+    return <Styled.Button {...rest}>{children}</Styled.Button>;
 };
 
 Button.propTypes = {};

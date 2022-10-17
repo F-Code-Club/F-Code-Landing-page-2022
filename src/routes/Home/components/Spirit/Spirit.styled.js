@@ -1,3 +1,4 @@
+import { down, up } from 'styled-breakpoints';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
@@ -6,22 +7,19 @@ export const Wrapper = styled.div`
     align-items: center;
     padding: 96px 0px;
     gap: 10px;
-
-    height: 595px;
-    left: 0px;
 `;
 
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 0 170px;
 
-    min-width: 1100px;
-    height: 403px;
+    ${up('xl')} {
+        min-width: 1100px;
+    }
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    ${down('lg')} {
+        max-width: 600px;
+    }
 `;
 
 export const Heading = styled.h1`
@@ -50,27 +48,29 @@ export const SupportingText = styled.p`
 export const CardContainer = styled.ul`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    padding: 30px 70px;
+    justify-content: center;
+    ${up('xl')} {
+        justify-content: space-between;
+    }
+
+    ${up('xl')} {
+        padding: 30px 70px;
+    }
+
+    flex-wrap: wrap;
+    padding: 30px 0;
     gap: 16px;
-
-    width: 1100px;
-    height: 293px;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 2;
-    flex-grow: 0;
 `;
 
 export const Card = styled.li`
     padding: 25px;
-    gap: 15px;
 
     width: 200px;
-    height: 233px;
+
+    /* ${down('md')} {
+        width: auto;
+    } */
 
     background: linear-gradient(152.97deg, rgba(105, 105, 105, 0.2) 0%, rgba(21, 21, 21, 0) 100%);
 
@@ -82,18 +82,14 @@ export const Card = styled.li`
     flex-grow: 0;
     list-style: none;
     transition: all 0.4s ease-in-out 0s;
-
+    cursor: pointer;
     &:hover {
         transform: translateY(-12px);
     }
 `;
 
 export const Icon = styled.div`
-    width: 42px;
-    min-height: 42px;
-    color: #fff;
-    background: #00c464;
-    display: block;
+    color: #00c464;
 `;
 
 export const CardHeading = styled.div`
@@ -101,9 +97,6 @@ export const CardHeading = styled.div`
     font-size: 22px;
     line-height: 25px;
     margin-top: 10px;
-
-    /* Green/500 */
-
     color: #00c464;
 `;
 
@@ -114,6 +107,7 @@ export const Separator = styled.div`
 
     border: 1px solid rgba(171, 171, 171, 0.38);
 `;
+
 export const Content = styled.p`
     margin-top: 40px;
     font-family: 'Inter';

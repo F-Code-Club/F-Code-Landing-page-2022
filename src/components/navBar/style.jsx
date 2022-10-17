@@ -14,21 +14,16 @@ export const Nav = styled.div`
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    z-index: 99;
     img {
         margin-right: 32px;
         width: ${px2vw(71)};
     }
 `;
-export const Section = styled.section`
-    background-color: transparent;
-    width: 100%;
-    min-height: 100vh;
-    @media (min-width: 1200px) {
-        max-width: ${px2vw(1260)};
-    }
-`;
 
 export const Background = styled.div`
+    overflow-x: hidden;
+
     width: 100%;
     min-height: 100vh;
     background: url(${bg});
@@ -38,23 +33,26 @@ export const Background = styled.div`
 export const LeftNav = styled.div`
     display: flex;
     align-items: center;
+
     h2 {
-        font-family: 'GT Walsheim Pro';
-        font-style: normal;
         font-weight: 700;
         font-size: 24px;
         line-height: 150%;
     }
 `;
 export const RightNav = styled.div`
-    color: #111928;
+    color: #fff;
     display: flex;
     align-items: center;
+
     ul {
         text-align: center;
         display: flex;
         align-items: center;
-        li {
+
+        a {
+            text-decoration: none;
+            color: #000;
             font-family: 'Inter';
             display: flex;
             font-style: normal;
@@ -64,6 +62,7 @@ export const RightNav = styled.div`
             cursor: pointer;
             list-style: none;
             margin-right: 32px;
+
             &:hover {
                 color: #1c1c1c;
             }
@@ -78,10 +77,8 @@ export const Button = styled.div`
     justify-content: center;
     align-items: center;
     padding: 8px 12px;
-
     width: 81px;
     height: 37px;
-
     background-color: #45ce7c;
     border-radius: 8px;
     cursor: pointer;

@@ -1,24 +1,27 @@
 // import React from 'react';
+import { BsPeopleFill } from 'react-icons/bs';
+import { FaFire, FaBookReader, FaHandsHelping } from 'react-icons/fa';
+
 import * as Styled from './Spirit.styled';
 
 const CARD_LIST = [
     {
-        icon: '',
+        icon: <FaFire size="42" />,
         heading: 'Enthusiasm',
         content: 'Eager to join various activities, ready to dedicate to the club',
     },
     {
-        icon: '',
+        icon: <FaBookReader size="42" />,
         heading: 'Sharing',
         content: 'Eager to join various activities, ready to dedicate to the club',
     },
     {
-        icon: '',
+        icon: <FaHandsHelping size="42" />,
         heading: 'Respect',
         content: 'Eager to join various activities, ready to dedicate to the club',
     },
     {
-        icon: '',
+        icon: <BsPeopleFill size="42" />,
         heading: 'Responsibility',
         content: 'Eager to join various activities, ready to dedicate to the club',
     },
@@ -28,16 +31,21 @@ const Spirit = () => {
     return (
         <Styled.Wrapper>
             <Styled.Container>
-                <Styled.Heading>F-Code Spirit</Styled.Heading>
+                <Styled.Heading data-aos="fade-up">F-Code Spirit</Styled.Heading>
 
-                <Styled.SupportingText>
+                <Styled.SupportingText data-aos="fade-up">
                     Members’ spirit plays an important role in building and sustaining a thriving
                     club.
                 </Styled.SupportingText>
 
                 <Styled.CardContainer>
-                    {CARD_LIST.map((item) => (
-                        <Styled.Card key={item.heading}>
+                    {CARD_LIST.map((item, idx) => (
+                        <Styled.Card
+                            key={item.heading}
+                            data-aos="flip-right"
+                            data-aos-delay={0 + idx * 100}
+                            data-aos-duration={600}
+                        >
                             <Styled.Icon>{item.icon}</Styled.Icon>
                             <Styled.CardHeading>{item.heading}</Styled.CardHeading>
 
