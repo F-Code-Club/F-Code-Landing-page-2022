@@ -277,7 +277,7 @@ export const Image = styled.img`
     border-radius: 15px;
     @media screen and (max-width: 560px) {
         margin: 0;
-        width: 100%;
+        width: 330px;
         height: auto;
     }
 `;
