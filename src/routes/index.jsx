@@ -3,10 +3,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from '../components/layout/Layout.component';
 import Activities from './Activities';
 import Home from './Home';
+import Timeline from './Home/components/Timeline';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 import RegistrationForm from './Registration Form';
-import Timeline from './Timeline';
+import Qna from './Qna';
+import SignUp from './SignUp';
+
 
 const publicRoute = [
     {
@@ -18,6 +21,18 @@ const publicRoute = [
     {
         path: '/activities',
         component: <Activities />,
+        exact: true,
+        restrict: true,
+    },
+    {
+        path: '/signup',
+        component: <SignUp />,
+        exact: true,
+        restrict: true,
+    },
+    {
+        path: '/faq',
+        component: <Qna />,
         exact: true,
         restrict: true,
     },

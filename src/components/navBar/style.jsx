@@ -14,6 +14,7 @@ export const Nav = styled.div`
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    z-index: 99;
     img {
         margin-right: 32px;
         width: ${px2vw(71)};
