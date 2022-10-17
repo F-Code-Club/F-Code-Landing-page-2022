@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { Formik } from 'formik';
 
 import Button from '../../Home/components/Button';
@@ -9,16 +11,16 @@ import { ValidationSchema } from './Schema/validation';
 import { Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
 
+const initialValues = {
+    firstName: '',
+    lastName: '',
+    Major: '',
+    rollNumber: '',
+    currentSemester: '',
+    acceptChallenge: false,
+    phoneNumber: '',
+};
 const FormRegister = () => {
-    const initialValues = {
-        firstName: '',
-        lastName: '',
-        Major: '',
-        rollNumber: '',
-        currentSemester: '',
-        accpetChallenge: false,
-        phoneNumber: '',
-    };
     const optionSemester = [
         { key: 'LUK1', value: 'LUK1' },
         { key: 'LUK2', value: 'LUK2' },
@@ -171,7 +173,7 @@ const FormRegister = () => {
                             <Grid item xs={12}>
                                 <FormikControl
                                     control="checkbox"
-                                    name="accpetChallenge"
+                                    name="acceptChallenge"
                                     label="I accept to take the challenges of F-Code"
                                 />
                             </Grid>

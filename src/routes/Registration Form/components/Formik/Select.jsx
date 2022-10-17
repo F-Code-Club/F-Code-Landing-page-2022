@@ -12,7 +12,7 @@ const SelectItem = ({ label, name, options, ...rest }) => {
             {({ field, form }) => {
                 // <InputLabel>{label}</InputLabel>
                 return (
-                    <FormControl>
+                    <FormControl error={form.errors[name] ? true : false}>
                         <InputLabel id="demo-simple-select-label">{label}</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
@@ -22,7 +22,6 @@ const SelectItem = ({ label, name, options, ...rest }) => {
                             {...field}
                             {...rest}
                             error={form.errors[name] ? true : false}
-                            // helperText={form.errors[name]}
                         >
                             {options.map((option) => {
                                 return (
