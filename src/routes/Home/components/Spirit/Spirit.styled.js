@@ -82,7 +82,7 @@ export const Card = styled.li`
     flex-grow: 0;
     list-style: none;
     transition: all 0.4s ease-in-out 0s;
-
+    cursor: pointer;
     &:hover {
         transform: translateY(-12px);
     }

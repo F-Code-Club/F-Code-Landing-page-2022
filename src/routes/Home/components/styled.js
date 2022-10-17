@@ -46,6 +46,9 @@ export const LeftHero = styled.div`
     span {
         color: #45ce7c;
     }
+    ${down('lg')} {
+        margin-bottom: 40px;
+    }
 `;
 export const ButtonContainer = styled.div`
     display: flex;
@@ -84,7 +87,11 @@ export const V2Button = styled.div`
     border: 1px solid #1f2a37;
     border-radius: 8px;
 `;
-export const RightHero = styled.div``;
+export const RightHero = styled.div`
+    ${down('md')} {
+        display: none;
+    }
+`;
 export const Box = styled.div`
     width: 200px;
     height: 200px;
@@ -213,6 +220,7 @@ export const SliderContainer = styled.div`
     position: relative;
     margin: 0 auto 2.31em;
     max-width: 1100px;
+    width: 900px;
     @media screen and (max-width: 1440px) {
         width: 900px;
     }
@@ -239,10 +247,11 @@ export const SliderContent = styled.div`
 `;
 export const Image = styled.img`
     position: relative;
-    background-size: contain;
-    width: 350px;
-    height: 250px;
+    background-size: cover;
+    width: 370px;
+    height: 270px;
     margin: 12px;
+    overflow: hidden;
     border-radius: 15px;
     @media screen and (max-width: 560px) {
         margin: 0;

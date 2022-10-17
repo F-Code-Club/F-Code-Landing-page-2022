@@ -21,14 +21,7 @@ const responsive = {
             max: 3000,
             min: 1400,
         },
-        items: 3,
-    },
-    mobile: {
-        breakpoint: {
-            max: 1000,
-            min: 0,
-        },
-        items: 1,
+        items: 2,
     },
     tablet: {
         breakpoint: {
@@ -36,6 +29,13 @@ const responsive = {
             min: 1000,
         },
         items: 2,
+    },
+    mobile: {
+        breakpoint: {
+            max: 1000,
+            min: 0,
+        },
+        items: 1,
     },
 };
 
@@ -48,6 +48,7 @@ const Slider = () => {
                     <SubTitle data-aos="fade-up">Hightlights Of F-Code</SubTitle>
                     <SliderContainer data-aos="flip-up">
                         <Carousel
+                            itemClass="carousel-item"
                             additionalTransfrom={0}
                             arrows
                             autoPlay
