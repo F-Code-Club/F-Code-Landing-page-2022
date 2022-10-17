@@ -36,6 +36,7 @@ const responsive = {
             min: 0,
         },
         items: 1,
+        partialVisibilityGutter: 30,
     },
 };
 
@@ -46,7 +47,7 @@ const Slider = () => {
                 <SliderContent>
                     <MiniTitle data-aos="fade-up">Activites</MiniTitle>
                     <SubTitle data-aos="fade-up">Hightlights Of F-Code</SubTitle>
-                    <SliderContainer data-aos="flip-up">
+                    <SliderContainer data-aos="flip-up" className="hi">
                         <Carousel
                             itemClass="carousel-item"
                             additionalTransfrom={0}

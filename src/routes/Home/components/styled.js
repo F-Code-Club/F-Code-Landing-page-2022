@@ -234,11 +234,7 @@ export const SliderContainer = styled.div`
     }
 `;
 export const SliderContent = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 0 1rem;
+    margin: 0 auto;
     @media screen and (max-width: 1440px) {
         align-items: center;
         width: 100%;
@@ -247,12 +243,14 @@ export const SliderContent = styled.div`
 `;
 export const Image = styled.img`
     position: relative;
-    background-size: cover;
+    background-size: contain;
     width: 370px;
     height: 270px;
     margin: 12px;
     overflow: hidden;
     border-radius: 15px;
+    margin: 0.5rem;
+    background-repeat: no-repeat;
     @media screen and (max-width: 560px) {
         margin: 0;
         width: 100%;
@@ -265,6 +263,7 @@ export const Activities = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin: 4rem 0;
 `;
 export const SubTitle = styled.h6`
     display: block;
@@ -296,7 +295,8 @@ export const ContentsContainer = styled(Content)`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 4rem;
+    padding: 0 8rem;
+    width: 100%;
     @media screen and (max-width: 1440px) {
         align-items: center;
         padding: 0 4rem;
