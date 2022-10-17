@@ -1,19 +1,35 @@
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import App from './Home/App';
+import Layout from '../components/layout/Layout.component';
+import Activities from './Activities';
+import Home from './Home';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
+import Qna from './Qna';
+import SignUp from './SignUp';
 
 const publicRoute = [
     {
-        path: 'home',
-        component: <App />,
+        path: '/',
+        component: <Home />,
         exact: true,
         restrict: true,
     },
     {
-        path: 'home2',
-        component: <App />,
+        path: '/activities',
+        component: <Activities />,
+        exact: true,
+        restrict: true,
+    },
+    {
+        path: '/signup',
+        component: <SignUp />,
+        exact: true,
+        restrict: true,
+    },
+    {
+        path: '/qna',
+        component: <Qna />,
         exact: true,
         restrict: true,
     },
@@ -21,8 +37,8 @@ const publicRoute = [
 
 const privateRoute = [
     {
-        path: 'private',
-        component: <App />,
+        path: '/private',
+        component: <Home />,
         exact: true,
         restrict: true,
     },
@@ -31,32 +47,33 @@ const privateRoute = [
 const RouterComponent = () => {
     return (
         <BrowserRouter>
-            <Routes>
-                <Route exact path="/" element={<Navigate to="/home" />} />
-                <Route exact path="/" element={<PrivateRoute />}>
-                    {privateRoute.map((route) => (
-                        <Route
-                            key={route.path}
-                            path={route.path}
-                            element={route.component}
-                            exact={route.exact}
-                            restrict={route.restrict}
-                        />
-                    ))}
-                </Route>
-                <Route exact path="/" element={<PublicRoute />}>
-                    {publicRoute.map((route) => (
-                        <Route
-                            key={route.path}
-                            path={route.path}
-                            element={route.component}
-                            exact={route.exact}
-                            restrict={route.restrict}
-                        />
-                    ))}
-                </Route>
-                <Route path="*" element={<p>404</p>} />
-            </Routes>
+            <Layout>
+                <Routes>
+                    <Route exact element={<PrivateRoute />}>
+                        {privateRoute.map((route) => (
+                            <Route
+                                key={route.path}
+                                path={route.path}
+                                element={route.component}
+                                exact={route.exact}
+                                restrict={route.restrict}
+                            />
+                        ))}
+                    </Route>
+                    <Route exact element={<PublicRoute />}>
+                        {publicRoute.map((route) => (
+                            <Route
+                                key={route.path}
+                                path={route.path}
+                                element={route.component}
+                                exact={route.exact}
+                                restrict={route.restrict}
+                            />
+                        ))}
+                    </Route>
+                    <Route path="*" element={<p>404</p>} />
+                </Routes>
+            </Layout>
         </BrowserRouter>
     );
 };

@@ -9,3 +9,29 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: 'GT Walsheim Pro';
+    src: local('GT Walsheim Pro'), url('./assets/fonts/GTWalsheimPro-Regular.woff2') format('woff2');
+    line-height: 150%;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro Black';
+    src: local('GT Walsheim Pro Black'),
+        url('./assets/fonts/GTWalsheimPro-Black.woff2') format('woff2');
+    line-height: 150%;
+}
+
+* {
+    font-family: 'GT Walsheim Pro', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'GT Walsheim Pro Black', Arial, Helvetica, sans-serif;
+}
