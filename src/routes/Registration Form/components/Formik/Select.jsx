@@ -9,10 +9,10 @@ import Select from '@mui/material/Select';
 const SelectItem = ({ label, name, options, ...rest }) => {
     return (
         <Field name={name}>
-            {({ field, form }) => {
+            {({ field, form, meta }) => {
                 // <InputLabel>{label}</InputLabel>
                 return (
-                    <FormControl error={form.errors[name] ? true : false}>
+                    <FormControl error={meta.touched && form.errors[name] ? true : false}>
                         <InputLabel id="demo-simple-select-label">{label}</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
@@ -21,7 +21,7 @@ const SelectItem = ({ label, name, options, ...rest }) => {
                             label={label}
                             {...field}
                             {...rest}
-                            error={form.errors[name] ? true : false}
+                            error={meta.touched && form.errors[name] ? true : false}
                         >
                             {options.map((option) => {
                                 return (
@@ -31,8 +31,8 @@ const SelectItem = ({ label, name, options, ...rest }) => {
                                 );
                             })}
                         </Select>
-                        <FormHelperText error={form.errors[name] ? true : false}>
-                            {form.errors[name]}
+                        <FormHelperText error={meta.touched && form.errors[name] ? true : false}>
+                            {meta.touched && form.errors[name]}
                         </FormHelperText>
                     </FormControl>
                 );

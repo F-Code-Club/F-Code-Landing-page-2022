@@ -1,7 +1,6 @@
-import { useState } from 'react';
-
 import { Formik } from 'formik';
 
+import { toastSuccess } from '../../../components/ToastNorification';
 import Button from '../../Home/components/Button';
 import { FormContainer } from '../style';
 import FormikControl from './Formik/FormikControl';
@@ -178,7 +177,14 @@ const FormRegister = () => {
                                 />
                             </Grid>
                         </Grid>
-                        <Button type="submit">Register Now</Button>
+                        <Button
+                            type="submit"
+                            onClick={() => {
+                                toastSuccess('!!');
+                            }}
+                        >
+                            Register Now
+                        </Button>
                     </FormContainer>
                 );
             }}

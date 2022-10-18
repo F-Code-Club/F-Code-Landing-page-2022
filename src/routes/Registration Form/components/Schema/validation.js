@@ -14,5 +14,5 @@ export const ValidationSchema = Yup.object({
     phoneNumber: Yup.string()
         .required('phonenumber cannot be empty')
         .matches(/^(01|03|05|07|08|09)+([0-9]{8})\b/, 'Your phone does not right'),
-    acceptChallenge: Yup.boolean().oneOf([true], ' the challenges of F-Code'),
+    acceptChallenge: Yup.boolean().oneOf([true], ' Please accept the challenges of F-Code'),
 });

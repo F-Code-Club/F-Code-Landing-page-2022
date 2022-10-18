@@ -1,15 +1,13 @@
+import Headernew from '../../components/Header/index';
 import Footer from '../footer/Footer.component';
-import Navbar from '../navBar/Navbar.component';
-// import Navbar from '../navBar/Navbar.component';
-import { Background } from '../navBar/style';
-import { ContainerStyle } from './style';
+import { ContainerStyle, Background } from './style';
 
 import CssBaseline from '@mui/material/CssBaseline';
 
 const Layout = ({ children }) => {
     return (
         <Background>
-            <Navbar />
+            <Headernew />
             <ContainerStyle maxWidth={false}>
                 <CssBaseline />
                 {children}

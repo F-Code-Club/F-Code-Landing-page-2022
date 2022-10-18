@@ -1,12 +1,11 @@
-import { Field } from 'formik';
+import { Field, ErrorMessage } from 'formik';
 
 import { TextField } from '@mui/material';
 
 const MuiInput = ({ label, name, ...rest }) => {
     return (
         <Field name={name}>
-            {({ field, form }) => {
-                // console.log(field);
+            {({ field, form, meta }) => {
                 return (
                     <>
                         <TextField
@@ -23,8 +22,8 @@ const MuiInput = ({ label, name, ...rest }) => {
                             }}
                             {...rest}
                             {...field}
-                            error={form.errors[name] ? true : false}
-                            helperText={form.errors[name]}
+                            error={meta.touched && form.errors[name] ? true : false}
+                            helperText={meta.touched && form.errors[name]}
                             variant="outlined"
                         />
                     </>
