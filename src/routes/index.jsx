@@ -6,10 +6,9 @@ import Home from './Home';
 import Timeline from './Home/components/Timeline';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
-import RegistrationForm from './Registration Form';
 import Qna from './Qna';
+import RegistrationForm from './Registration Form';
 import SignUp from './SignUp';
-
 
 const publicRoute = [
     {

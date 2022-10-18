@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 import bg from '../../assets/background/background.png';
@@ -30,15 +31,16 @@ export const Background = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
 `;
-export const LeftNav = styled.div`
+export const Logo = styled.div`
     display: flex;
     align-items: center;
-
-    h2 {
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 150%;
-    }
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 24px;
+    color: #45ce7c;
+    height: 32px;
 `;
 export const RightNav = styled.div`
     color: #fff;
@@ -49,24 +51,6 @@ export const RightNav = styled.div`
         text-align: center;
         display: flex;
         align-items: center;
-
-        a {
-            text-decoration: none;
-            color: #000;
-            font-family: 'Inter';
-            display: flex;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 150%;
-            cursor: pointer;
-            list-style: none;
-            margin-right: 32px;
-
-            &:hover {
-                color: #1c1c1c;
-            }
-        }
     }
 `;
 export const Button = styled.div`
@@ -89,5 +73,38 @@ export const Button = styled.div`
     flex-grow: 0;
     &:hover {
         background-color: #37a463;
+    }
+`;
+
+export const NavContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    padding: 10px 20px;
+    /* background: gray;    */
+    background: linear-gradient(152.97deg, rgba(21, 21, 21, 0.08) 0%, rgba(21, 21, 21, 0.09) 100%);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+`;
+
+export const NavLinkStyle = styled(NavLink)`
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #000;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    margin-right: 32px;
+    cursor: pointer;
+    list-style: none;
+    transition: all 0.2s;
+    &:hover {
+        background: #45ce7c;
+        color: white;
     }
 `;

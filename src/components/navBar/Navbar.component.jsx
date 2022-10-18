@@ -1,24 +1,25 @@
 import { NavLink } from 'react-router-dom';
 
-import logo from '../../assets/logo/logo.svg';
-import { Nav, LeftNav, RightNav, Button } from './style';
+import { ReactComponent as FCodeLogo } from '../../assets/logo.svg';
+import { Nav, Logo, NavContainer, NavLinkStyle, RightNav, Button } from './style';
 
 const Navbar = () => {
     return (
         <Nav>
-            <LeftNav>
-                <img src={logo} alt="" />
-                <h2>F-Code</h2>
-            </LeftNav>
-            <RightNav>
-                <ul>
-                    <NavLink to="/">Home</NavLink>
-                    <NavLink to="/activities">Activites</NavLink>
-                    <NavLink to="/timeline">Timeline</NavLink>
-                    <NavLink to="/faq">FAQ</NavLink>
-                    <Button>Register</Button>
-                </ul>
-            </RightNav>
+            <NavContainer>
+                <Logo>
+                    <FCodeLogo width={50} height={50} />F - Code
+                </Logo>
+                <RightNav>
+                    <ul>
+                        <NavLinkStyle to="/">Home</NavLinkStyle>
+                        <NavLinkStyle to="/activities">Activites</NavLinkStyle>
+                        <NavLinkStyle to="/timeline">Timeline</NavLinkStyle>
+                        <NavLinkStyle to="/faq">FAQ</NavLinkStyle>
+                        <Button>Register</Button>
+                    </ul>
+                </RightNav>
+            </NavContainer>
         </Nav>
     );
 };

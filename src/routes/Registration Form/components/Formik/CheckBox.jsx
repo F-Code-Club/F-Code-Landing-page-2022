@@ -12,15 +12,17 @@ const CheckBox = ({ name, label, ...rest }) => {
         // <label>{label}</label>
         <div className="form-control">
             <Field name={name}>
-                {({ field, form }) => {
+                {({ field, form, meta }) => {
                     return (
                         <>
                             <FormControlLabel
                                 control={<Checkbox color="success" {...field} {...rest} />}
                                 label={label}
                             />
-                            <FormHelperText error={form.errors[name] ? true : false}>
-                                {form.errors[name]}
+                            <FormHelperText
+                                error={meta.touched && form.errors[name] ? true : false}
+                            >
+                                {meta.touched && form.errors[name]}
                             </FormHelperText>
                         </>
                     );
