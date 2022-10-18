@@ -1,4 +1,5 @@
 import { Formik } from 'formik';
+import { useNavigate } from 'react-router-dom';
 
 import { toastSuccess } from '../../../components/ToastNorification';
 import Button from '../../Home/components/Button';
@@ -20,6 +21,7 @@ const initialValues = {
     phoneNumber: '',
 };
 const FormRegister = () => {
+    const navigate = useNavigate();
     const optionSemester = [
         { key: 'LUK1', value: 'LUK1' },
         { key: 'LUK2', value: 'LUK2' },
@@ -179,8 +181,9 @@ const FormRegister = () => {
                         </Grid>
                         <Button
                             type="submit"
-                            onClick={() => {
-                                toastSuccess('!!');
+                            onClick={async () => {
+                                toastSuccess('Congratulations!!');
+                                await navigate('/signup');
                             }}
                         >
                             Register Now
