@@ -1,46 +1,29 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-import bg from '../../assets/background/background.png';
-import px2vw from '../../utils/px2vw';
-
-export const Nav = styled.div`
+const StyledHeader = styled.div`
+    width: 100%;
+    height: 64px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    max-width: 100%;
-    height: 119px;
+    z-index: 5;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0px 64px;
     align-items: center;
-    width: 100%;
-    z-index: 99;
-    img {
-        margin-right: 32px;
-        width: ${px2vw(71)};
+    background: transparent;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+
+    @media (max-width: 1440px) {
+        padding: 8px;
     }
 `;
 
-export const Background = styled.div`
-    overflow-x: hidden;
-
+const Container = styled.div`
     width: 100%;
-    min-height: 100vh;
-    background: url(${bg});
-    background-size: cover;
-    background-repeat: no-repeat;
-`;
-export const Logo = styled.div`
-    display: flex;
-    align-items: center;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 16px;
-    line-height: 24px;
-    color: #45ce7c;
-    height: 32px;
 `;
 export const RightNav = styled.div`
     color: #fff;
@@ -52,7 +35,11 @@ export const RightNav = styled.div`
         display: flex;
         align-items: center;
     }
+    @media (max-width: 992px) {
+        display: none;
+    }
 `;
+
 export const Button = styled.div`
     /* Auto layout */
 
@@ -82,6 +69,7 @@ export const NavContainer = styled.div`
     align-items: center;
     width: 80%;
     height: auto;
+    margin-top: 50px;
     padding: 10px 20px;
     /* background: gray;    */
     background: linear-gradient(152.97deg, rgba(21, 21, 21, 0.08) 0%, rgba(21, 21, 21, 0.09) 100%);
@@ -108,3 +96,5 @@ export const NavLinkStyle = styled(NavLink)`
         color: white;
     }
 `;
+
+export { StyledHeader, Container };
