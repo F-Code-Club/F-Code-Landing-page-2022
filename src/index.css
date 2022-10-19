@@ -37,10 +37,40 @@ h1 {
     font-family: 'GT Walsheim Pro Black', Arial, Helvetica, sans-serif;
 }
 
-.react-multi-carousel-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.slick-slide img {
+    width: 338px;
+    border-radius: 15px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: transparent;
+}
+
+/* Selection */
+::selection {
+    color: #fff;
+    background: #45ce7c;
+}
+
+a {
+    text-decoration: none;
+}
+.slick-slider .slick-slide {
+    text-align: center;
+    margin: 0 15px;
 }
 
 /* Scrollbar */

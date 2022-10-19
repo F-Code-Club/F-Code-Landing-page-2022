@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { StyledFillGround } from './fillground.style';
 
 const FillGround = (props) => {

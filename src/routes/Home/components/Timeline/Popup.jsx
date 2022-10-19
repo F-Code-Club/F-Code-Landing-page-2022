@@ -1,4 +1,7 @@
+import moment from 'moment';
+
 import Button from '../Button';
+import * as Styled from './Timeline.styled';
 import Transition from './Transition';
 
 import Dialog from '@mui/material/Dialog';
@@ -16,14 +19,19 @@ const Popup = ({ open = false, handleClose = () => {}, data = [] }) => {
             onClose={handleClose}
             aria-describedby="alert-dialog-slide-description"
         >
-            <DialogTitle>{data.heading}</DialogTitle>
+            <DialogTitle>
+                <Styled.CardHeading>{data.title}</Styled.CardHeading>
+                <Styled.CardSubheading>{`Time: ${moment(data.startTime).format('DD/MM')} - 
+                                    ${moment(data.endTime).format(
+                                        'DD/MM'
+                                    )}`}</Styled.CardSubheading>
+            </DialogTitle>
             <DialogContent>
                 <DialogContentText id="alert-dialog-slide-description">
-                    {data.content}
+                    {data.description}
                 </DialogContentText>
             </DialogContent>
             <DialogActions>
-                {/* <Button onClick={handleClose}>Disagree</Button> */}
                 <Button onClick={handleClose}>Agree</Button>
             </DialogActions>
         </Dialog>
