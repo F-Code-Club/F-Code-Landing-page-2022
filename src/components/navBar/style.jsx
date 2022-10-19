@@ -99,4 +99,8 @@ export const Button = styled.div`
     &:hover {
         background-color: #37a463;
     }
+    a {
+        margin-right: 0 !important;
+        color: #fff !important;
+    }
 `;

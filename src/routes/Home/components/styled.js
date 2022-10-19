@@ -26,10 +26,6 @@ export const LeftHero = styled.div`
         font-size: 60px;
         line-height: 65px;
         margin-bottom: 24px;
-
-        span {
-            font-family: 'GT Walsheim Pro Black';
-        }
     }
     p {
         font-family: 'GT Walsheim Pro';
@@ -41,6 +37,10 @@ export const LeftHero = styled.div`
         margin-bottom: 60px;
     }
     span {
+        font-family: 'GT Walsheim Pro Black';
+    }
+    span:last-child {
+        font-family: 'GT Walsheim Pro Black';
         color: #45ce7c;
     }
 `;

@@ -1,3 +1,5 @@
+import Typed from 'react-typed';
+
 import Computer from '../../../assets/images/computer.svg';
 import {
     Container,
@@ -14,7 +16,13 @@ function Hero() {
         <Container>
             <LeftHero>
                 <h1>
-                    Code the<br></br> future
+                    Code the <br />
+                    <Typed
+                        strings={['future', 'dream', 'journey']}
+                        typeSpeed={200}
+                        backSpeed={100}
+                        loop={true}
+                    />{' '}
                     <br />
                     with <span>F-Code.</span>
                 </h1>
