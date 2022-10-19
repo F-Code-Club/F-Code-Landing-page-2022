@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-    max-width: 700px;
+    max-width: 927px;
     width: 100%;
     margin-top: 120px;
 `;
@@ -88,6 +88,11 @@ export const Button = styled.button`
     border: 0;
     margin-top: 24px;
     cursor: pointer;
+    box-shadow: 4px 4px 2px #aaaaaa;
+    transition: 0.3s ease all;
+    &:hover {
+        transform: translateY(-10px);
+    }
 `;
 export const Img = styled.img`
     width: 30px;

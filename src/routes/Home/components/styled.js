@@ -53,7 +53,8 @@ export const LeftHero = styled.div`
 export const ButtonContainer = styled.div`
     display: flex;
     div {
-        margin: 8px;
+        margin: 8px 0px;
+        margin-right: 8px;
     }
 `;
 export const Button = styled.div`
@@ -128,7 +129,7 @@ export const Direct = styled.div`
     h4 {
         display: flex;
         align-items: center;
-        margin-bottom: 12px;
+        margin-bottom: 16px;
     }
 `;
 export const RightPart = styled.div`
@@ -146,15 +147,18 @@ export const RightPart = styled.div`
         strong {
             font-weight: 900;
         }
+        margin-bottom: 48px;
     }
     h4 {
         font-weight: 500;
         font-size: 18px;
         line-height: 18px;
         color: #45ce7c;
+        margin-bottom: 12px;
     }
     h1 {
         font-family: 'GT Walsheim Pro Black';
+        margin-bottom: 16px;
     }
 `;
 export const SlideArrow = styled.div`
@@ -183,7 +187,8 @@ export const SlideArrow = styled.div`
     }
 `;
 export const VericalContainer = styled.div`
-    position: relative;
+    max-width: 1000px;
+    width: 90vw;
 `;
 export const LeftArrow = styled(SlideArrow)`
     left: 15px;
