@@ -1,23 +1,33 @@
 import GoogleIcon from '../../assets/logo/google.png';
-import {
-    Container,
-    Hero,
-    Description,
-    Step,
-    Stage,
-    Bar,
-    Box,
-    Name,
-    NameContainer,
-    Button,
-    Google,
-    Img,
-    GoogleContainer,
-} from './styled';
-
-import CheckIcon from '@mui/icons-material/Check';
+import ProgressBar from './progress';
+import { Container, Hero, Description, Button, Google, Img, GoogleContainer } from './styled';
+import Title from './title';
 
 function SingUp() {
+    const progress = [
+        {
+            key: 'registration',
+            title: 'Register',
+            description: '',
+            step: 1,
+            isDone: true,
+        },
+        {
+            key: 'verifyMail',
+            title: 'Check mail for confirmation mail',
+            description: '',
+            step: 2,
+            isDone: false,
+        },
+        {
+            key: 'Accept',
+            title: 'Confirm',
+            description: '',
+            step: 3,
+            isDone: false,
+        },
+    ];
+    let step = 2;
     return (
         <Container>
             <Hero>
@@ -26,32 +36,8 @@ function SingUp() {
             <Description>
                 To become a member of <span>F-Code,</span> you need to sign up using FPT email.
             </Description>
-            <Step>
-                <Box>
-                    <Stage>
-                        <CheckIcon />
-                    </Stage>
-                </Box>
-                <Bar />
-                <Box>
-                    <Stage>
-                        <CheckIcon />
-                    </Stage>
-                </Box>
-                <Bar />
-                <Box>
-                    <Stage>
-                        <CheckIcon />
-                    </Stage>
-                </Box>
-            </Step>
-            <NameContainer>
-                <Name>Register</Name>
-
-                <Name>Check mail for confirmation mail</Name>
-
-                <Name>Confirm</Name>
-            </NameContainer>
+            <ProgressBar progress={step} data={progress} />
+            <Title data={progress} />
             <GoogleContainer>
                 <Button type="button">
                     <Img src={GoogleIcon} alt="" />

@@ -36,8 +36,14 @@ h1 {
     font-family: 'GT Walsheim Pro Black', Arial, Helvetica, sans-serif;
 }
 
-.react-multi-carousel-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.slick-slide img {
+    width:338px;
+    border-radius: 15px;
 }
+.slick-slider .slick-slide {
+    text-align: center; 
+    margin: 0 15px;
+  }
+
+
+
