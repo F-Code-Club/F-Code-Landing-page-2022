@@ -221,6 +221,37 @@ export const RightArrow = styled(SlideArrow)`
         display: none;
     }
 `;
+
+export const Wrapper = styled.div`
+    text-align: center;
+    margin: 70px 0;
+    max-width: 1100px;
+
+    & h4 {
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 125%;
+        color: #45ce7c;
+        margin-bottom: 10px;
+    }
+
+    & h1 {
+        margin-bottom: 10px;
+        font-size: 36px;
+    }
+
+    & p {
+        font-size: 16px;
+        margin-bottom: 32px;
+
+        & span {
+            color: #45ce7c;
+            font-weight: 900;
+            font-size: 20px;
+        }
+    }
+`;
 export const SliderContainer = styled.div`
     position: relative;
     margin: 0 auto 2.31em;
@@ -258,7 +289,7 @@ export const Image = styled.img`
     background-repeat: no-repeat;
     @media screen and (max-width: 560px) {
         margin: 0;
-        width: 100%;
+        width: 330px;
         height: auto;
     }
 `;

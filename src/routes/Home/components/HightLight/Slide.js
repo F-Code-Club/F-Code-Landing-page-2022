@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 
 import img from '../../../../assets/images/highlight/club-activity1.jpeg';
 
+
 export default class Slide extends React.Component {
     render() {
         var settings = {
@@ -66,3 +67,4 @@ export default class Slide extends React.Component {
         );
     }
 }
+
