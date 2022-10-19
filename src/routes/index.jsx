@@ -3,9 +3,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from '../components/layout/Layout.component';
 import Activities from './Activities';
 import Home from './Home';
+import Timeline from './Home/components/Timeline';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
-import Timeline from './TimeLine';
+import Qna from './Qna';
+import RegistrationForm from './Registration Form';
+import SignUp from './SignUp';
 
 const publicRoute = [
     {
@@ -21,8 +24,26 @@ const publicRoute = [
         restrict: true,
     },
     {
+        path: '/signup',
+        component: <SignUp />,
+        exact: true,
+        restrict: true,
+    },
+    {
+        path: '/faq',
+        component: <Qna />,
+        exact: true,
+        restrict: true,
+    },
+    {
         path: '/timeline',
         component: <Timeline />,
+        exact: true,
+        restrict: true,
+    },
+    {
+        path: '/register',
+        component: <RegistrationForm />,
         exact: true,
         restrict: true,
     },

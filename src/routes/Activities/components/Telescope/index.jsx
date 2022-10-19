@@ -1,9 +1,9 @@
 import * as Styled from './Telescope.styled';
 
 const IMG_LIST = [
-    'https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/310512874_3241145429435347_1307646043115394265_n.png?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=8s87CROrdrwAX910aPv&_nc_ht=scontent.fhan2-3.fna&oh=00_AT9DZCgLaXTgRvpT8DVHSdVqCjRGwLyOUadz-dSQrImIQw&oe=63485241',
-    'https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/310512874_3241145429435347_1307646043115394265_n.png?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=8s87CROrdrwAX910aPv&_nc_ht=scontent.fhan2-3.fna&oh=00_AT9DZCgLaXTgRvpT8DVHSdVqCjRGwLyOUadz-dSQrImIQw&oe=63485241',
-    'https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/310512874_3241145429435347_1307646043115394265_n.png?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=8s87CROrdrwAX910aPv&_nc_ht=scontent.fhan2-3.fna&oh=00_AT9DZCgLaXTgRvpT8DVHSdVqCjRGwLyOUadz-dSQrImIQw&oe=63485241',
+    'https://th.bing.com/th/id/OIP.nGSEh_PGq3vs7w16VkE04QHaFj?w=260&h=196&c=7&r=0&o=5&dpr=1.1&pid=1.7',
+    'https://th.bing.com/th/id/OIP.r16mCLlX0OgB1TbKKD2GAAHaEK?w=285&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7',
+    'https://th.bing.com/th/id/OIP.YwPNGDIPW3kWRPiMLAio4wHaEo?w=260&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7',
 ];
 
 const Telescope = () => {

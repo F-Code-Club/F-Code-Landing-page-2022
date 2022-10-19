@@ -13,17 +13,17 @@ const CARD_LIST = [
     {
         icon: <FaBookReader size="42" />,
         heading: 'Sharing',
-        content: 'Eager to join various activities, ready to dedicate to the club',
+        content: 'Be open-minded and ready to share knowledge',
     },
     {
         icon: <FaHandsHelping size="42" />,
         heading: 'Respect',
-        content: 'Eager to join various activities, ready to dedicate to the club',
+        content: 'Ready to help other members and show them respect',
     },
     {
         icon: <BsPeopleFill size="42" />,
         heading: 'Responsibility',
-        content: 'Eager to join various activities, ready to dedicate to the club',
+        content: 'Be responsible, patient and dare to challenge yourself',
     },
 ];
 

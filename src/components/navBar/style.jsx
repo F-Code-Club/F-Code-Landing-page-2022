@@ -42,6 +42,7 @@ export const LeftNav = styled.div`
     align-items: center;
 
     h2 {
+        font-family: 'GT Walsheim Pro';
         font-weight: 700;
         font-size: 24px;
         line-height: 150%;

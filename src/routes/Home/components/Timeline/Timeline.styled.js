@@ -108,14 +108,10 @@ export const Left = styled.div`
 export const Right = styled.div``;
 
 export const CardHeading = styled.div`
-    font-style: normal;
+    font-family: 'GT Walsheim Pro Black';
     font-weight: 800;
     font-size: 26px;
     line-height: 150%;
-    /* identical to box height, or 39px */
-
-    /* Green/500 */
-
     color: #00c464;
 `;
 

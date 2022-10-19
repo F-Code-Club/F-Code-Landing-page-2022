@@ -1,4 +1,7 @@
+import { useState } from 'react';
+
 import Button from '../Button';
+import Popup from './Popup';
 import * as Styled from './Timeline.styled';
 
 const CARD_LIST = [
@@ -7,12 +10,14 @@ const CARD_LIST = [
         subheading: 'Time: 21/9 - 24/10',
         content: 'Click on the Register button to accept the challenges from F-Code!',
         buttonTitle: 'Register Now!',
+        status: 'enabled',
     },
     {
         heading: 'First Challenge',
         subheading: 'Time: 21/9 - 24/10',
         content: 'Click on the Register button to accept the challenges from F-Code!',
-        buttonTitle: 'See Detail',
+        buttonTitle: 'See Details',
+        status: 'enabled',
     },
     {
         heading: 'Second Challenge',
@@ -29,6 +34,16 @@ const CARD_LIST = [
 ];
 
 const Timeline = () => {
+    const [open, setOpen] = useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
     return (
         <Styled.Wrapper>
             <Styled.Container>
@@ -53,9 +68,12 @@ const Timeline = () => {
                                 <Styled.CardSubheading>{item.subheading}</Styled.CardSubheading>
                                 <p>{item.content}</p>
                             </Styled.Left>
-                            {!item.status && (
+                            {item.status !== 'disabled' && (
                                 <Styled.Right>
-                                    <Button>{item.buttonTitle}</Button>
+                                    <Button onClick={handleClickOpen}>
+                                        {item.buttonTitle || 'See Details'}
+                                    </Button>
+                                    <Popup open={open} handleClose={handleClose} data={item} />
                                 </Styled.Right>
                             )}
                         </Styled.Card>
