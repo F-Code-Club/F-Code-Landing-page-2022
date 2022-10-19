@@ -23,17 +23,23 @@ function AboutUs() {
                     various activites to students.
                 </h3>
                 <Direct>
-                    <h4>
-                        F-Code Official Fanpage <ArrowForwardIcon />
-                    </h4>
-                    <h4>
-                        F-Code Channel
-                        <ArrowForwardIcon />
-                    </h4>
-                    <h4>
-                        F-Code Blog
-                        <ArrowForwardIcon />
-                    </h4>
+                    <a href="https://www.facebook.com/fcodefpt/">
+                        <h4>
+                            F-Code Official Fanpage <ArrowForwardIcon />
+                        </h4>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCZyrUXSrQ1AdkomxYz1GvCw/featured">
+                        <h4>
+                            F-Code Channel
+                            <ArrowForwardIcon />
+                        </h4>
+                    </a>
+                    <a href="http://fcodehcm.wordpress.com/">
+                        <h4>
+                            F-Code Blog
+                            <ArrowForwardIcon />
+                        </h4>
+                    </a>
                 </Direct>
             </RightPart>
         </Container>

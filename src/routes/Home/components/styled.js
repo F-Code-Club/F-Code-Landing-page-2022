@@ -126,6 +126,9 @@ export const Box = styled.div`
     }
 `;
 export const Direct = styled.div`
+    a {
+        text-decoration: none;
+    }
     h4 {
         display: flex;
         align-items: center;
