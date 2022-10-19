@@ -2,6 +2,7 @@ import React from 'react';
 
 import ReactDOM from 'react-dom/client';
 
+import Toast from './components/ToastNorification/index';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import RouterComponent from './routes';
@@ -10,6 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <RouterComponent />
+        <Toast />
     </React.StrictMode>
 );
 

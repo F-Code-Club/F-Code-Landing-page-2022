@@ -16,7 +16,9 @@ export const Content = styled.div`
         width: 1100px;
     }
 `;
-
+export const ContentRegister = styled(Content)`
+    align-items: flex-start;
+`;
 export const LeftContent = styled.div``;
 
 export const RightContent = styled.div`
