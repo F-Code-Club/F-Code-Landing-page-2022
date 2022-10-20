@@ -12,13 +12,15 @@ export const StatusContainer = styled.div`
         position: absolute;
         background-color: rgba(171, 171, 171, 0.38);
         content: '';
-        width: 25vw;
+        width: 41vw;
         height: 1.5px;
+        max-width: 380px;
         left: -890%;
-        @media screen and (max-width: 1280px) {
+        @media screen and (max-width: 940px) {
             display: none;
         }
     }
+
     @media screen and (max-width: 500px) {
         margin-bottom: 1.5rem;
     }
