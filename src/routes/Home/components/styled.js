@@ -359,3 +359,6 @@ export const MiniTitle = styled.p`
 
     color: #45ce7c;
 `;
+export const SlideWrapper = styled.div`
+    text-align: center;
+`;
