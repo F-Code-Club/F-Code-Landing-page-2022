@@ -37,12 +37,21 @@ h1 {
 }
 
 .slick-slide img {
-    width:338px;
-    border-radius: 15px;
+  width: 100%;
+  border-radius: 15px;
 }
+
 .slick-slider .slick-slide {
     text-align: center; 
     margin: 0 15px;
+    width:338px;
+  }
+        
+        
+  @media only screen and (max-width: 600px){
+    .slick-slider .slick-slide{
+        margin:0;
+    }
   }
 
 
