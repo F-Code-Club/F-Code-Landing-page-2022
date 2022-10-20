@@ -61,6 +61,10 @@ export const Button = styled.div`
     &:hover {
         background-color: #37a463;
     }
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
 `;
 
 export const NavContainer = styled.div`

@@ -52,6 +52,7 @@ export const Subheading = styled.h1`
     font-weight: 300;
     font-size: 18px;
     line-height: 150%;
+    text-align: center;
 
     color: #6b7280;
 `;
@@ -84,7 +85,7 @@ export const Card = styled.div`
         margin-bottom: 40px;
     }
 
-    ${(props) => props.status === 'disabled' && 'filter: grayscale(100%); opacity: 0.75'};
+    ${(props) => props.status !== 'ACTIVE' && 'filter: grayscale(100%); opacity: 0.75'};
 
     &:hover {
         transform: translateX(14px);
@@ -108,14 +109,10 @@ export const Left = styled.div`
 export const Right = styled.div``;
 
 export const CardHeading = styled.div`
-    font-style: normal;
+    font-family: 'GT Walsheim Pro Black';
     font-weight: 800;
     font-size: 26px;
     line-height: 150%;
-    /* identical to box height, or 39px */
-
-    /* Green/500 */
-
     color: #00c464;
 `;
 
