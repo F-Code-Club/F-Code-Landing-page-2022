@@ -10,6 +10,7 @@ import {
     SliderContent,
     ContentsContainer,
     MiniTitle,
+    TitleContainer,
 } from '../styled';
 import { clubActiveFix } from './../../../../assets/images/highlight/index';
 
@@ -21,7 +22,7 @@ const responsive = {
             max: 3000,
             min: 1400,
         },
-        items: 3,
+        items: 2,
     },
     mobile: {
         breakpoint: {
@@ -44,8 +45,10 @@ const Slider = () => {
         <Activities>
             <ContentsContainer>
                 <SliderContent>
-                    <MiniTitle data-aos="fade-up">Activites</MiniTitle>
-                    <SubTitle data-aos="fade-up">Hightlights Of F-Code</SubTitle>
+                    <TitleContainer>
+                        <MiniTitle data-aos="fade-up">Activites</MiniTitle>
+                        <SubTitle data-aos="fade-up">Hightlights Of F-Code</SubTitle>
+                    </TitleContainer>
                     <SliderContainer data-aos="flip-up" className="hi">
                         <Carousel
                             itemClass="carousel-item"

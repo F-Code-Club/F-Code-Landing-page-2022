@@ -22,7 +22,6 @@ export const Highlight = styled.span`
 `;
 
 export const EstablishPart = styled.div`
-    width: 360px;
     display: flex;
 `;
 
@@ -226,7 +225,8 @@ export const SlideArrow = styled.div`
 `;
 export const VericalContainer = styled.div`
     max-width: 1000px;
-    width: 90vw;
+    display: flex;
+    justify-content: center;
 `;
 export const LeftArrow = styled(SlideArrow)`
     left: 15px;
@@ -386,7 +386,7 @@ export const MiniTitle = styled.p`
     font-weight: 500;
     font-size: 18px;
     line-height: 125%;
-
+    text-align: center;
     display: flex;
     align-items: center;
     text-align: center;
@@ -396,4 +396,9 @@ export const MiniTitle = styled.p`
 `;
 export const SlideWrapper = styled.div`
     text-align: center;
+`;
+export const TitleContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 `;
