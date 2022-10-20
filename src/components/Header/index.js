@@ -1,5 +1,7 @@
 import { useRef, useState } from 'react';
 
+import { NavLink } from 'react-router-dom';
+
 import Burger from './Burger';
 import FillGround from './FillGround';
 import Logo from './Logo';
@@ -25,14 +27,16 @@ const Headernew = () => {
         <Container>
             <StyledHeader ref={menu}>
                 <NavContainer>
-                    <Logo></Logo>
+                    <Logo />
                     <RightNav>
                         <ul>
                             <NavLinkStyle to="/">Home</NavLinkStyle>
                             <NavLinkStyle to="/activities">Activites</NavLinkStyle>
                             <NavLinkStyle to="/timeline">Timeline</NavLinkStyle>
                             <NavLinkStyle to="/faq">FAQ</NavLinkStyle>
-                            <Button>Register</Button>
+                            <Button>
+                                <NavLink to="/register">Register</NavLink>
+                            </Button>
                         </ul>
                     </RightNav>
                     <Burger open={open} setOpen={setOpen}></Burger>
