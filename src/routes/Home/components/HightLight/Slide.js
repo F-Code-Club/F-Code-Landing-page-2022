@@ -10,6 +10,7 @@ import {
     SliderContent,
     ContentsContainer,
     MiniTitle,
+    Description,
 } from '../styled';
 import { clubActiveFix } from './../../../../assets/images/highlight/index';
 
@@ -21,7 +22,7 @@ const responsive = {
             max: 3000,
             min: 1400,
         },
-        items: 3,
+        items: 2,
     },
     mobile: {
         breakpoint: {
@@ -39,13 +40,25 @@ const responsive = {
     },
 };
 
-const Slider = () => {
+const Slider = ({ anniversary }) => {
     return (
         <Activities>
             <ContentsContainer>
                 <SliderContent>
-                    <MiniTitle data-aos="fade-up">Activites</MiniTitle>
-                    <SubTitle data-aos="fade-up">Hightlights Of F-Code</SubTitle>
+                    <MiniTitle data-aos="fade-up">
+                        {anniversary ? 'Anniversary' : 'Activites'}
+                    </MiniTitle>
+                    <SubTitle data-aos="fade-up">
+                        {anniversary ? '8-year Anniversary of F-Code' : 'Hightlights Of F-Code'}
+                    </SubTitle>
+                    {anniversary && (
+                        <Description>
+                            <span>F-Code</span>, established in 2014, is the first academic club of
+                            <strong> FPT University</strong> at <strong>Ho Chi Minh City</strong>.
+                            With the initial aim of creating a community for Software Engineering
+                            major’s students.
+                        </Description>
+                    )}
                     <SliderContainer data-aos="flip-up" className="hi">
                         <Carousel
                             itemClass="carousel-item"
