@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { toastSuccess } from '../../../components/ToastNorification';
 import Button from '../../Home/components/Button';
-import { FormContainer } from '../style';
+import { FormContainer, ButtonWrapper } from '../style';
 import FormikControl from './Formik/FormikControl';
 // import * as Yup from 'yup';
 import { ValidationSchema } from './Schema/validation';
@@ -72,6 +72,7 @@ const FormRegister = () => {
                                 fontFamily: 'GT Walsheim Pro Black',
                                 fontSize: { xs: '50px', sm: '60px' },
                                 lineHeight: '65px',
+                                textAlign: { xs: 'center' },
                             }}
                         >
                             Registration Form
@@ -84,6 +85,7 @@ const FormRegister = () => {
                                 lineHeight: '150%',
                                 color: '#6B7280',
                                 marginBottom: '10px',
+                                textAlign: { xs: 'center' },
                             }}
                         >
                             Fill in all the information to receive challenges from us!
@@ -136,7 +138,6 @@ const FormRegister = () => {
                                     label="Roll Number"
                                     sx={{
                                         width: { xs: '300px', sm: '200px' },
-
                                         '& .MuiOutlinedInput-root': {
                                             borderRadius: '10px',
                                         },
@@ -179,15 +180,17 @@ const FormRegister = () => {
                                 />
                             </Grid>
                         </Grid>
-                        <Button
-                            type="submit"
-                            onClick={async () => {
-                                toastSuccess('Congratulations!!');
-                                await navigate('/signup');
-                            }}
-                        >
-                            Register Now
-                        </Button>
+                        <ButtonWrapper>
+                            <Button
+                                type="submit"
+                                onClick={() => {
+                                    toastSuccess('Congratulations!!');
+                                    navigate('/signup');
+                                }}
+                            >
+                                Register Now
+                            </Button>
+                        </ButtonWrapper>
                     </FormContainer>
                 );
             }}
