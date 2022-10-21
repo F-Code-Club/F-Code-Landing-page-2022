@@ -12,9 +12,30 @@ import {
     MiniTitle,
     Description,
 } from '../styled';
+import anniversary1 from './../../../../assets/images/anniversary/anniversary1.jpg';
+import anniversary2 from './../../../../assets/images/anniversary/anniversary2.jpg';
+import anniversary3 from './../../../../assets/images/anniversary/anniversary3.jpg';
+import anniversary4 from './../../../../assets/images/anniversary/anniversary4.jpg';
+import anniversary5 from './../../../../assets/images/anniversary/anniversary5.jpg';
+import anniversary6 from './../../../../assets/images/anniversary/anniversary6.jpg';
+import anniversary7 from './../../../../assets/images/anniversary/anniversary7.jpg';
+import anniversary8 from './../../../../assets/images/anniversary/anniversary8.jpg';
+import anniversary9 from './../../../../assets/images/anniversary/anniversary9.jpg';
 import { clubActiveFix } from './../../../../assets/images/highlight/index';
 
 import 'react-multi-carousel/lib/styles.css';
+
+const ANIVERSARY_IMAGES = [
+    anniversary1,
+    anniversary2,
+    anniversary3,
+    anniversary4,
+    anniversary5,
+    anniversary6,
+    anniversary7,
+    anniversary8,
+    anniversary9,
+];
 
 const responsive = {
     desktop: {
@@ -41,6 +62,8 @@ const responsive = {
 };
 
 const Slider = ({ anniversary }) => {
+    const images = anniversary ? ANIVERSARY_IMAGES : clubActiveFix;
+
     return (
         <Activities>
             <ContentsContainer>
@@ -79,7 +102,7 @@ const Slider = ({ anniversary }) => {
                             showDots={false}
                             slidesToSlide={1}
                         >
-                            {clubActiveFix.map((item, index) => {
+                            {images.map((item, index) => {
                                 return <Image key={index} src={item}></Image>;
                             })}
                         </Carousel>

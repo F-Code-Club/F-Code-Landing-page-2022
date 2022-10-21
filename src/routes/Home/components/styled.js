@@ -1,7 +1,23 @@
 import { down, up } from 'styled-breakpoints';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import arrows from '../../../assets/components';
+
+const flow = keyframes`
+    from, to {
+        transform: translateY(0)
+    }
+
+    25% {
+        transform: translateY(10px)
+
+    }
+
+    75% {
+        transform: translateY(-10px)
+
+    }
+`;
 
 export const Container = styled.section`
     max-width: 1100px;
@@ -109,6 +125,7 @@ export const RightHero = styled.div`
     img {
         margin-top: -60px;
         margin-right: -24px;
+        animation: ${flow} 3s linear infinite;
     }
 
     ${down('md')} {
