@@ -72,7 +72,7 @@ const FormRegister = () => {
                                 fontFamily: 'GT Walsheim Pro Black',
                                 fontSize: { xs: '50px', sm: '60px' },
                                 lineHeight: '65px',
-                                textAlign: { xs: 'center' },
+                                textAlign: { xs: 'center', md: 'left' },
                             }}
                         >
                             Registration Form
@@ -85,7 +85,7 @@ const FormRegister = () => {
                                 lineHeight: '150%',
                                 color: '#6B7280',
                                 marginBottom: '10px',
-                                textAlign: { xs: 'center' },
+                                textAlign: { xs: 'center', md: 'left' },
                             }}
                         >
                             Fill in all the information to receive challenges from us!
@@ -95,7 +95,7 @@ const FormRegister = () => {
                                 <FormikControl
                                     control="MuiInput"
                                     sx={{
-                                        width: { xs: '300px', sm: '200px' },
+                                        width: { xs: '100%', sm: '200px' },
                                         borderWidth: '2px',
                                         '& .MuiOutlinedInput-root': {
                                             borderRadius: '10px',
@@ -109,7 +109,7 @@ const FormRegister = () => {
                                 <FormikControl
                                     control="MuiInput"
                                     sx={{
-                                        width: { xs: '300px', sm: '200px' },
+                                        width: { xs: '100%', sm: '200px' },
 
                                         '& .MuiOutlinedInput-root': {
                                             borderRadius: '10px',
@@ -137,7 +137,7 @@ const FormRegister = () => {
                                     control="MuiInput"
                                     label="Roll Number"
                                     sx={{
-                                        width: { xs: '300px', sm: '200px' },
+                                        width: { xs: '100%', sm: '200px' },
                                         '& .MuiOutlinedInput-root': {
                                             borderRadius: '10px',
                                         },
@@ -163,7 +163,7 @@ const FormRegister = () => {
                                 <FormikControl
                                     control="MuiInput"
                                     sx={{
-                                        width: { xs: '300px', sm: '433px', lg: '433px' },
+                                        width: { xs: '100%', sm: '433px', lg: '433px' },
                                         '& .MuiOutlinedInput-root': {
                                             borderRadius: '10px',
                                         },
