@@ -35,7 +35,7 @@ const Headernew = () => {
                             <NavLinkStyle to="/timeline">Timeline</NavLinkStyle>
                             <NavLinkStyle to="/faq">FAQ</NavLinkStyle>
                             <Button>
-                                <NavLink to="/register">Register</NavLink>
+                                <NavLink to="/signup">Register</NavLink>
                             </Button>
                         </ul>
                     </RightNav>

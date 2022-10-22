@@ -1,7 +1,7 @@
 import { Formik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 
-import { toastSuccess } from '../../../components/ToastNorification';
+import { toastSuccess, toastError } from '../../../components/ToastNorification';
 import Button from '../../Home/components/Button';
 import { FormContainer, ButtonWrapper } from '../style';
 import FormikControl from './Formik/FormikControl';
@@ -58,6 +58,7 @@ const FormRegister = () => {
     const onSubmit = (values) => {
         console.log('Form data', values);
     };
+
     return (
         <Formik
             initialValues={initialValues}
@@ -184,8 +185,11 @@ const FormRegister = () => {
                             <Button
                                 type="submit"
                                 onClick={() => {
-                                    toastSuccess('Congratulations!!');
-                                    navigate('/signup');
+                                    if (!Formik.isValid) toastError('Please enter a valid form');
+                                    else {
+                                        toastSuccess('Congratulations!!');
+                                        navigate('/signup');
+                                    }
                                 }}
                             >
                                 Register Now

@@ -33,7 +33,7 @@ function Hero() {
                 </p>
                 <ButtonContainer>
                     <Button>
-                        <NavLink to="/register">Register Now</NavLink>
+                        <NavLink to="/signup">Register Now</NavLink>
                     </Button>
                     <V2Button>
                         <NavLink to="/timeline">Timeline</NavLink>

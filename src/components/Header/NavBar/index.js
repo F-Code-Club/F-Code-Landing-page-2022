@@ -1,5 +1,3 @@
-import React from 'react';
-
 import BlankButton from '../BlankButton';
 import FilledButton from '../FilledButton';
 import { StyledNavBar } from './navBar.style';
