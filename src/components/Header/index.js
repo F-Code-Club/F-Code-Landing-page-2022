@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import Burger from './Burger';
 import FillGround from './FillGround';
@@ -41,7 +41,9 @@ const Headernew = () => {
                             <NavLinkStyle to="/activities">Activites</NavLinkStyle>
                             <NavLinkStyle to="/timeline">Timeline</NavLinkStyle>
                             <NavLinkStyle to="/faq">FAQ</NavLinkStyle>
-                            <Button>Register</Button>
+                            <Button>
+                                <NavLink to="/register">Register</NavLink>
+                            </Button>
                         </ul>
                     </RightNav>
                 </NavContainer>

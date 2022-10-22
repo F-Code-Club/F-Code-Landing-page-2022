@@ -23,7 +23,13 @@ const StyledMenu = styled.div`
 
     @media (max-width: 992px) {
         display: flex;
+        min-width: 0vw;
     }
+    @media (max-width: 600px) {
+        display: flex;
+        min-width: 100vw;
+    }
+
     flex-direction: column;
 `;
 

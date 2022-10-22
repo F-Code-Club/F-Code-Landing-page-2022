@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const Container = styled.section`
     max-width: 700px;
     width: 100%;
-    margin-top: 120px;
+    margin-top: 40px;
 `;
 export const Hero = styled.h1`
     font-family: 'GT Walsheim Pro black';
@@ -45,6 +45,7 @@ export const Input = styled.div`
         width: 451px;
         height: 54px;
         border-radius: 10px;
+        background-color: transparent;
     }
     button {
         display: flex;
@@ -54,9 +55,11 @@ export const Input = styled.div`
         padding: 12px 20px;
         width: 140px;
         height: 54px;
+        color: #fff;
         background: #45ce7c;
         border-radius: 8px;
         border: none;
+        font-size: 14px;
     }
     margin-bottom: 64px;
 `;

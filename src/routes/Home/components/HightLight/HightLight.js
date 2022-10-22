@@ -3,10 +3,10 @@ import Slide from './Slide';
 
 import 'react-multi-carousel/lib/styles.css';
 
-function HightLight() {
+function HightLight({ anniversary }) {
     return (
         <VericalContainer>
-            <Slide />
+            <Slide anniversary={anniversary} />
         </VericalContainer>
     );
 }

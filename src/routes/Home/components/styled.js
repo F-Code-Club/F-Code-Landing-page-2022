@@ -1,14 +1,30 @@
-import { down } from 'styled-breakpoints';
-import styled from 'styled-components';
+import { down, up } from 'styled-breakpoints';
+import styled, { keyframes } from 'styled-components';
 
 import arrows from '../../../assets/components';
+
+const flow = keyframes`
+    from, to {
+        transform: translateY(0)
+    }
+
+    25% {
+        transform: translateY(10px)
+
+    }
+
+    75% {
+        transform: translateY(-10px)
+
+    }
+`;
 
 export const Container = styled.section`
     max-width: 1100px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 64px 0;
+    margin: 84px 0;
     ${down('lg')} {
         flex-direction: column;
         align-items: center;
@@ -21,6 +37,11 @@ export const Highlight = styled.span`
     font-size: 22px;
 `;
 
+export const EstablishPart = styled.div`
+    width: 360px;
+    display: flex;
+`;
+
 export const LeftHero = styled.div`
     h1 {
         font-family: 'GT Walsheim Pro Black';
@@ -29,10 +50,6 @@ export const LeftHero = styled.div`
         font-size: 60px;
         line-height: 65px;
         margin-bottom: 24px;
-
-        span {
-            font-family: 'GT Walsheim Pro Black';
-        }
     }
     p {
         font-family: 'GT Walsheim Pro';
@@ -44,17 +61,25 @@ export const LeftHero = styled.div`
         margin-bottom: 60px;
     }
     span {
+        font-family: 'GT Walsheim Pro Black';
+    }
+    span:last-child {
+        font-family: 'GT Walsheim Pro Black';
         color: #45ce7c;
     }
+
     ${down('lg')} {
         margin-bottom: 40px;
+    }
+
+    ${down('sm')} {
+        h1 {
+            font-size: 52px;
+        }
     }
 `;
 export const ButtonContainer = styled.div`
     display: flex;
-    div {
-        margin: 8px;
-    }
 `;
 export const Button = styled.div`
     display: flex;
@@ -66,6 +91,10 @@ export const Button = styled.div`
     min-width: 131px;
     height: 35px;
     cursor: pointer;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
     &:hover {
         filter: brightness(95%);
     }
@@ -73,6 +102,7 @@ export const Button = styled.div`
 
     background: #45ce7c;
     border-radius: 8px;
+    margin-right: 16px;
 `;
 export const V2Button = styled.div`
     display: flex;
@@ -83,11 +113,21 @@ export const V2Button = styled.div`
     cursor: pointer;
     width: 98px;
     height: 35px;
-
     border: 1px solid #1f2a37;
     border-radius: 8px;
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
 `;
 export const RightHero = styled.div`
+    img {
+        margin-top: -60px;
+        margin-right: -24px;
+        animation: ${flow} 3s linear infinite;
+    }
+
     ${down('md')} {
         display: none;
     }
@@ -102,9 +142,14 @@ export const Box = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: auto;
+
+    ${down('md')} {
+        margin: 48px auto;
+    }
+
     h2 {
-        font-family: 'GT Walsheim Pro';
-        font-style: normal;
+        font-family: 'GT Walsheim Pro Black';
         font-weight: 900;
         font-size: 48px;
         line-height: 55px;
@@ -125,10 +170,14 @@ export const Box = styled.div`
     }
 `;
 export const Direct = styled.div`
+    a {
+        text-decoration: none;
+    }
     h4 {
+        font-size: 16px !important;
         display: flex;
         align-items: center;
-        margin-bottom: 12px;
+        margin-bottom: 12px !important;
     }
 `;
 export const RightPart = styled.div`
@@ -137,24 +186,34 @@ export const RightPart = styled.div`
     line-height: 150%;
     margin: 0;
     h3 {
+        font-size: 18px;
         font-weight: 300;
         color: #6b7280;
         max-width: 640px;
         span {
+            font-size: 22px;
             color: #45ce7c;
+            font-family: 'GT Walsheim Pro Black';
         }
         strong {
             font-weight: 900;
         }
+        margin-bottom: 48px;
     }
     h4 {
         font-weight: 500;
         font-size: 18px;
         line-height: 18px;
         color: #45ce7c;
+        margin-bottom: 16px;
+        svg {
+            margin-left: 8px;
+        }
     }
     h1 {
         font-family: 'GT Walsheim Pro Black';
+        margin-bottom: 16px;
+        font-size: 36px;
     }
 `;
 export const SlideArrow = styled.div`
@@ -183,10 +242,11 @@ export const SlideArrow = styled.div`
     }
 `;
 export const VericalContainer = styled.div`
-    position: relative;
+    max-width: 1000px;
+    width: 90vw;
 `;
 export const LeftArrow = styled(SlideArrow)`
-    left: 15px;
+    left: 3px;
     z-index: 999;
     &::before {
         background: url(${arrows['left-arrow.svg']});
@@ -199,7 +259,7 @@ export const LeftArrow = styled(SlideArrow)`
 `;
 
 export const RightArrow = styled(SlideArrow)`
-    right: 20px;
+    right: 3px;
     z-index: 999;
     &::before {
         background: url(${arrows['right-arrow.svg']});
@@ -249,9 +309,11 @@ export const Wrapper = styled.div`
 `;
 export const SliderContainer = styled.div`
     position: relative;
-    margin: 0 auto 2.31em;
+    margin: 32px auto 0;
     max-width: 1100px;
     width: 900px;
+    margin-top: 32px;
+
     @media screen and (max-width: 1440px) {
         width: 900px;
     }
@@ -265,17 +327,19 @@ export const SliderContainer = styled.div`
     }
 `;
 export const SliderContent = styled.div`
+    text-align: center;
     margin: 0 auto;
     @media screen and (max-width: 1440px) {
         align-items: center;
         width: 100%;
-        padding: 0 1rem;
+        /* padding: 0 1rem; */
     }
 `;
 export const Image = styled.img`
     position: relative;
     background-size: contain;
-    width: 370px;
+    object-fit: cover;
+    width: 400px;
     height: 270px;
     margin: 12px;
     overflow: hidden;
@@ -285,7 +349,7 @@ export const Image = styled.img`
     @media screen and (max-width: 560px) {
         margin: 0;
         width: 330px;
-        height: auto;
+        /* height: auto; */
     }
 `;
 export const Activities = styled.div`
@@ -304,21 +368,14 @@ export const SubTitle = styled.h6`
     font-size: 36px;
     line-height: 125%;
 
-    display: flex;
-    align-items: center;
-    text-align: center;
     letter-spacing: -0.01em;
     color: #111928;
-    margin-bottom: 62px;
-    @media screen and (max-width: 1000px) {
-        margin-bottom: 2rem;
-    }
 `;
 export const Content = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 4em;
+    /* padding: 0 4em; */
     margin: 0 auto;
     height: 100%;
 `;
@@ -326,28 +383,43 @@ export const ContentsContainer = styled(Content)`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 8rem;
+    /* padding: 0 8rem; */
     width: 100%;
     @media screen and (max-width: 1440px) {
         align-items: center;
         padding: 0 4rem;
     }
     @media screen and (max-width: 560px) {
-        font-size: 12px;
+        font-size: 14px;
         padding: 0 1.4rem;
     }
 `;
 export const MiniTitle = styled.p`
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 500;
     font-size: 18px;
     line-height: 125%;
 
-    display: flex;
-    align-items: center;
-    text-align: center;
     letter-spacing: -0.01em;
 
     color: #45ce7c;
+    text-align: center;
+`;
+export const SlideWrapper = styled.div`
+    text-align: center;
+`;
+
+export const Description = styled.p`
+    margin: 10px auto 0;
+
+    & span {
+        font-family: inherit;
+        color: #45ce7c;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    ${up('lg')} {
+        width: 800px;
+    }
 `;

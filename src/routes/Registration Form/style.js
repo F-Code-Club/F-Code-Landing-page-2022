@@ -18,6 +18,7 @@ export const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
 `;
+
 export const FormContainer = styled(Form)`
     width: 450px;
     display: flex;
@@ -29,5 +30,18 @@ export const FormContainer = styled(Form)`
     }
     ${down('sm')} {
         max-width: 300px;
+    }
+`;
+
+export const ButtonWrapper = styled.div`
+    width: 100%;
+
+    ${down('sm')} {
+        margin: auto;
+
+        button {
+            height: 45px;
+            width: inherit;
+        }
     }
 `;

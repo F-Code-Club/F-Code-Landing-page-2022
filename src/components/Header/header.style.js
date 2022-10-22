@@ -20,6 +20,16 @@ const StyledHeader = styled.div`
     @media (max-width: 1440px) {
         padding: 8px;
     }
+    @media (max-width: 992px) {
+        background: linear-gradient(
+            152.97deg,
+            rgba(21, 21, 21, 0.08) 0%,
+            rgba(21, 21, 21, 0.09) 100%
+        );
+        height: 100px;
+
+        backdrop-filter: blur(10px);
+    }
 `;
 
 const Container = styled.div`
@@ -61,6 +71,10 @@ export const Button = styled.div`
     &:hover {
         background-color: #37a463;
     }
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
 `;
 
 export const NavContainer = styled.div`
@@ -75,6 +89,17 @@ export const NavContainer = styled.div`
     background: linear-gradient(152.97deg, rgba(21, 21, 21, 0.08) 0%, rgba(21, 21, 21, 0.09) 100%);
     backdrop-filter: blur(10px);
     border-radius: 16px;
+    @media (max-width: 992px) {
+        /* width: 100%; */
+        /* padding: 30px 20px; */
+        background: transparent;
+        margin-top: 0px;
+        margin-left: 60px;
+        backdrop-filter: blur(0px);
+    }
+    @media (max-width: 992px) {
+        margin-left: 0px;
+    }
 `;
 
 export const NavLinkStyle = styled(NavLink)`

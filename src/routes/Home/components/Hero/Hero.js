@@ -1,3 +1,6 @@
+import { NavLink } from 'react-router-dom';
+import Typed from 'react-typed';
+
 import Computer from '../../../../assets/images/computer.svg';
 import {
     Container,
@@ -14,7 +17,13 @@ function Hero() {
         <Container data-aos="fade-down">
             <LeftHero>
                 <h1>
-                    Code the<br></br> future
+                    Code the <br />
+                    <Typed
+                        strings={['future', 'dream', 'journey']}
+                        typeSpeed={200}
+                        backSpeed={100}
+                        loop={true}
+                    />{' '}
                     <br />
                     with <span>F-Code.</span>
                 </h1>
@@ -23,8 +32,12 @@ function Hero() {
                     share the same passion for coding. What are you waiting for? Join us now.
                 </p>
                 <ButtonContainer>
-                    <Button>Register Now</Button>
-                    <V2Button>Timeline</V2Button>
+                    <Button>
+                        <NavLink to="/register">Register Now</NavLink>
+                    </Button>
+                    <V2Button>
+                        <NavLink to="/timeline">Timeline</NavLink>
+                    </V2Button>
                 </ButtonContainer>
             </LeftHero>
             <RightHero>

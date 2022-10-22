@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { StyledBurger } from './burger.style';
 
 const Burger = (props) => {

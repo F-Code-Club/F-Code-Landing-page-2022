@@ -61,6 +61,7 @@ export const SupportingText = styled.p`
     color: #6b7280;
 
     margin-bottom: 60px;
+    margin-top: 18px;
 
     ${down('sm')} {
         width: auto;

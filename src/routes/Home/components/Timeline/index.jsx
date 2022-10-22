@@ -1,34 +1,77 @@
+import { useState, useEffect } from 'react';
+
+import moment from 'moment';
+
 import Button from '../Button';
+import Popup from './Popup';
 import * as Styled from './Timeline.styled';
 
 const CARD_LIST = [
+    // {
+    //     description: 'string',
+    //     endTime: '2022-10-19T17:31:18.442Z',
+    //     startTime: '2022-10-19T17:31:18.442Z',
+    //     id: 0,
+    //     status: 'ACTIVE',
+    //     title: 'string',
+    // },
     {
-        heading: 'Form registration',
-        subheading: 'Time: 21/9 - 24/10',
-        content: 'Click on the Register button to accept the challenges from F-Code!',
+        title: 'Form registration',
+        description: 'Click on the Register button to accept the challenges from F-Code!',
+        startTime: '2022-10-19T17:31:18.442Z',
+        endTime: '2022-10-19T17:31:18.442Z',
+        id: 0,
+        status: 'ACTIVE',
         buttonTitle: 'Register Now!',
     },
     {
-        heading: 'First Challenge',
-        subheading: 'Time: 21/9 - 24/10',
-        content: 'Click on the Register button to accept the challenges from F-Code!',
-        buttonTitle: 'See Detail',
+        title: 'First Challenge',
+        description: 'Click on the Details button to view this challenges from F-Code!',
+        startTime: '2022-10-19T17:31:18.442Z',
+        endTime: '2022-10-19T17:31:18.442Z',
+        id: 1,
+        status: 'ACTIVE',
+        buttonTitle: 'See Details',
     },
     {
-        heading: 'Second Challenge',
-        subheading: 'Time: 21/9 - 24/10',
-        content: 'Click on the Register button to accept the challenges from F-Code!',
+        title: 'Second Challenge',
+        description: 'The challenge will be revealed later',
+        startTime: '2022-10-19T17:31:18.442Z',
+        endTime: '2022-10-19T17:31:18.442Z',
+        id: 2,
         status: 'disabled',
+        buttonTitle: 'See Details',
     },
     {
-        heading: 'Third Challenge',
-        subheading: 'Time: 21/9 - 24/10',
-        content: 'Click on the Register button to accept the challenges from F-Code!',
+        title: 'Third Challenge',
+        description: 'The challenge will be revealed later',
+        startTime: '2022-10-19T17:31:18.442Z',
+        endTime: '2022-10-19T17:31:18.442Z',
+        id: 3,
         status: 'disabled',
+        buttonTitle: 'See Details',
     },
 ];
 
 const Timeline = () => {
+    const [open, setOpen] = useState(false);
+    const [itemIdx, setItemIdx] = useState(-1);
+    const [challenges, setChallenges] = useState([]);
+
+    useEffect(() => {
+        // Call API to get all the challenges
+        setChallenges(CARD_LIST);
+    }, []);
+
+    const handleClickOpen = (idx) => {
+        setOpen(true);
+        setItemIdx(idx);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
     return (
         <Styled.Wrapper>
             <Styled.Container>
@@ -41,21 +84,31 @@ const Timeline = () => {
                     </Styled.Subheading>
                 </Styled.Header>
                 <div>
-                    {CARD_LIST.map((item) => (
+                    {CARD_LIST.map((item, idx) => (
                         <Styled.Card
-                            key={item.heading}
+                            key={item.id}
                             status={item.status}
                             data-aos="fade-up"
                             data-aos-anchor-placement="bottom-bottom"
                         >
                             <Styled.Left>
-                                <Styled.CardHeading>{item.heading}</Styled.CardHeading>
-                                <Styled.CardSubheading>{item.subheading}</Styled.CardSubheading>
-                                <p>{item.content}</p>
+                                <Styled.CardHeading>{item.title}</Styled.CardHeading>
+                                <Styled.CardSubheading>
+                                    {`Time: ${moment(item.startTime).format('DD/MM')} - 
+                                    ${moment(item.endTime).format('DD/MM')}`}
+                                </Styled.CardSubheading>
+                                <p>{item.description}</p>
                             </Styled.Left>
-                            {!item.status && (
+                            {item.status === 'ACTIVE' && (
                                 <Styled.Right>
-                                    <Button>{item.buttonTitle}</Button>
+                                    <Button onClick={() => handleClickOpen(idx)}>
+                                        {item.buttonTitle}
+                                    </Button>
+                                    <Popup
+                                        open={open}
+                                        handleClose={handleClose}
+                                        data={challenges[itemIdx]}
+                                    />
                                 </Styled.Right>
                             )}
                         </Styled.Card>
