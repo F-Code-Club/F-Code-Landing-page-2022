@@ -17,11 +17,10 @@ const StyledLogo = styled.div`
 `;
 
 const LText = styled.div`
-    font-family: Roboto;
-    font-size: 24px;
+    font-family: 'GT Walsheim Pro';
+    font-size: 20px;
     font-style: normal;
-    font-weight: 900;
-    /* color: #45ce7c; */
+    font-weight: 700;
     line-height: 24px;
     width: 80px;
 `;

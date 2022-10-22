@@ -4,6 +4,8 @@ export const StyledBurger = styled.div`
     width: 60px;
     height: 45px;
     position: relative;
+    top: 25px;
+    right: 100px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -21,7 +23,8 @@ export const StyledBurger = styled.div`
     @media (max-width: 992px) {
         display: block;
     }
-
+    @media (max-width: 400px) {
+    }
     > span {
         display: block;
         position: absolute;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledMenu = styled.div`
-    min-width: 0vw;
+    min-width: 100vw;
     height: 100vh;
 
     position: fixed;
