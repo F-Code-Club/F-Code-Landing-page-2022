@@ -14,8 +14,6 @@ export const Item = styled.div`
     line-height: 150%;
     text-align: center;
     max-width: 140px;
-
-    /* green */
-
     color: #00d17d;
+    margin-top: 16px;
 `;

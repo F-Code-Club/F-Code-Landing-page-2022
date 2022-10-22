@@ -7,7 +7,6 @@ export const StatusContainer = styled.div`
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-bottom: 8px;
     &:not(:nth-child(1)):before {
         position: absolute;
         background-color: rgba(171, 171, 171, 0.38);
@@ -36,7 +35,6 @@ export const Step = styled.h6`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 8px;
     background: linear-gradient(153.18deg, rgba(56, 255, 76, 0.2) 0%, rgba(81, 223, 95, 0) 167.08%);
     width: 36px;
     height: 36px;
