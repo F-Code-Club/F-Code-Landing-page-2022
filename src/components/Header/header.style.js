@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { down } from 'styled-breakpoints';
 import styled from 'styled-components';
 
 const StyledHeader = styled.div`
@@ -19,6 +20,16 @@ const StyledHeader = styled.div`
 
     @media (max-width: 1440px) {
         padding: 8px;
+    }
+    @media (max-width: 992px) {
+        background: linear-gradient(
+            152.97deg,
+            rgba(21, 21, 21, 0.08) 0%,
+            rgba(21, 21, 21, 0.09) 100%
+        );
+        height: 100px;
+
+        backdrop-filter: blur(10px);
     }
 `;
 
@@ -49,7 +60,6 @@ export const Button = styled.div`
     align-items: center;
     padding: 8px 12px;
     width: 81px;
-    height: 37px;
     background-color: #45ce7c;
     border-radius: 8px;
     cursor: pointer;
@@ -65,6 +75,9 @@ export const Button = styled.div`
         color: #fff;
         text-decoration: none;
     }
+    ${down('lg')} {
+        height: 45px;
+    }
 `;
 
 export const NavContainer = styled.div`
@@ -79,6 +92,17 @@ export const NavContainer = styled.div`
     background: linear-gradient(152.97deg, rgba(21, 21, 21, 0.08) 0%, rgba(21, 21, 21, 0.09) 100%);
     backdrop-filter: blur(10px);
     border-radius: 16px;
+    @media (max-width: 992px) {
+        /* width: 100%; */
+        /* padding: 30px 20px; */
+        background: transparent;
+        margin-top: 0px;
+        margin-left: 60px;
+        backdrop-filter: blur(0px);
+    }
+    @media (max-width: 992px) {
+        margin-left: 0px;
+    }
 `;
 
 export const NavLinkStyle = styled(NavLink)`
@@ -95,9 +119,15 @@ export const NavLinkStyle = styled(NavLink)`
     cursor: pointer;
     list-style: none;
     transition: all 0.2s;
+
     &:hover {
         background: #45ce7c;
         color: white;
+    }
+
+    ${down('lg')} {
+        margin-right: 0;
+        height: 45px;
     }
 `;
 

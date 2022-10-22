@@ -5,18 +5,32 @@ import { NavLinkStyle, Button } from '../header.style';
 import { StyledMenu, LogoContainer, BtnContainer } from './menu.style';
 
 const Menu = (props) => {
+    const { setOpen } = props;
+    const handleClose = () => {
+        setOpen(false);
+    };
     return (
         <StyledMenu open={props.open}>
             <LogoContainer>
                 <Logo></Logo>
             </LogoContainer>
             <BtnContainer>
-                <NavLinkStyle to="/">Home</NavLinkStyle>
-                <NavLinkStyle to="/activities">Activites</NavLinkStyle>
-                <NavLinkStyle to="/timeline">Timeline</NavLinkStyle>
-                <NavLinkStyle to="/faq">FAQ</NavLinkStyle>
+                <NavLinkStyle onClick={handleClose} to="/">
+                    Home
+                </NavLinkStyle>
+                <NavLinkStyle onClick={handleClose} to="/activities">
+                    Activites
+                </NavLinkStyle>
+                <NavLinkStyle onClick={handleClose} to="/timeline">
+                    Timeline
+                </NavLinkStyle>
+                <NavLinkStyle onClick={handleClose} to="/faq">
+                    FAQ
+                </NavLinkStyle>
                 <Button>
-                    <NavLink to="/register">Register</NavLink>
+                    <NavLink onClick={handleClose} to="/register">
+                        Register
+                    </NavLink>
                 </Button>
             </BtnContainer>
         </StyledMenu>
