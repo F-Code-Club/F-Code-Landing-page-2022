@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import Burger from './Burger';
 import FillGround from './FillGround';
@@ -21,13 +21,20 @@ const Headernew = () => {
 
     const menu = useRef();
     useOnClickOutside(menu, () => setOpen(false));
-    // <NavBar></NavBar>
 
     return (
         <Container>
             <StyledHeader ref={menu}>
                 <NavContainer>
-                    <Logo />
+                    <Link
+                        style={{
+                            textDecoration: 'none',
+                            color: '#000000',
+                        }}
+                        to="/"
+                    >
+                        <Logo></Logo>
+                    </Link>
                     <RightNav>
                         <ul>
                             <NavLinkStyle to="/">Home</NavLinkStyle>
@@ -39,8 +46,8 @@ const Headernew = () => {
                             </Button>
                         </ul>
                     </RightNav>
-                    <Burger open={open} setOpen={setOpen}></Burger>
                 </NavContainer>
+                <Burger open={open} setOpen={setOpen}></Burger>
                 <Menu open={open} setOpen={setOpen}></Menu>
             </StyledHeader>
             <FillGround open={open} setOpen={setOpen}></FillGround>

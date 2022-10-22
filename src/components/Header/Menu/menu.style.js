@@ -1,7 +1,8 @@
+import { down } from 'styled-breakpoints';
 import styled from 'styled-components';
 
 const StyledMenu = styled.div`
-    min-width: 0vw;
+    min-width: 100vw;
     height: 100vh;
 
     position: fixed;
@@ -21,9 +22,15 @@ const StyledMenu = styled.div`
         font-size: 18px;
     }
 
-    @media (max-width: 992px) {
+    ${down('lg')} {
         display: flex;
+        min-width: 40vw;
     }
+    ${down('md')} {
+        display: flex;
+        min-width: 100vw;
+    }
+
     flex-direction: column;
 `;
 
