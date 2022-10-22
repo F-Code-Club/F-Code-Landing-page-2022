@@ -65,7 +65,7 @@ const FormRegister = () => {
             onSubmit={onSubmit}
             validationSchema={ValidationSchema}
         >
-            {() => {
+            {(formik) => {
                 return (
                     <FormContainer data-aos="fade-right">
                         <Typography
@@ -185,12 +185,12 @@ const FormRegister = () => {
                             <Button
                                 type="submit"
                                 onClick={() => {
-                                    if (!Formik.isValid) toastError('Please enter a valid form');
-                                    else {
+                                    if (formik.isValid) {
                                         toastSuccess('Congratulations!!');
                                         navigate('/signup');
                                     }
                                 }}
+                                disabled={!formik.isValid}
                             >
                                 Register Now
                             </Button>
