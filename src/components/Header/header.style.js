@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { down } from 'styled-breakpoints';
 import styled from 'styled-components';
 
 const StyledHeader = styled.div`
@@ -59,7 +60,6 @@ export const Button = styled.div`
     align-items: center;
     padding: 8px 12px;
     width: 81px;
-    height: 37px;
     background-color: #45ce7c;
     border-radius: 8px;
     cursor: pointer;
@@ -74,6 +74,9 @@ export const Button = styled.div`
     a {
         color: #fff;
         text-decoration: none;
+    }
+    ${down('lg')} {
+        height: 45px;
     }
 `;
 
@@ -117,9 +120,15 @@ export const NavLinkStyle = styled(NavLink)`
     cursor: pointer;
     list-style: none;
     transition: all 0.2s;
+
     &:hover {
         background: #45ce7c;
         color: white;
+    }
+
+    ${down('lg')} {
+        margin-right: 0;
+        height: 45px;
     }
 `;
 

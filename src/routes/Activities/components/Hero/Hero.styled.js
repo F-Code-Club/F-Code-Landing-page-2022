@@ -1,4 +1,4 @@
-import { up, down } from 'styled-breakpoints';
+import { up, down, between } from 'styled-breakpoints';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -30,6 +30,10 @@ export const RightContent = styled.div`
 
     ${down('lg')} {
         display: none;
+    }
+
+    ${between('lg', 'xl')} {
+        min-width: 525px;
     }
 `;
 
