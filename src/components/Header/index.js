@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import Burger from './Burger';
 import FillGround from './FillGround';
@@ -48,15 +48,8 @@ const Headernew = () => {
         <Container>
             <StyledHeader ref={menu} className={navClassList.join(' ')}>
                 <NavContainer>
-                    <Link
-                        style={{
-                            textDecoration: 'none',
-                            color: '#000000',
-                        }}
-                        to="/"
-                    >
-                        <Logo></Logo>
-                    </Link>
+                    <Logo></Logo>
+
                     <RightNav>
                         <ul>
                             <NavLinkStyle to="/">Home</NavLinkStyle>
