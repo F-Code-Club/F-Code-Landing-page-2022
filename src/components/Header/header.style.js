@@ -112,7 +112,8 @@ export const NavLinkStyle = styled(NavLink)`
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
-    margin-right: 32px;
+    /* margin-right: 32px; */
+    text-align: center;
     cursor: pointer;
     list-style: none;
     transition: all 0.2s;
