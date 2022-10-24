@@ -55,7 +55,7 @@ const LogoContainer = styled.div`
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    padding: 40px 32px;
+    padding: 20px 32px;
 `;
 
 export { StyledMenu, LogoContainer, BtnContainer };

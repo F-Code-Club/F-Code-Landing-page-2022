@@ -22,7 +22,7 @@ export const StyledBurger = styled.div`
 
     @media (max-width: 992px) {
         display: block;
-        right: 100px;
+        right: 50px;
     }
     @media (max-width: 400px) {
         display: block;
