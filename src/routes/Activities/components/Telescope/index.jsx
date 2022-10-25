@@ -1,10 +1,9 @@
+import netcompany from '../../../../assets/images/telescope/netcompany.jpg';
+import poster from '../../../../assets/images/telescope/poster.jpg';
+import recap from '../../../../assets/images/telescope/recap.jpg';
 import * as Styled from './Telescope.styled';
 
-const IMG_LIST = [
-    'https://th.bing.com/th/id/OIP.nGSEh_PGq3vs7w16VkE04QHaFj?w=260&h=196&c=7&r=0&o=5&dpr=1.1&pid=1.7',
-    'https://th.bing.com/th/id/OIP.r16mCLlX0OgB1TbKKD2GAAHaEK?w=285&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7',
-    'https://th.bing.com/th/id/OIP.YwPNGDIPW3kWRPiMLAio4wHaEo?w=260&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7',
-];
+const IMG_LIST = [recap, poster, netcompany];
 
 const Telescope = () => {
     return (

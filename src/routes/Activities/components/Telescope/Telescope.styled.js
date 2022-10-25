@@ -36,7 +36,7 @@ export const Stats = styled.div`
 
 export const Img = styled.div`
     position: absolute;
-    background-image: url(${(props) => props.img});
+
     backdrop-filter: blur(5px);
     border-radius: 16px;
     background-position: center;
@@ -55,6 +55,7 @@ export const LeftImg = styled(Img)`
     height: 450px;
     left: 0px;
     top: 0px;
+    background-image: url(${(props) => props.img});
 
     ${down('sm')} {
         left: unset;
@@ -67,6 +68,7 @@ export const TopRightImg = styled(Img)`
     height: 200px;
     right: 0px;
     top: 0px;
+    background-image: url(${(props) => props.img});
 
     ${down('sm')} {
         right: unset;
@@ -78,6 +80,7 @@ export const BottomRightImg = styled(Img)`
     height: 200px;
     right: 0;
     bottom: 0;
+    background-image: url(${(props) => props.img});
 
     ${down('sm')} {
         right: unset;

@@ -1,9 +1,9 @@
 import { Formik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 
-import { toastSuccess } from '../../../components/ToastNorification';
+import { toastSuccess, toastError } from '../../../components/ToastNorification';
 import Button from '../../Home/components/Button';
-import { FormContainer } from '../style';
+import { FormContainer, ButtonWrapper } from '../style';
 import FormikControl from './Formik/FormikControl';
 // import * as Yup from 'yup';
 import { ValidationSchema } from './Schema/validation';
@@ -58,13 +58,14 @@ const FormRegister = () => {
     const onSubmit = (values) => {
         console.log('Form data', values);
     };
+
     return (
         <Formik
             initialValues={initialValues}
             onSubmit={onSubmit}
             validationSchema={ValidationSchema}
         >
-            {() => {
+            {(formik) => {
                 return (
                     <FormContainer data-aos="fade-right">
                         <Typography
@@ -72,6 +73,7 @@ const FormRegister = () => {
                                 fontFamily: 'GT Walsheim Pro Black',
                                 fontSize: { xs: '50px', sm: '60px' },
                                 lineHeight: '65px',
+                                textAlign: { xs: 'center', md: 'left' },
                             }}
                         >
                             Registration Form
@@ -84,6 +86,7 @@ const FormRegister = () => {
                                 lineHeight: '150%',
                                 color: '#6B7280',
                                 marginBottom: '10px',
+                                textAlign: { xs: 'center', md: 'left' },
                             }}
                         >
                             Fill in all the information to receive challenges from us!
@@ -93,7 +96,7 @@ const FormRegister = () => {
                                 <FormikControl
                                     control="MuiInput"
                                     sx={{
-                                        width: { xs: '300px', sm: '200px' },
+                                        width: { xs: '100%', sm: '200px' },
                                         borderWidth: '2px',
                                         '& .MuiOutlinedInput-root': {
                                             borderRadius: '10px',
@@ -107,7 +110,7 @@ const FormRegister = () => {
                                 <FormikControl
                                     control="MuiInput"
                                     sx={{
-                                        width: { xs: '300px', sm: '200px' },
+                                        width: { xs: '100%', sm: '200px' },
 
                                         '& .MuiOutlinedInput-root': {
                                             borderRadius: '10px',
@@ -135,8 +138,7 @@ const FormRegister = () => {
                                     control="MuiInput"
                                     label="Roll Number"
                                     sx={{
-                                        width: { xs: '300px', sm: '200px' },
-
+                                        width: { xs: '100%', sm: '200px' },
                                         '& .MuiOutlinedInput-root': {
                                             borderRadius: '10px',
                                         },
@@ -162,7 +164,7 @@ const FormRegister = () => {
                                 <FormikControl
                                     control="MuiInput"
                                     sx={{
-                                        width: { xs: '300px', sm: '433px', lg: '433px' },
+                                        width: { xs: '100%', sm: '433px', lg: '433px' },
                                         '& .MuiOutlinedInput-root': {
                                             borderRadius: '10px',
                                         },
@@ -179,15 +181,20 @@ const FormRegister = () => {
                                 />
                             </Grid>
                         </Grid>
-                        <Button
-                            type="submit"
-                            onClick={async () => {
-                                toastSuccess('Congratulations!!');
-                                await navigate('/signup');
-                            }}
-                        >
-                            Register Now
-                        </Button>
+                        <ButtonWrapper>
+                            <Button
+                                type="submit"
+                                onClick={() => {
+                                    if (formik.isValid) {
+                                        toastSuccess('Congratulations!!');
+                                        navigate('/signup');
+                                    }
+                                }}
+                                disabled={!formik.isValid}
+                            >
+                                Register Now
+                            </Button>
+                        </ButtonWrapper>
                     </FormContainer>
                 );
             }}

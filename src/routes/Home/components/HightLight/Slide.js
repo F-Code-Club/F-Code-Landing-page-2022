@@ -10,11 +10,36 @@ import {
     SliderContent,
     ContentsContainer,
     MiniTitle,
+<<<<<<< HEAD
     TitleContainer,
+=======
+    Description,
+>>>>>>> 7a09dcd0da3447d42e9f03f90fec0fd79e445086
 } from '../styled';
+import anniversary1 from './../../../../assets/images/anniversary/anniversary1.jpg';
+import anniversary2 from './../../../../assets/images/anniversary/anniversary2.jpg';
+import anniversary3 from './../../../../assets/images/anniversary/anniversary3.jpg';
+import anniversary4 from './../../../../assets/images/anniversary/anniversary4.jpg';
+import anniversary5 from './../../../../assets/images/anniversary/anniversary5.jpg';
+import anniversary6 from './../../../../assets/images/anniversary/anniversary6.jpg';
+import anniversary7 from './../../../../assets/images/anniversary/anniversary7.jpg';
+import anniversary8 from './../../../../assets/images/anniversary/anniversary8.jpg';
+import anniversary9 from './../../../../assets/images/anniversary/anniversary9.jpg';
 import { clubActiveFix } from './../../../../assets/images/highlight/index';
 
 import 'react-multi-carousel/lib/styles.css';
+
+const ANIVERSARY_IMAGES = [
+    anniversary1,
+    anniversary2,
+    anniversary3,
+    anniversary4,
+    anniversary5,
+    anniversary6,
+    anniversary7,
+    anniversary8,
+    anniversary9,
+];
 
 const responsive = {
     desktop: {
@@ -40,15 +65,34 @@ const responsive = {
     },
 };
 
-const Slider = () => {
+const Slider = ({ anniversary }) => {
+    const images = anniversary ? ANIVERSARY_IMAGES : clubActiveFix;
+
     return (
         <Activities>
             <ContentsContainer>
                 <SliderContent>
+<<<<<<< HEAD
                     <TitleContainer>
                         <MiniTitle data-aos="fade-up">Activites</MiniTitle>
                         <SubTitle data-aos="fade-up">Hightlights Of F-Code</SubTitle>
                     </TitleContainer>
+=======
+                    <MiniTitle data-aos="fade-up">
+                        {anniversary ? 'Anniversary' : 'Activites'}
+                    </MiniTitle>
+                    <SubTitle data-aos="fade-up">
+                        {anniversary ? '8-year Anniversary of F-Code' : 'Hightlights Of F-Code'}
+                    </SubTitle>
+                    {anniversary && (
+                        <Description>
+                            <span>F-Code</span>, established in 2014, is the first academic club of
+                            <strong> FPT University</strong> at <strong>Ho Chi Minh City</strong>.
+                            With the initial aim of creating a community for Software Engineering
+                            major’s students.
+                        </Description>
+                    )}
+>>>>>>> 7a09dcd0da3447d42e9f03f90fec0fd79e445086
                     <SliderContainer data-aos="flip-up" className="hi">
                         <Carousel
                             itemClass="carousel-item"
@@ -69,7 +113,7 @@ const Slider = () => {
                             showDots={false}
                             slidesToSlide={1}
                         >
-                            {clubActiveFix.map((item, index) => {
+                            {images.map((item, index) => {
                                 return <Image key={index} src={item}></Image>;
                             })}
                         </Carousel>

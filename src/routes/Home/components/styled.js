@@ -1,7 +1,27 @@
+<<<<<<< HEAD
 import { down } from 'styled-breakpoints';
+=======
+import { down, up } from 'styled-breakpoints';
+>>>>>>> 7a09dcd0da3447d42e9f03f90fec0fd79e445086
 import styled, { keyframes } from 'styled-components';
 
 import arrows from '../../../assets/components';
+
+const flow = keyframes`
+    from, to {
+        transform: translateY(0)
+    }
+
+    25% {
+        transform: translateY(10px)
+
+    }
+
+    75% {
+        transform: translateY(-10px)
+
+    }
+`;
 
 export const Container = styled.section`
     max-width: 1100px;
@@ -108,6 +128,7 @@ export const RightHero = styled.div`
     img {
         margin-top: -60px;
         margin-right: -24px;
+        animation: ${flow} 3s linear infinite;
     }
 
     ${down('md')} {
@@ -246,7 +267,7 @@ export const VericalContainer = styled.div`
     justify-content: center;
 `;
 export const LeftArrow = styled(SlideArrow)`
-    left: 15px;
+    left: 3px;
     z-index: 999;
     &::before {
         background: url(${arrows['left-arrow.svg']});
@@ -259,7 +280,7 @@ export const LeftArrow = styled(SlideArrow)`
 `;
 
 export const RightArrow = styled(SlideArrow)`
-    right: 20px;
+    right: 3px;
     z-index: 999;
     &::before {
         background: url(${arrows['right-arrow.svg']});
@@ -309,9 +330,11 @@ export const Wrapper = styled.div`
 `;
 export const SliderContainer = styled.div`
     position: relative;
-    margin: 0 auto 2.31em;
+    margin: 32px auto 0;
     max-width: 1100px;
     width: 900px;
+    margin-top: 32px;
+
     @media screen and (max-width: 1440px) {
         width: 900px;
     }
@@ -325,17 +348,19 @@ export const SliderContainer = styled.div`
     }
 `;
 export const SliderContent = styled.div`
+    text-align: center;
     margin: 0 auto;
     @media screen and (max-width: 1440px) {
         align-items: center;
         width: 100%;
-        padding: 0 1rem;
+        /* padding: 0 1rem; */
     }
 `;
 export const Image = styled.img`
     position: relative;
     background-size: contain;
-    width: 370px;
+    object-fit: cover;
+    width: 400px;
     height: 270px;
     margin: 12px;
     overflow: hidden;
@@ -345,7 +370,7 @@ export const Image = styled.img`
     @media screen and (max-width: 560px) {
         margin: 0;
         width: 330px;
-        height: auto;
+        /* height: auto; */
     }
 `;
 export const Activities = styled.div`
@@ -364,21 +389,14 @@ export const SubTitle = styled.h6`
     font-size: 36px;
     line-height: 125%;
 
-    display: flex;
-    align-items: center;
-    text-align: center;
     letter-spacing: -0.01em;
     color: #111928;
-    margin-bottom: 62px;
-    @media screen and (max-width: 1000px) {
-        margin-bottom: 2rem;
-    }
 `;
 export const Content = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 4em;
+    /* padding: 0 4em; */
     margin: 0 auto;
     height: 100%;
 `;
@@ -386,36 +404,57 @@ export const ContentsContainer = styled(Content)`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 8rem;
+    /* padding: 0 8rem; */
     width: 100%;
     @media screen and (max-width: 1440px) {
         align-items: center;
         padding: 0 4rem;
     }
     @media screen and (max-width: 560px) {
-        font-size: 12px;
+        font-size: 14px;
         padding: 0 1.4rem;
     }
 `;
 export const MiniTitle = styled.p`
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 500;
     font-size: 18px;
     line-height: 125%;
+<<<<<<< HEAD
     text-align: center;
     display: flex;
     align-items: center;
     text-align: center;
+=======
+
+>>>>>>> 7a09dcd0da3447d42e9f03f90fec0fd79e445086
     letter-spacing: -0.01em;
 
     color: #45ce7c;
+    text-align: center;
 `;
 export const SlideWrapper = styled.div`
     text-align: center;
 `;
+<<<<<<< HEAD
 export const TitleContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
+=======
+
+export const Description = styled.p`
+    margin: 10px auto 0;
+
+    & span {
+        font-family: inherit;
+        color: #45ce7c;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    ${up('lg')} {
+        width: 800px;
+    }
+>>>>>>> 7a09dcd0da3447d42e9f03f90fec0fd79e445086
 `;

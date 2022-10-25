@@ -69,8 +69,9 @@ export const BottomLeftImg = styled(Img)`
     bottom: 0px;
 
     ${down('sm')} {
-        left: unset;
-        bottom: unset;
+        display: none;
+        /* left: unset;
+        bottom: unset; */
     }
 `;
 
@@ -92,8 +93,9 @@ export const BottomRightImg = styled(Img)`
     bottom: 0;
 
     ${down('sm')} {
-        right: unset;
-        bottom: unset;
+        display: none;
+        /* right: unset;
+        bottom: unset; */
     }
 `;
 
