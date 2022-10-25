@@ -6,6 +6,7 @@ export const StyledAccordion = styled(Accordion)`
     box-shadow: none !important;
     border-bottom: 1px solid #e5e7eb;
     padding: 16px 0;
+    margin: 0;
 `;
 export const StyledTypography = styled(Typography)`
     font-family: 'Inter';

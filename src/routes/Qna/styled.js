@@ -25,6 +25,12 @@ export const Section = styled.div`
 export const Input = styled.div`
     display: flex;
     justify-content: center;
+    button {
+        cursor: pointer;
+        &:hover {
+            background-color: #37a463;
+        }
+    }
     ${down('md')} {
         display: flex;
         flex-direction: column;

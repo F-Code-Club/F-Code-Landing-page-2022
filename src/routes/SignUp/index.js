@@ -27,7 +27,7 @@ function SingUp() {
             isDone: false,
         },
     ];
-    let step = 2;
+    let step = 1;
     return (
         <Container>
             <Hero>

@@ -1,5 +1,5 @@
 import { down } from 'styled-breakpoints';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import arrows from '../../../assets/components';
 
@@ -129,6 +129,9 @@ export const Box = styled.div`
     ${down('md')} {
         margin: 48px auto;
     }
+    ${down('lg')} {
+        width: 50vw;
+    }
 
     h2 {
         font-family: 'GT Walsheim Pro Black';
@@ -151,9 +154,23 @@ export const Box = styled.div`
         color: rgba(21, 21, 21, 0.5);
     }
 `;
+const rotate = keyframes`
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100px);
+  }
+`;
 export const Direct = styled.div`
     a {
         text-decoration: none;
+        &:hover {
+            svg {
+                animation: ${rotate} linear 2s;
+            }
+        }
     }
     h4 {
         font-size: 16px !important;
