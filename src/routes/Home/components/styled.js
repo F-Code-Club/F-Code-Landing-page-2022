@@ -10,7 +10,6 @@ const flow = keyframes`
 
     25% {
         transform: translateY(10px)
-
     }
 
     75% {
@@ -38,7 +37,6 @@ export const Highlight = styled.span`
 `;
 
 export const EstablishPart = styled.div`
-    width: 360px;
     display: flex;
 `;
 
@@ -147,6 +145,9 @@ export const Box = styled.div`
     ${down('md')} {
         margin: 48px auto;
     }
+    ${down('lg')} {
+        width: 50vw;
+    }
 
     h2 {
         font-family: 'GT Walsheim Pro Black';
@@ -169,9 +170,23 @@ export const Box = styled.div`
         color: rgba(21, 21, 21, 0.5);
     }
 `;
+const rotate = keyframes`
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100px);
+  }
+`;
 export const Direct = styled.div`
     a {
         text-decoration: none;
+        &:hover {
+            svg {
+                animation: ${rotate} linear 2s;
+            }
+        }
     }
     h4 {
         font-size: 16px !important;
@@ -243,7 +258,8 @@ export const SlideArrow = styled.div`
 `;
 export const VericalContainer = styled.div`
     max-width: 1000px;
-    width: 90vw;
+    display: flex;
+    justify-content: center;
 `;
 export const LeftArrow = styled(SlideArrow)`
     left: 3px;
@@ -399,7 +415,10 @@ export const MiniTitle = styled.p`
     font-style: normal;
     font-size: 18px;
     line-height: 125%;
-
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
     letter-spacing: -0.01em;
 
     color: #45ce7c;
@@ -407,6 +426,11 @@ export const MiniTitle = styled.p`
 `;
 export const SlideWrapper = styled.div`
     text-align: center;
+`;
+export const TitleContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 `;
 
 export const Description = styled.p`
