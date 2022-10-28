@@ -11,7 +11,6 @@ import {
     ContentsContainer,
     MiniTitle,
     TitleContainer,
-    Description,
 } from '../styled';
 import anniversary1 from './../../../../assets/images/anniversary/anniversary1.jpg';
 import anniversary2 from './../../../../assets/images/anniversary/anniversary2.jpg';
@@ -69,6 +68,12 @@ const Slider = ({ anniversary }) => {
         <Activities>
             <ContentsContainer>
                 <SliderContent>
+<<<<<<< HEAD
+                    <TitleContainer>
+                        <MiniTitle data-aos="fade-up">Activites</MiniTitle>
+                        <SubTitle data-aos="fade-up">Hightlights Of F-Code</SubTitle>
+                    </TitleContainer>
+=======
                     <MiniTitle data-aos="fade-up">
                         {anniversary ? 'Anniversary' : 'Activites'}
                     </MiniTitle>
@@ -83,6 +88,7 @@ const Slider = ({ anniversary }) => {
                             major’s students.
                         </Description>
                     )}
+>>>>>>> 7a09dcd0da3447d42e9f03f90fec0fd79e445086
                     <SliderContainer data-aos="flip-up" className="hi">
                         <Carousel
                             itemClass="carousel-item"
