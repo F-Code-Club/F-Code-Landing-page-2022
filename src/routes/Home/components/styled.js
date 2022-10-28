@@ -269,26 +269,21 @@ export const LeftArrow = styled(SlideArrow)`
         background-repeat: no-repeat;
         background-size: stretch;
     }
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 920px) {
         display: none;
     }
 `;
 
 export const RightArrow = styled(SlideArrow)`
-    right: 3px;
-    z-index: 999;
+    right: 5px;
+    z-index: 10000;
     &::before {
         background: url(${arrows['right-arrow.svg']});
         background-repeat: no-repeat;
         background-size: stretch;
     }
-    @media screen and (max-width: 1440px) {
-        right: 45px;
-    }
-    @media screen and (max-width: 1000px) {
-        right: 25px;
-    }
-    @media screen and (max-width: 520px) {
+
+    @media screen and (max-width: 920px) {
         display: none;
     }
 `;
@@ -415,14 +410,11 @@ export const MiniTitle = styled.p`
     font-style: normal;
     font-size: 18px;
     line-height: 125%;
-<<<<<<< HEAD
     text-align: center;
     display: flex;
     align-items: center;
     text-align: center;
-=======
 
->>>>>>> 7a09dcd0da3447d42e9f03f90fec0fd79e445086
     letter-spacing: -0.01em;
 
     color: #45ce7c;
@@ -431,13 +423,11 @@ export const MiniTitle = styled.p`
 export const SlideWrapper = styled.div`
     text-align: center;
 `;
-<<<<<<< HEAD
 export const TitleContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-=======
-
+`;
 export const Description = styled.p`
     margin: 10px auto 0;
 
@@ -451,5 +441,4 @@ export const Description = styled.p`
     ${up('lg')} {
         width: 800px;
     }
->>>>>>> 7a09dcd0da3447d42e9f03f90fec0fd79e445086
 `;
