@@ -41,6 +41,8 @@ export const Img = styled.div`
     border-radius: 16px;
     background-position: center;
     background-size: cover;
+    width: 210px;
+    height: 210px;
 
     ${down('sm')} {
         position: relative;
@@ -51,8 +53,6 @@ export const Img = styled.div`
 `;
 
 export const TopLeftImg = styled(Img)`
-    width: 200px;
-    height: 200px;
     left: 0px;
     top: 0px;
 
@@ -63,8 +63,6 @@ export const TopLeftImg = styled(Img)`
 `;
 
 export const BottomLeftImg = styled(Img)`
-    width: 200px;
-    height: 200px;
     left: 0px;
     bottom: 0px;
 
@@ -76,8 +74,6 @@ export const BottomLeftImg = styled(Img)`
 `;
 
 export const TopRightImg = styled(Img)`
-    width: 200px;
-    height: 200px;
     right: 0px;
     top: 0px;
 
@@ -87,8 +83,6 @@ export const TopRightImg = styled(Img)`
     }
 `;
 export const BottomRightImg = styled(Img)`
-    width: 200px;
-    height: 200px;
     right: 0;
     bottom: 0;
 

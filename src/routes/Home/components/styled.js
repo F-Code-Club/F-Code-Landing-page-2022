@@ -314,7 +314,6 @@ export const Wrapper = styled.div`
         & span {
             color: #45ce7c;
             font-weight: 900;
-            font-size: 20px;
         }
     }
 `;
@@ -430,13 +429,13 @@ export const TitleContainer = styled.div`
 `;
 export const Description = styled.p`
     margin: 10px auto 0;
-
+    /* 
     & span {
         font-family: inherit;
         color: #45ce7c;
         font-weight: bold;
         font-size: 20px;
-    }
+    } */
 
     ${up('lg')} {
         width: 800px;

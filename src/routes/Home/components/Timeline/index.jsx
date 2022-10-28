@@ -88,7 +88,7 @@ const Timeline = () => {
                         <Styled.Card
                             key={item.id}
                             status={item.status}
-                            data-aos="fade-up"
+                            // data-aos="fade-up"
                             data-aos-anchor-placement="bottom-bottom"
                         >
                             <Styled.Left>

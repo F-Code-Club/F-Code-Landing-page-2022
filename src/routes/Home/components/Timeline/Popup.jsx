@@ -5,7 +5,6 @@ import * as Styled from './Timeline.styled';
 import Transition from './Transition';
 
 import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
@@ -31,9 +30,9 @@ const Popup = ({ open = false, handleClose = () => {}, data = [] }) => {
                     {data.description}
                 </DialogContentText>
             </DialogContent>
-            <DialogActions>
+            <Styled.WrapperButton>
                 <Button onClick={handleClose}>Agree</Button>
-            </DialogActions>
+            </Styled.WrapperButton>
         </Dialog>
     );
 };
