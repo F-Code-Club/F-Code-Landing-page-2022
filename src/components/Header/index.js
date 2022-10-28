@@ -31,17 +31,7 @@ const Headernew = () => {
         setNavClassList(_classList);
     }, [scroll.y, scroll.lastY]);
     const menu = useRef();
-    // const styles = {
-    //     active: {
-    //         visibility: 'visible',
-    //         transition: 'all 0.5s',
-    //     },
-    //     hidden: {
-    //         visibility: 'hidden',
-    //         transition: 'all 0.5s',
-    //         transform: 'translateY(-120%)',
-    //     },
-    // };
+
     useOnClickOutside(menu, () => setOpen(false));
 
     return (
@@ -52,7 +42,9 @@ const Headernew = () => {
 
                     <RightNav>
                         <ul>
-                            <NavLinkStyle to="/">Home</NavLinkStyle>
+                            <NavLinkStyle to="/" end>
+                                Home
+                            </NavLinkStyle>
                             <NavLinkStyle to="/activities">Activites</NavLinkStyle>
                             <NavLinkStyle to="/timeline">Timeline</NavLinkStyle>
                             <NavLinkStyle to="/faq">FAQ</NavLinkStyle>

@@ -47,9 +47,20 @@ export const RightNav = styled.div`
     align-items: center;
 
     ul {
+        width: 450px;
         text-align: center;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        & > a.active {
+            color: #45ce7c;
+            border-bottom: 3px solid #45ce7c;
+            border-radius: 0px;
+            &:hover {
+                border-radius: 8px;
+                color: #ffffff;
+            }
+        }
     }
     @media (max-width: 992px) {
         display: none;
