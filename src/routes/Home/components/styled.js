@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { down } from 'styled-breakpoints';
-=======
 import { down, up } from 'styled-breakpoints';
->>>>>>> 7a09dcd0da3447d42e9f03f90fec0fd79e445086
 import styled, { keyframes } from 'styled-components';
 
 import arrows from '../../../assets/components';
@@ -420,14 +416,11 @@ export const MiniTitle = styled.p`
     font-style: normal;
     font-size: 18px;
     line-height: 125%;
-<<<<<<< HEAD
     text-align: center;
     display: flex;
     align-items: center;
     text-align: center;
-=======
 
->>>>>>> 7a09dcd0da3447d42e9f03f90fec0fd79e445086
     letter-spacing: -0.01em;
 
     color: #45ce7c;
@@ -436,13 +429,11 @@ export const MiniTitle = styled.p`
 export const SlideWrapper = styled.div`
     text-align: center;
 `;
-<<<<<<< HEAD
 export const TitleContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-=======
-
+`;
 export const Description = styled.p`
     margin: 10px auto 0;
 
@@ -456,5 +447,4 @@ export const Description = styled.p`
     ${up('lg')} {
         width: 800px;
     }
->>>>>>> 7a09dcd0da3447d42e9f03f90fec0fd79e445086
 `;
