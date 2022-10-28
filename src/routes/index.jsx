@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Layout from '../components/layout/Layout.component';
+import ScrollToTop from '../utils/helper/ScrollToTop';
 import Activities from './Activities';
 import Home from './Home';
 import Timeline from './Home/components/Timeline';
@@ -61,6 +62,7 @@ const privateRoute = [
 const RouterComponent = () => {
     return (
         <BrowserRouter>
+            <ScrollToTop />
             <Layout>
                 <Routes>
                     <Route exact element={<PrivateRoute />}>
