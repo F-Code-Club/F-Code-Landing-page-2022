@@ -55,8 +55,11 @@ const FormRegister = () => {
         { key: 'Korean language', value: 'Korean language' },
     ];
 
-    const onSubmit = (values) => {
+    const onSubmit = (values, formik) => {
         console.log('Form data', values);
+
+        toastSuccess('Congratulations!!');
+        navigate('/signup');
     };
 
     return (
@@ -184,12 +187,12 @@ const FormRegister = () => {
                         <ButtonWrapper>
                             <Button
                                 type="submit"
-                                onClick={() => {
-                                    if (formik.isValid) {
-                                        toastSuccess('Congratulations!!');
-                                        navigate('/signup');
-                                    }
-                                }}
+                                // onClick={() => {
+                                //     if (formik.isValid) {
+                                //         toastSuccess('Congratulations!!');
+                                //         navigate('/signup');
+                                //     }
+                                // }}
                                 disabled={!formik.isValid}
                             >
                                 Register Now
