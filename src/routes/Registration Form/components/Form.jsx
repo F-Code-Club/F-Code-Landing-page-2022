@@ -57,6 +57,8 @@ const FormRegister = () => {
 
     const onSubmit = (values) => {
         console.log('Form data', values);
+        toastSuccess('Congratulations!!');
+        navigate('/signup');
     };
 
     return (
@@ -182,16 +184,7 @@ const FormRegister = () => {
                             </Grid>
                         </Grid>
                         <ButtonWrapper>
-                            <Button
-                                type="submit"
-                                onClick={() => {
-                                    if (formik.isValid) {
-                                        toastSuccess('Congratulations!!');
-                                        navigate('/signup');
-                                    }
-                                }}
-                                disabled={!formik.isValid}
-                            >
+                            <Button type="submit" disabled={!formik.isValid}>
                                 Register Now
                             </Button>
                         </ButtonWrapper>
