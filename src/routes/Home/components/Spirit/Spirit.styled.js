@@ -81,10 +81,12 @@ export const Card = styled.li`
     order: 0;
     flex-grow: 0;
     list-style: none;
-    transition: all 0.4s ease-in-out 0s;
+    transition: all 0.1s ease-in-out 0s;
     cursor: pointer;
+
     &:hover {
         transform: translateY(-12px);
+        transition-duration: 0.3s !important;
     }
 `;
 

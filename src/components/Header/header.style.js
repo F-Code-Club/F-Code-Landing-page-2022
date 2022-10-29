@@ -136,6 +136,9 @@ export const NavLinkStyle = styled(NavLink)`
     cursor: pointer;
     list-style: none;
     transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
         background: #45ce7c;
