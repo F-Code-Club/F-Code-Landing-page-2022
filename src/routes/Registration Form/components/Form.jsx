@@ -17,6 +17,8 @@ const initialValues = {
     Major: '',
     rollNumber: '',
     currentSemester: '',
+    emailFpt: '',
+    emailPersonal: '',
     acceptChallenge: false,
     phoneNumber: '',
 };
@@ -56,6 +58,28 @@ const FormRegister = () => {
     ];
 
     const onSubmit = (values) => {
+        const {
+            firstName,
+            lastName,
+            Major,
+            rollNumber,
+            currentSemester,
+            emailFpt,
+            emailPersonal,
+            phoneNumber,
+        } = values;
+
+        let FormData = {};
+
+        FormData.name = firstName + ' ' + lastName;
+        FormData.major = Major;
+        FormData.personalMail = emailPersonal;
+        FormData.schoolMail = emailFpt;
+        FormData.phone = phoneNumber;
+        FormData.rollNumber = rollNumber;
+        FormData.semester = currentSemester;
+
+        console.log(FormData);
         console.log('Form data', values);
         toastSuccess('Congratulations!!');
         navigate('/signup');
@@ -120,6 +144,32 @@ const FormRegister = () => {
                                     }}
                                     label="Last Name"
                                     name="lastName"
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <FormikControl
+                                    control="MuiInput"
+                                    sx={{
+                                        width: { xs: '100%', sm: '433px', lg: '433px' },
+                                        '& .MuiOutlinedInput-root': {
+                                            borderRadius: '10px',
+                                        },
+                                    }}
+                                    label="FPT Email"
+                                    name="emailFpt"
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <FormikControl
+                                    control="MuiInput"
+                                    sx={{
+                                        width: { xs: '100%', sm: '433px', lg: '433px' },
+                                        '& .MuiOutlinedInput-root': {
+                                            borderRadius: '10px',
+                                        },
+                                    }}
+                                    label="Personal Email"
+                                    name="emailPersonal"
                                 />
                             </Grid>
                             <Grid item xs={12}>
