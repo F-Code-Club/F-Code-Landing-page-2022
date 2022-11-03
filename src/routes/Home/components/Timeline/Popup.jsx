@@ -20,10 +20,11 @@ const Popup = ({ open = false, handleClose = () => {}, data = [] }) => {
         >
             <DialogTitle>
                 <Styled.CardHeading>{data.title}</Styled.CardHeading>
-                <Styled.CardSubheading>{`Time: ${moment(data.startTime).format('DD/MM')} - 
-                                    ${moment(data.endTime).format(
-                                        'DD/MM'
-                                    )}`}</Styled.CardSubheading>
+                <Styled.CardSubheading>
+                    {/* {`Time: ${moment(data.startTime).format('DD/MM')} - 
+                                    ${moment(data.endTime).format('DD/MM')}`} */}
+                    {`Time: ${data.startTime}`}
+                </Styled.CardSubheading>
             </DialogTitle>
             <DialogContent>
                 <DialogContentText id="alert-dialog-slide-description">
