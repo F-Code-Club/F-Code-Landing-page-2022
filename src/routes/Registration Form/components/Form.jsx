@@ -71,8 +71,14 @@ const FormRegister = () => {
 
         let FormData = {};
 
-        FormData.name = firstName + lastName;
+        FormData.name = firstName + ' ' + lastName;
         FormData.major = Major;
+        FormData.personalMail = emailPersonal;
+        FormData.schoolMail = emailFpt;
+        FormData.phone = phoneNumber;
+        FormData.rollNumber = rollNumber;
+        FormData.semester = currentSemester;
+
         console.log(FormData);
         console.log('Form data', values);
         toastSuccess('Congratulations!!');
