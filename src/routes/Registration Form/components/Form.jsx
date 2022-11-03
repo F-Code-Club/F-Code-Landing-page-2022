@@ -2,6 +2,7 @@ import { Formik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 
 import { toastSuccess, toastError } from '../../../components/ToastNorification';
+import { post } from '../../../utils/ApiCaller';
 import Button from '../../Home/components/Button';
 import { FormContainer, ButtonWrapper } from '../style';
 import FormikControl from './Formik/FormikControl';
@@ -25,16 +26,16 @@ const initialValues = {
 const FormRegister = () => {
     const navigate = useNavigate();
     const optionSemester = [
-        { key: 'LUK1', value: 'LUK1' },
-        { key: 'LUK2', value: 'LUK2' },
-        { key: 'LUK3', value: 'LUK3' },
-        { key: 'LUK4', value: 'LUK4' },
-        { key: 'TRS4', value: 'TRS4' },
-        { key: 'TRS5', value: 'TRS5' },
-        { key: 'TRS6', value: 'TRS6' },
-        { key: 'CN1', value: 'CN1' },
-        { key: 'CN2', value: 'CN2' },
-        { key: 'CN3', value: 'CN3' },
+        { key: 'LUK1', value: 0 },
+        { key: 'LUK2', value: 1 },
+        { key: 'LUK3', value: 2 },
+        { key: 'LUK4', value: 3 },
+        { key: 'TRS4', value: 4 },
+        { key: 'TRS5', value: 5 },
+        { key: 'TRS6', value: 6 },
+        { key: 'CN1', value: 7 },
+        { key: 'CN2', value: 8 },
+        { key: 'CN3', value: 9 },
     ];
     const optionsMajor = [
         { key: 'Software Engineering', value: 'Software Engineering' },
@@ -79,8 +80,14 @@ const FormRegister = () => {
         FormData.rollNumber = rollNumber;
         FormData.semester = currentSemester;
 
-        console.log(FormData);
-        console.log('Form data', values);
+        const response = post('/register-challenge/new', FormData, {}, {})
+            .then((data) => {
+                console.log(data);
+            })
+            .catch((error) => console.log(error.response.data));
+        // console.log(FormData);
+
+        // console.log('Form data', values);
         toastSuccess('Congratulations!!');
         navigate('/signup');
     };
