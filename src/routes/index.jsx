@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from '../components/layout/Layout.component';
 import ScrollToTop from '../utils/helper/ScrollToTop';
 import Activities from './Activities';
+import CommingSoon from './CommingSoon';
 import Home from './Home';
 import Timeline from './Home/components/Timeline';
 import PrivateRoute from './PrivateRoute';
@@ -87,7 +88,7 @@ const RouterComponent = () => {
                             />
                         ))}
                     </Route>
-                    <Route path="*" element={<p>404</p>} />
+                    <Route path="*" element={<CommingSoon />} />
                 </Routes>
             </Layout>
         </BrowserRouter>
