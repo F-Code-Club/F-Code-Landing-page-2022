@@ -5,7 +5,6 @@ import * as Styled from './Timeline.styled';
 import Transition from './Transition';
 
 import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
@@ -21,19 +20,20 @@ const Popup = ({ open = false, handleClose = () => {}, data = [] }) => {
         >
             <DialogTitle>
                 <Styled.CardHeading>{data.title}</Styled.CardHeading>
-                <Styled.CardSubheading>{`Time: ${moment(data.startTime).format('DD/MM')} - 
-                                    ${moment(data.endTime).format(
-                                        'DD/MM'
-                                    )}`}</Styled.CardSubheading>
+                <Styled.CardSubheading>
+                    {/* {`Time: ${moment(data.startTime).format('DD/MM')} - 
+                                    ${moment(data.endTime).format('DD/MM')}`} */}
+                    {`Time: ${data.startTime}`}
+                </Styled.CardSubheading>
             </DialogTitle>
             <DialogContent>
                 <DialogContentText id="alert-dialog-slide-description">
                     {data.description}
                 </DialogContentText>
             </DialogContent>
-            <DialogActions>
+            <Styled.WrapperButton>
                 <Button onClick={handleClose}>Agree</Button>
-            </DialogActions>
+            </Styled.WrapperButton>
         </Dialog>
     );
 };

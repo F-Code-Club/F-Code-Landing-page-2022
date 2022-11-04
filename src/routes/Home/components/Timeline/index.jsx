@@ -16,39 +16,39 @@ const CARD_LIST = [
     //     title: 'string',
     // },
     {
-        title: 'Form registration',
         description: 'Click on the Register button to accept the challenges from F-Code!',
-        startTime: '2022-10-19T17:31:18.442Z',
-        endTime: '2022-10-19T17:31:18.442Z',
+        endTime: '20/10',
+        startTime: '04/11 - 09/11',
         id: 0,
         status: 'ACTIVE',
+        title: 'Form registration',
         buttonTitle: 'Register Now!',
     },
     {
         title: 'First Challenge',
         description: 'Click on the Details button to view this challenges from F-Code!',
-        startTime: '2022-10-19T17:31:18.442Z',
-        endTime: '2022-10-19T17:31:18.442Z',
+        startTime: 'Reveal later',
+        endTime: 'Reveal later',
         id: 1,
-        status: 'ACTIVE',
+        status: 'INACTIVE',
         buttonTitle: 'See Details',
     },
     {
         title: 'Second Challenge',
         description: 'The challenge will be revealed later',
-        startTime: '2022-10-19T17:31:18.442Z',
-        endTime: '2022-10-19T17:31:18.442Z',
+        startTime: 'Reveal later',
+        endTime: 'Reveal later',
         id: 2,
-        status: 'disabled',
+        status: 'INACTIVE',
         buttonTitle: 'See Details',
     },
     {
         title: 'Third Challenge',
         description: 'The challenge will be revealed later',
-        startTime: '2022-10-19T17:31:18.442Z',
-        endTime: '2022-10-19T17:31:18.442Z',
+        startTime: 'Reveal later',
+        endTime: 'Reveal later',
         id: 3,
-        status: 'disabled',
+        status: 'INACTIVE',
         buttonTitle: 'See Details',
     },
 ];
@@ -88,14 +88,15 @@ const Timeline = () => {
                         <Styled.Card
                             key={item.id}
                             status={item.status}
-                            data-aos="fade-up"
+                            // data-aos="fade-up"
                             data-aos-anchor-placement="bottom-bottom"
                         >
                             <Styled.Left>
                                 <Styled.CardHeading>{item.title}</Styled.CardHeading>
                                 <Styled.CardSubheading>
-                                    {`Time: ${moment(item.startTime).format('DD/MM')} - 
-                                    ${moment(item.endTime).format('DD/MM')}`}
+                                    {/* {`Time: ${moment(item.startTime).format('DD/MM')} - 
+                                    ${moment(item.endTime).format('DD/MM')}`} */}
+                                    {`Time: ${item.startTime}`}
                                 </Styled.CardSubheading>
                                 <p>{item.description}</p>
                             </Styled.Left>

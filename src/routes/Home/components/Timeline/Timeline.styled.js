@@ -15,7 +15,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0px;
-    gap: 96px;
+    gap: 64px;
 
     ${up('xl')} {
         width: 1100px;
@@ -122,4 +122,10 @@ export const CardSubheading = styled.p`
     font-weight: 600;
     font-size: 16px;
     line-height: 150%;
+`;
+
+export const WrapperButton = styled.div`
+    padding: 0 24px 16px;
+    display: flex;
+    justify-content: flex-end;
 `;
