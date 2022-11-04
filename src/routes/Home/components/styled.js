@@ -426,6 +426,11 @@ export const TitleContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    & p {
+        margin: auto;
+        margin-bottom: 12px;
+    }
 `;
 export const Description = styled.p`
     margin: 10px auto 0;
