@@ -16,12 +16,12 @@ const CARD_LIST = [
     //     title: 'string',
     // },
     {
-        title: 'Form registration',
         description: 'Click on the Register button to accept the challenges from F-Code!',
-        startTime: '03/11 - 09/11',
         endTime: '20/10',
+        startTime: '04/11 - 09/11',
         id: 0,
         status: 'ACTIVE',
+        title: 'Form registration',
         buttonTitle: 'Register Now!',
     },
     {
@@ -30,7 +30,7 @@ const CARD_LIST = [
         startTime: 'Reveal later',
         endTime: 'Reveal later',
         id: 1,
-        status: 'disabled',
+        status: 'INACTIVE',
         buttonTitle: 'See Details',
     },
     {
@@ -39,7 +39,7 @@ const CARD_LIST = [
         startTime: 'Reveal later',
         endTime: 'Reveal later',
         id: 2,
-        status: 'disabled',
+        status: 'INACTIVE',
         buttonTitle: 'See Details',
     },
     {
@@ -48,7 +48,7 @@ const CARD_LIST = [
         startTime: 'Reveal later',
         endTime: 'Reveal later',
         id: 3,
-        status: 'disabled',
+        status: 'INACTIVE',
         buttonTitle: 'See Details',
     },
 ];
