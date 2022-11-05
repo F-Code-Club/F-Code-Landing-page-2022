@@ -1,4 +1,5 @@
 import GoogleIcon from '../../assets/logo/google.png';
+import { API_URL } from '../../config';
 // import { get } from '../../utils/ApiCaller';
 import { getLogin } from '../../utils/productAPI';
 import ProgressBar from './progress';
@@ -43,13 +44,8 @@ function SingUp() {
             <GoogleContainer>
                 <Button type="button">
                     <Img src={GoogleIcon} alt="" />
-                    <Google
-                        onClick={() => {
-                            const response = getLogin();
-                            console.log(response);
-                        }}
-                    >
-                        Login with Google
+                    <Google>
+                        <a href={`${API_URL}/auth/google`}>Sign up with Google</a>
                     </Google>
                 </Button>
             </GoogleContainer>
