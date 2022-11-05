@@ -26,11 +26,11 @@ const CARD_LIST = [
     },
     {
         title: 'First Challenge',
-        description: 'Click on the Details button to view this challenges from F-Code!',
+        description: 'The challenge will be revealed later',
         startTime: '12/11 - 17/11',
         endTime: 'Reveal later',
         id: 1,
-        status: 'ACTIVE',
+        status: 'INACTIVE',
         buttonTitle: 'See Details',
     },
     {
