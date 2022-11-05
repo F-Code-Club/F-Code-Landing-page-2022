@@ -1,4 +1,5 @@
 import AOS from 'aos';
+import { Navigate, useLocation, useParams, useSearchParams } from 'react-router-dom';
 
 import AboutUs from './components/AboutUs/AboutUs';
 import Hero from './components/Hero/Hero';
@@ -24,6 +25,16 @@ AOS.init({
     anchorPlacement: 'top-bottom', // Which position that the element should be triggered
 });
 function Home() {
+    const location = useLocation();
+    const [searchParams] = useSearchParams(location);
+    const token = searchParams.get('token') || '';
+    const success = searchParams.get('success') || '';
+
+    if (token) {
+        localStorage.setItem('token', token);
+        return <Navigate to="/" />;
+    }
+
     return (
         <>
             <Hero />
