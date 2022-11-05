@@ -90,9 +90,9 @@ const FormRegister = () => {
                 console.log(data);
             })
             .catch((error) => console.log(error.response.data));
-        // console.log(FormData);
+        console.log(FormData);
 
-        // console.log('Form data', values);
+        console.log('Form data', values);
         toastSuccess('Congratulations!!');
         navigate('/signup');
     };
