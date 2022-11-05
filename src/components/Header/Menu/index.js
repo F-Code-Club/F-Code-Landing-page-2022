@@ -28,7 +28,7 @@ const Menu = (props) => {
                     FAQ
                 </NavLinkStyle>
                 <Button onClick={handleClose} to="/signUp">
-                    Register
+                    Sign Up
                 </Button>
             </BtnContainer>
         </StyledMenu>

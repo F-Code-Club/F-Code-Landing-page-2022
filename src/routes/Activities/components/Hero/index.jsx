@@ -25,7 +25,7 @@ const Hero = () => {
                         participate these activities now.
                     </Styled.SupportingText>
                     <Link to="/signup" style={{ textDecoration: 'none' }}>
-                        <Button>Register Now</Button>
+                        <Button>Sign Up Now</Button>
                     </Link>
                 </Styled.LeftContent>
 

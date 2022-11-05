@@ -111,7 +111,7 @@ export const Google = styled.div`
     line-height: 150%;
 `;
 export const GoogleContainer = styled.div`
-    margin-top: 40px;
+    // margin-top: 40px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -125,7 +125,7 @@ export const ButtonLogOut = styled(Button)`
     justify-content: center;
     align-items: center;
     padding: 12px 20px;
-    width: 220px;
+    width: 140px;
     height: 48px;
     border: 0;
     margin-top: 24px;

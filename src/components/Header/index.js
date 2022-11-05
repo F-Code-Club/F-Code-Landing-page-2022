@@ -48,7 +48,7 @@ const Headernew = () => {
                             <NavLinkStyle to="/activities">Activites</NavLinkStyle>
                             <NavLinkStyle to="/timeline">Timeline</NavLinkStyle>
                             <NavLinkStyle to="/faq">FAQ</NavLinkStyle>
-                            <ButtonHeader to="/signup">Register</ButtonHeader>
+                            <ButtonHeader to="/signup">Sign Up</ButtonHeader>
                         </ul>
                     </RightNav>
                 </NavContainer>

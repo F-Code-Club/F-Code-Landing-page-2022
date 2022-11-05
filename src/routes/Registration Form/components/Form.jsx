@@ -83,12 +83,12 @@ const FormRegister = () => {
 
         const response = postRegister(FormData)
             .then((data) => {
-                console.log(data.data.status.message);
+                console.log(data);
                 if (data.data.status.code == 400) {
                     toastError(data.data.status.message);
-                    localStorage.removeItem('token');
                 } else if (data.data.status.code == 200) {
                     toastSuccess(data.data.status.message);
+                    localStorage.removeItem('token');
                     navigate('/');
                 }
             })
