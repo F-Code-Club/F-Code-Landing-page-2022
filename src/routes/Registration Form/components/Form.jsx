@@ -80,7 +80,12 @@ const FormRegister = () => {
         FormData.rollNumber = rollNumber;
         FormData.semester = currentSemester;
 
-        const response = post('/register-challenge/new', FormData, {}, {})
+        const response = post(
+            '/register-challenge/new',
+            FormData,
+            {},
+            { Origin: 'http://localhost:9002/' }
+        )
             .then((data) => {
                 console.log(data);
             })
