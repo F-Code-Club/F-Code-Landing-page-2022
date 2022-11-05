@@ -23,7 +23,7 @@ const Popup = ({ open = false, handleClose = () => {}, data = [] }) => {
                 <Styled.CardSubheading>
                     {/* {`Time: ${moment(data.startTime).format('DD/MM')} - 
                                     ${moment(data.endTime).format('DD/MM')}`} */}
-                    {`Time: ${data.startTime}`}
+                    {`Time: ${data.startTime} - ${data.endTime}`}
                 </Styled.CardSubheading>
             </DialogTitle>
             <DialogContent>

@@ -27,3 +27,7 @@ export const postRegister = (form) => {
         }
     );
 };
+export const getChallenge = () => {
+    const url = `/api/challenges`;
+    return get(url, {}, {});
+};

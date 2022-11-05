@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 import moment from 'moment';
 
+import { getChallenge } from '../../../../utils/productAPI';
 import Button from '../Button';
 import Popup from './Popup';
 import * as Styled from './Timeline.styled';
@@ -15,6 +16,7 @@ const CARD_LIST = [
     //     status: 'ACTIVE',
     //     title: 'string',
     // },
+
     {
         description: 'Click on the Sign Up button to accept the challenges from F-Code!',
         endTime: '20/10',
@@ -53,18 +55,47 @@ const CARD_LIST = [
     },
 ];
 // curDate sẽ lưu trữ thời gian hiện tại
-// var curDate = new Date();
-
-// console.log(curDate.getDate());
+var localTime = moment().format('YYYY-MM-DD'); // store localTime
+var proposedDate = localTime + 'T00:00:00.000Z';
+console.log(proposedDate);
 // if
 const Timeline = () => {
     const [open, setOpen] = useState(false);
     const [itemIdx, setItemIdx] = useState(-1);
     const [challenges, setChallenges] = useState([]);
+    const [active, setActive] = useState('');
 
     useEffect(() => {
         // Call API to get all the challenges
-        setChallenges(CARD_LIST);
+        getChallenge()
+            .then((res) => {
+                console.log(res);
+                let dateChanllenge = res.data.status.data;
+                dateChanllenge.forEach((el) => {
+                    if (proposedDate >= el.start_time && proposedDate <= el.end_time) {
+                        el.status = 'ACTIVE';
+                        setActive('ACTIVE');
+                    } else {
+                        el.status = 'INACTIVE';
+                        setActive('INACTIVE');
+                    }
+
+                    let newStartTime = el.start_time.split('T');
+                    let StartDate = newStartTime[0].split('-');
+                    let newStartDate = StartDate[2] + '/' + StartDate[1];
+                    el.startTime = newStartDate;
+
+                    let newEndTime = el.end_time.split('T');
+                    let EndDate = newEndTime[0].split('-');
+                    let newEndDate = EndDate[2] + '/' + EndDate[1];
+                    el.endTime = newEndDate;
+                });
+                setChallenges(dateChanllenge);
+            })
+            .catch((err) => {
+                console.log('TimeLine: ', err);
+            });
+        // setChallenges(CARD_LIST);
     }, []);
 
     const handleClickOpen = (idx) => {
@@ -75,7 +106,7 @@ const Timeline = () => {
     const handleClose = () => {
         setOpen(false);
     };
-
+    // console.log(challenges);
     return (
         <Styled.Wrapper>
             <Styled.Container>
@@ -88,9 +119,9 @@ const Timeline = () => {
                     </Styled.Subheading>
                 </Styled.Header>
                 <div>
-                    {CARD_LIST.map((item, idx) => (
+                    {challenges.map((item, idx) => (
                         <Styled.Card
-                            key={item.id}
+                            key={item._id}
                             status={item.status}
                             // data-aos="fade-up"
                             data-aos-anchor-placement="bottom-bottom"
@@ -98,14 +129,24 @@ const Timeline = () => {
                             <Styled.Left>
                                 <Styled.CardHeading>{item.title}</Styled.CardHeading>
                                 <Styled.CardSubheading>
-                                    {`Time: ${item.startTime}`}
+                                    {`Time: ${item.startTime} - ${item.endTime}`}
                                 </Styled.CardSubheading>
-                                <p>{item.description}</p>
+                                <p
+                                    style={{
+                                        display: 'inline-block',
+                                        maxWidth: '100%',
+                                        overflow: 'hidden',
+                                        whiteSpace: 'nowrap',
+                                        textOverflow: 'ellipsis',
+                                    }}
+                                >
+                                    {item.description}
+                                </p>
                             </Styled.Left>
                             {item.status === 'ACTIVE' && (
                                 <Styled.Right>
                                     <Button onClick={() => handleClickOpen(idx)}>
-                                        {item.buttonTitle}
+                                        See more details
                                     </Button>
                                     <Popup
                                         open={open}
