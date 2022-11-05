@@ -80,12 +80,7 @@ const FormRegister = () => {
         FormData.rollNumber = rollNumber;
         FormData.semester = currentSemester;
 
-        const response = post(
-            '/register-challenge/new',
-            FormData,
-            {},
-            { Origin: 'http://localhost:9002/' }
-        )
+        const response = post('/register-challenge/new', FormData, {}, {})
             .then((data) => {
                 console.log(data);
             })
@@ -246,16 +241,7 @@ const FormRegister = () => {
                             </Grid>
                         </Grid>
                         <ButtonWrapper>
-                            <Button
-                                type="submit"
-                                onClick={() => {
-                                    if (formik.isValid) {
-                                        toastSuccess('Congratulations!!');
-                                        navigate('/signup');
-                                    }
-                                }}
-                                disabled={!formik.isValid}
-                            >
+                            <Button type="submit" disabled={!formik.isValid}>
                                 Register Now
                             </Button>
                         </ButtonWrapper>
