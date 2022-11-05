@@ -1,5 +1,6 @@
 import GoogleIcon from '../../assets/logo/google.png';
-import { get } from '../../utils/ApiCaller';
+// import { get } from '../../utils/ApiCaller';
+import { getLogin } from '../../utils/productAPI';
 import ProgressBar from './progress';
 import { Container, Hero, Description, Button, Google, Img, GoogleContainer } from './styled';
 import Title from './title';
@@ -44,7 +45,7 @@ function SingUp() {
                     <Img src={GoogleIcon} alt="" />
                     <Google
                         onClick={() => {
-                            const response = get('/register');
+                            const response = getLogin();
                             console.log(response);
                         }}
                     >
