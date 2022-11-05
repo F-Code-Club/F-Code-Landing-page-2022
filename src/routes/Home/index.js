@@ -1,6 +1,7 @@
 import AOS from 'aos';
-import { Navigate, useLocation, useParams, useSearchParams } from 'react-router-dom';
+import { Navigate, useNavigate, useLocation, useParams, useSearchParams } from 'react-router-dom';
 
+import { toastError, toastSuccess } from '../../components/ToastNorification';
 import AboutUs from './components/AboutUs/AboutUs';
 import Hero from './components/Hero/Hero';
 import HightLight from './components/HightLight/HightLight';
@@ -25,6 +26,7 @@ AOS.init({
     anchorPlacement: 'top-bottom', // Which position that the element should be triggered
 });
 function Home() {
+    // const navigate = useNavigate();
     const location = useLocation();
     const [searchParams] = useSearchParams(location);
     const token = searchParams.get('token') || '';
@@ -33,6 +35,9 @@ function Home() {
     if (token) {
         localStorage.setItem('token', token);
         return <Navigate to="/" />;
+    } else if (success) {
+        toastError('Invalid Account, Please Sign Up again, Use FPT Education Mail');
+        <Navigate to="/" />;
     }
 
     return (

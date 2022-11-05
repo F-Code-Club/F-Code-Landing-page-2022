@@ -1,9 +1,12 @@
+import { useContext } from 'react';
+
 import { Formik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 
 import { toastSuccess, toastError } from '../../../components/ToastNorification';
 // import { post } from '../../../utils/ApiCaller';
 import { postRegister } from '../../../utils/productAPI';
+import { UserContext } from '../../../utils/userContext';
 import Button from '../../Home/components/Button';
 import { FormContainer, ButtonWrapper } from '../style';
 import FormikControl from './Formik/FormikControl';
@@ -25,6 +28,7 @@ const initialValues = {
     phoneNumber: '',
 };
 const FormRegister = () => {
+    const { setSuccess } = useContext(UserContext);
     const navigate = useNavigate();
     const optionSemester = [
         { key: 'LUK1', value: 0 },
@@ -83,7 +87,7 @@ const FormRegister = () => {
 
         const response = postRegister(FormData)
             .then((data) => {
-                console.log(data);
+                setSuccess(data.data.success);
                 if (data.data.status.code == 400) {
                     toastError(data.data.status.message);
                 } else if (data.data.status.code == 200) {

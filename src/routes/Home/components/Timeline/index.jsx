@@ -53,9 +53,10 @@ const CARD_LIST = [
     },
 ];
 // curDate sẽ lưu trữ thời gian hiện tại
-var curDate = new Date();
-console.log(curDate.getDate());
-console.log(Date.now);
+// var curDate = new Date();
+
+// console.log(curDate.getDate());
+// if
 const Timeline = () => {
     const [open, setOpen] = useState(false);
     const [itemIdx, setItemIdx] = useState(-1);

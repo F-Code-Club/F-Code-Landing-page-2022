@@ -1,3 +1,6 @@
+import { useEffect, useContext } from 'react';
+
+import { UserContext } from '../../../utils/userContext';
 import Status from '../status/index';
 import { ProgressContainer } from './styled';
 
@@ -8,6 +11,7 @@ import StepLabel from '@mui/material/StepLabel';
 import Stepper from '@mui/material/Stepper';
 import { styled } from '@mui/material/styles';
 
+let token = localStorage.getItem('token');
 const QontoConnector = styled(StepConnector)(({ theme }) => ({
     [`&.${stepConnectorClasses.alternativeLabel}`]: {
         top: 10,
@@ -53,6 +57,7 @@ const QontoStepIconRoot = styled('div')(({ theme, ownerState }) => ({
         backgroundColor: 'currentColor',
     },
 }));
+// useEffect(() => {});
 
 function QontoStepIcon(props) {
     const { active, completed, className } = props;
@@ -67,8 +72,32 @@ function QontoStepIcon(props) {
         </QontoStepIconRoot>
     );
 }
-const steps = ['Login', 'Register Successful', 'Confirm'];
+
 const ProgressBar = ({ progress }) => {
+    const { success } = useContext(UserContext);
+    const steps = [
+        {
+            key: 'Sign Up',
+            title: token ? 'Sign Up Success' : 'Sign Up',
+            description: '',
+            step: 1,
+            isDone: true,
+        },
+        {
+            key: 'Register',
+            title: success ? 'Register Success' : 'Register ',
+            description: '',
+            step: 2,
+            isDone: false,
+        },
+        {
+            key: 'Confirm',
+            title: 'Confirm',
+            description: '',
+            step: 3,
+            isDone: false,
+        },
+    ];
     return (
         // <ProgressContainer>
         //     {props.data.map((item) => (
@@ -76,9 +105,9 @@ const ProgressBar = ({ progress }) => {
         //     ))}
         // </ProgressContainer>
         <Stepper alternativeLabel activeStep={progress} connector={<QontoConnector />}>
-            {steps.map((label) => (
-                <Step key={label}>
-                    <StepLabel StepIconComponent={QontoStepIcon}>{label}</StepLabel>
+            {steps.map((step) => (
+                <Step key={step.title}>
+                    <StepLabel StepIconComponent={QontoStepIcon}>{step.title}</StepLabel>
                 </Step>
             ))}
         </Stepper>
