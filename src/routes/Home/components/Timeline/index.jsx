@@ -30,7 +30,7 @@ const CARD_LIST = [
         startTime: '12/11 - 17/11',
         endTime: 'Reveal later',
         id: 1,
-        status: 'INACTIVE',
+        status: 'ACTIVE',
         buttonTitle: 'See Details',
     },
     {
@@ -52,7 +52,10 @@ const CARD_LIST = [
         buttonTitle: 'See Details',
     },
 ];
-
+// curDate sẽ lưu trữ thời gian hiện tại
+var curDate = new Date();
+console.log(curDate.getDate());
+console.log(Date.now);
 const Timeline = () => {
     const [open, setOpen] = useState(false);
     const [itemIdx, setItemIdx] = useState(-1);
@@ -94,8 +97,6 @@ const Timeline = () => {
                             <Styled.Left>
                                 <Styled.CardHeading>{item.title}</Styled.CardHeading>
                                 <Styled.CardSubheading>
-                                    {/* {`Time: ${moment(item.startTime).format('DD/MM')} - 
-                                    ${moment(item.endTime).format('DD/MM')}`} */}
                                     {`Time: ${item.startTime}`}
                                 </Styled.CardSubheading>
                                 <p>{item.description}</p>

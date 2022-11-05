@@ -88,8 +88,7 @@ const FormRegister = () => {
                     toastError(data.data.status.message);
                 } else if (data.data.status.code == 200) {
                     toastSuccess(data.data.status.message);
-                    localStorage.removeItem('token');
-                    navigate('/');
+                    navigate('/signUp');
                 }
             })
             .catch((err) => {

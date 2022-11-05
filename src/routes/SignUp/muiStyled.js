@@ -19,6 +19,7 @@ export const StyledTypography = styled(Typography)`
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
+        margin-left: 20px;
         font-size: 16px;
         line-height: 150%;
         color: #6b7280;
