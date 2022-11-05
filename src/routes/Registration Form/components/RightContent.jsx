@@ -1,11 +1,10 @@
+import netcompany from '../../../assets/images/telescope/netcompany.jpg';
+import poster from '../../../assets/images/telescope/poster.jpg';
+import recap from '../../../assets/images/telescope/recap.jpg';
 import Glass from '../../Activities/components/Glass/index';
 import * as Styled from '../../Activities/components/Hero/Hero.styled';
 
-const IMG_LIST = [
-    'https://images.pexels.com/photos/2929245/pexels-photo-2929245.jpeg?auto=compress&cs=tinysrgb&w=600',
-    'https://images.pexels.com/photos/1050604/pexels-photo-1050604.jpeg?auto=compress&cs=tinysrgb&w=600',
-    'https://images.pexels.com/photos/267961/pexels-photo-267961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-];
+const IMG_LIST = [recap, poster, netcompany];
 
 const RightContent = () => {
     return (
