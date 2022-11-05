@@ -43,14 +43,7 @@ function SingUp() {
             <GoogleContainer>
                 <Button type="button">
                     <Img src={GoogleIcon} alt="" />
-                    <Google
-                        onClick={() => {
-                            const response = getLogin();
-                            console.log(response);
-                        }}
-                    >
-                        Login with Google
-                    </Google>
+                    <Google>Login with Google</Google>
                 </Button>
             </GoogleContainer>
         </Container>
