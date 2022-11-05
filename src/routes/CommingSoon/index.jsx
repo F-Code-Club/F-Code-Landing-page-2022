@@ -7,11 +7,9 @@ const CommingSoon = () => {
 
     const styles2 = { color: '#6B7280', marginBottom: '120px' };
     return (
-        <div>
-            <h1 style={styles}>Comming soon...</h1>
-            <p style={styles2}>
-                Oops. We’re preparing something. Come back later to see cool things!
-            </p>
+        <div style={{ textAlign: 'center' }}>
+            <h1 style={styles}>404</h1>
+            <p style={styles2}>Oops. Something Wrong!</p>
         </div>
     );
 };

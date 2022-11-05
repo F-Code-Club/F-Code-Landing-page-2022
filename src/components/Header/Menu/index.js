@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
 import Logo from '../Logo';
-import { NavLinkStyle, Button } from '../header.style';
+import { NavLinkStyle, Button, ButtonHeader } from '../header.style';
 import { StyledMenu, LogoContainer, BtnContainer } from './menu.style';
 
 const Menu = (props) => {
@@ -27,10 +27,8 @@ const Menu = (props) => {
                 <NavLinkStyle onClick={handleClose} to="/faq">
                     FAQ
                 </NavLinkStyle>
-                <Button>
-                    <NavLink onClick={handleClose} to="/register">
-                        Register
-                    </NavLink>
+                <Button onClick={handleClose} to="/signUp">
+                    Register
                 </Button>
             </BtnContainer>
         </StyledMenu>

@@ -2,7 +2,8 @@ import { Formik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 
 import { toastSuccess, toastError } from '../../../components/ToastNorification';
-import { post } from '../../../utils/ApiCaller';
+// import { post } from '../../../utils/ApiCaller';
+import { postRegister } from '../../../utils/productAPI';
 import Button from '../../Home/components/Button';
 import { FormContainer, ButtonWrapper } from '../style';
 import FormikControl from './Formik/FormikControl';
@@ -80,21 +81,20 @@ const FormRegister = () => {
         FormData.rollNumber = rollNumber;
         FormData.semester = currentSemester;
 
-        const response = post(
-            '/register-challenge/new',
-            FormData,
-            {},
-            { 'Access-Control-Allow-Origin': '*' }
-        )
+        const response = postRegister(FormData)
             .then((data) => {
-                console.log(data);
+                console.log(data.data.status.message);
+                if (data.data.status.code == 400) {
+                    toastError(data.data.status.message);
+                    localStorage.removeItem('token');
+                } else if (data.data.status.code == 200) {
+                    toastSuccess(data.data.status.message);
+                    navigate('/');
+                }
             })
-            .catch((error) => console.log(error.response.data));
-        console.log(FormData);
-
-        console.log('Form data', values);
-        toastSuccess('Congratulations!!');
-        navigate('/signup');
+            .catch((err) => {
+                console.log(err);
+            });
     };
 
     return (

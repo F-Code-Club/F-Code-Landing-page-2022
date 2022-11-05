@@ -1,36 +1,64 @@
+import { useEffect, useState } from 'react';
+
+import { useNavigate } from 'react-router-dom';
+
 import GoogleIcon from '../../assets/logo/google.png';
 import { API_URL } from '../../config';
-// import { get } from '../../utils/ApiCaller';
-import { getLogin } from '../../utils/productAPI';
+import { getStep } from '../../utils/productAPI';
 import ProgressBar from './progress';
-import { Container, Hero, Description, Button, Google, Img, GoogleContainer } from './styled';
+import {
+    Container,
+    Hero,
+    Description,
+    Button,
+    Google,
+    Img,
+    GoogleContainer,
+    ButtonLogOut,
+} from './styled';
 import Title from './title';
 
+import LogoutIcon from '@mui/icons-material/Logout';
+import SvgIcon from '@mui/material/SvgIcon';
+
 function SingUp() {
+    const navigate = useNavigate();
+    const [step, setStep] = useState({ step: 0 });
+
+    useEffect(() => {
+        getStep()
+            .then((res) => {
+                setStep(res.data);
+            })
+            .catch((err) => {
+                console.log('err progress: ', err);
+            });
+    }, []);
     const progress = [
         {
-            key: 'registration',
-            title: 'Register',
+            key: 'Login',
+            title: 'Login',
             description: '',
             step: 1,
             isDone: true,
         },
         {
-            key: 'verifyMail',
-            title: 'Check mail for confirmation mail',
+            key: 'Register Success',
+            title: 'Register Success',
             description: '',
             step: 2,
             isDone: false,
         },
         {
-            key: 'Accept',
+            key: 'Confirm',
             title: 'Confirm',
             description: '',
             step: 3,
             isDone: false,
         },
     ];
-    let step = 1;
+    let token = localStorage.getItem('token');
+
     return (
         <Container>
             <Hero>
@@ -39,16 +67,28 @@ function SingUp() {
             <Description>
                 To become a member of <span>F-Code,</span> you need to sign up using FPT email.
             </Description>
-            <ProgressBar progress={step} data={progress} />
-            <Title data={progress} />
-            <GoogleContainer>
-                <Button type="button">
-                    <Img src={GoogleIcon} alt="" />
-                    <Google>
-                        <a href={`${API_URL}/auth/google`}>Sign up with Google</a>
-                    </Google>
-                </Button>
-            </GoogleContainer>
+            <ProgressBar progress={step.step} data={progress} />
+            {!token ? (
+                <GoogleContainer>
+                    <Button type="button" href={`${API_URL}/auth/google`}>
+                        <Img src={GoogleIcon} alt="" />
+                        <Google>Sign up with Google</Google>
+                    </Button>
+                </GoogleContainer>
+            ) : (
+                <GoogleContainer>
+                    <ButtonLogOut
+                        type="button"
+                        onClick={() => {
+                            localStorage.removeItem('token');
+                            navigate('/');
+                        }}
+                    >
+                        <SvgIcon sx={{ marginRight: '10px' }} component={LogoutIcon}></SvgIcon>
+                        Log Out
+                    </ButtonLogOut>
+                </GoogleContainer>
+            )}
         </Container>
     );
 }

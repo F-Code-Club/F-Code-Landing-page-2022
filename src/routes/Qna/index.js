@@ -7,9 +7,9 @@ function Qna() {
         <Container>
             <Hero>Frequently asked questions</Hero>
             <SimpleAccordion />
-            <More />
         </Container>
     );
+    // <More />
 }
 
 export default Qna;

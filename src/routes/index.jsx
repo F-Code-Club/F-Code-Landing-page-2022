@@ -43,18 +43,12 @@ const publicRoute = [
         exact: true,
         restrict: true,
     },
-    {
-        path: '/register',
-        component: <RegistrationForm />,
-        exact: true,
-        restrict: true,
-    },
 ];
 
 const privateRoute = [
     {
-        path: '/private',
-        component: <Home />,
+        path: '/register',
+        component: <RegistrationForm />,
         exact: true,
         restrict: true,
     },

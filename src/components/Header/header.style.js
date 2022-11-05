@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { down } from 'styled-breakpoints';
 import styled from 'styled-components';
 
@@ -67,35 +67,6 @@ export const RightNav = styled.div`
     }
 `;
 
-export const Button = styled.div`
-    /* Auto layout */
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 12px;
-    width: 81px;
-    background-color: #45ce7c;
-    border-radius: 8px;
-    cursor: pointer;
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    &:hover {
-        background-color: #37a463;
-    }
-    a {
-        color: #fff;
-        text-decoration: none;
-    }
-    ${down('lg')} {
-        height: 45px;
-    }
-`;
-
 export const NavContainer = styled.div`
     display: flex;
     justify-content: space-between;
@@ -147,6 +118,62 @@ export const NavLinkStyle = styled(NavLink)`
 
     ${down('lg')} {
         margin-right: 0;
+        height: 45px;
+    }
+`;
+export const Button = styled(NavLinkStyle)`
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    width: 100%;
+    background-color: #45ce7c;
+    border-radius: 8px;
+    cursor: pointer;
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    &:hover {
+        background-color: #37a463;
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    ${down('lg')} {
+        height: 45px;
+    }
+`;
+export const ButtonHeader = styled(Link)`
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    width: 81px;
+    background-color: #45ce7c;
+    border-radius: 8px;
+    cursor: pointer;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    &:hover {
+        background-color: #37a463;
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    ${down('lg')} {
         height: 45px;
     }
 `;

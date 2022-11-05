@@ -75,7 +75,8 @@ export const NameContainer = styled.div`
     width: 100%;
     justify-content: space-between;
 `;
-export const Button = styled.button`
+
+export const Button = styled.a`
     background: linear-gradient(152.97deg, rgba(105, 105, 105, 0.2) 0%, rgba(21, 21, 21, 0) 100%);
     border-radius: 8px;
     display: flex;
@@ -100,10 +101,12 @@ export const Img = styled.img`
     border-radius: 50%;
     margin-right: 12px;
 `;
-export const Google = styled.b`
+export const Google = styled.div`
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 600;
+    // font-weight: 600;
+    tex-decoration: none;
+    color: darkblue;
     font-size: 14px;
     line-height: 150%;
 `;
@@ -112,4 +115,24 @@ export const GoogleContainer = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+`;
+export const ButtonLogOut = styled(Button)`
+    background: #e97777;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    width: 220px;
+    height: 48px;
+    border: 0;
+    margin-top: 24px;
+    cursor: pointer;
+    box-shadow: 4px 4px 2px #aaaaaa;
+    transition: 0.3s ease all;
+    &:hover {
+        transform: translateY(-10px);
+    }
 `;

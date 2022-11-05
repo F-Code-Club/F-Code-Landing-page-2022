@@ -11,7 +11,7 @@ import {
     NavContainer,
     RightNav,
     NavLinkStyle,
-    Button,
+    ButtonHeader,
     StyledHeader,
     Container,
 } from './header.style';
@@ -48,9 +48,7 @@ const Headernew = () => {
                             <NavLinkStyle to="/activities">Activites</NavLinkStyle>
                             <NavLinkStyle to="/timeline">Timeline</NavLinkStyle>
                             <NavLinkStyle to="/faq">FAQ</NavLinkStyle>
-                            <Button>
-                                <NavLink to="/signup">Register</NavLink>
-                            </Button>
+                            <ButtonHeader to="/signup">Register</ButtonHeader>
                         </ul>
                     </RightNav>
                 </NavContainer>
