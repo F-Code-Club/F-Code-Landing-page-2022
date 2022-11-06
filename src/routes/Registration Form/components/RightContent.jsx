@@ -1,10 +1,13 @@
+import ImgRegister1 from '../../../assets/FormRegistration/formRegis1.jpg';
+import ImgRegister2 from '../../../assets/FormRegistration/formRegis2.jpg';
+import ImgRegister3 from '../../../assets/FormRegistration/formRegis3.jpg';
 import netcompany from '../../../assets/images/telescope/netcompany.jpg';
 import poster from '../../../assets/images/telescope/poster.jpg';
 import recap from '../../../assets/images/telescope/recap.jpg';
 import Glass from '../../Activities/components/Glass/index';
 import * as Styled from '../../Activities/components/Hero/Hero.styled';
 
-const IMG_LIST = [recap, poster, netcompany];
+const IMG_LIST = [ImgRegister3, ImgRegister2, ImgRegister1];
 
 const RightContent = () => {
     return (
