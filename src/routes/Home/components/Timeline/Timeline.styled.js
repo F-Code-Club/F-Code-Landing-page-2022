@@ -64,8 +64,20 @@ export const Card = styled.div`
     align-items: center;
     padding: 30px 40px;
     gap: 10px;
-
+    ${down('lg')} {
+        width: 500px;
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
     ${down('xl')} {
+        width: 600px;
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
+
+    ${down('md')} {
+        width: 300px;
+        overflow: hidden;
         flex-wrap: wrap;
     }
 
@@ -99,7 +111,7 @@ export const Left = styled.div`
     align-items: flex-start;
     padding: 0px;
     gap: 5px;
-
+    overflow: hidden;
     ${up('xl')} {
         width: 537px;
     }

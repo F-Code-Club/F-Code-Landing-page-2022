@@ -54,7 +54,7 @@ const CARD_LIST = [
         buttonTitle: 'See Details',
     },
 ];
-// curDate sẽ lưu trữ thời gian hiện tại
+
 var localTime = moment().format('YYYY-MM-DD'); // store localTime
 var proposedDate = localTime + 'T00:00:00.000Z';
 console.log(proposedDate);
@@ -69,8 +69,15 @@ const Timeline = () => {
         // Call API to get all the challenges
         getChallenge()
             .then((res) => {
+                console.log(res);
+                let titleChallenge = [
+                    'FORM REGISTRATION',
+                    'FIRST CHALLENGE',
+                    'SECOND CHANLLENGE',
+                    'THIRD CHALLENGE',
+                ];
                 let dateChanllenge = res.data.status.data;
-                dateChanllenge.forEach((el) => {
+                dateChanllenge.forEach((el, id) => {
                     if (proposedDate >= el.start_time && proposedDate <= el.end_time) {
                         el.status = 'ACTIVE';
                         setActive('ACTIVE');
@@ -88,6 +95,7 @@ const Timeline = () => {
                     let EndDate = newEndTime[0].split('-');
                     let newEndDate = EndDate[2] + '/' + EndDate[1];
                     el.endTime = newEndDate;
+                    el.titleChallenge = titleChallenge[id];
                 });
                 setChallenges(dateChanllenge);
             })
@@ -126,7 +134,9 @@ const Timeline = () => {
                             data-aos-anchor-placement="bottom-bottom"
                         >
                             <Styled.Left>
-                                <Styled.CardHeading>{item.title}</Styled.CardHeading>
+                                <Styled.CardHeading>
+                                    {item.status === 'ACTIVE' ? item.title : item.titleChallenge}
+                                </Styled.CardHeading>
                                 <Styled.CardSubheading>
                                     {`Time: ${item.startTime} - ${item.endTime}`}
                                 </Styled.CardSubheading>
@@ -134,17 +144,23 @@ const Timeline = () => {
                                     style={{
                                         display: 'inline-block',
                                         maxWidth: '100%',
+                                        // height: '50px',
                                         overflow: 'hidden',
                                         whiteSpace: 'nowrap',
                                         textOverflow: 'ellipsis',
                                     }}
                                 >
-                                    {item.description}
+                                    {item.status === 'ACTIVE'
+                                        ? item.description
+                                        : 'The challenge will be revealed later'}
                                 </p>
                             </Styled.Left>
                             {item.status === 'ACTIVE' && (
                                 <Styled.Right>
-                                    <Button onClick={() => handleClickOpen(idx)}>
+                                    <Button
+                                        style={{ width: 'fit-content' }}
+                                        onClick={() => handleClickOpen(idx)}
+                                    >
                                         See more details
                                     </Button>
                                     <Popup
