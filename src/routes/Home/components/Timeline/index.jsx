@@ -69,7 +69,6 @@ const Timeline = () => {
         // Call API to get all the challenges
         getChallenge()
             .then((res) => {
-                console.log(res);
                 let dateChanllenge = res.data.status.data;
                 dateChanllenge.forEach((el) => {
                     if (proposedDate >= el.start_time && proposedDate <= el.end_time) {
