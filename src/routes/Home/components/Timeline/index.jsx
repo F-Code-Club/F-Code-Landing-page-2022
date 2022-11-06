@@ -19,8 +19,8 @@ const CARD_LIST = [
 
     {
         description: 'Click on the Sign Up button to accept the challenges from F-Code!',
-        endTime: '20/10',
-        startTime: '06/11 - 10/11',
+        endTime: '10.11',
+        startTime: '06/11',
         id: 0,
         status: 'ACTIVE',
         title: 'Form registration',
@@ -29,8 +29,8 @@ const CARD_LIST = [
     {
         title: 'First Challenge',
         description: 'The challenge will be revealed later',
-        startTime: '12/11 - 17/11',
-        endTime: 'Reveal later',
+        startTime: '12/11',
+        endTime: '17/11',
         id: 1,
         status: 'INACTIVE',
         buttonTitle: 'See Details',
@@ -38,8 +38,8 @@ const CARD_LIST = [
     {
         title: 'Second Challenge',
         description: 'The challenge will be revealed later',
-        startTime: '19/11 - 23/11',
-        endTime: 'Reveal later',
+        startTime: '19/11',
+        endTime: '23/11',
         id: 2,
         status: 'INACTIVE',
         buttonTitle: 'See Details',
@@ -47,8 +47,8 @@ const CARD_LIST = [
     {
         title: 'Third Challenge',
         description: 'The challenge will be revealed later',
-        startTime: '26/11 - 24/12',
-        endTime: 'Reveal later',
+        startTime: '26/11',
+        endTime: '24/12',
         id: 3,
         status: 'INACTIVE',
         buttonTitle: 'See Details',
@@ -62,7 +62,7 @@ console.log(proposedDate);
 const Timeline = () => {
     const [open, setOpen] = useState(false);
     const [itemIdx, setItemIdx] = useState(-1);
-    const [challenges, setChallenges] = useState([]);
+    const [challenges, setChallenges] = useState(CARD_LIST);
     const [active, setActive] = useState('');
 
     useEffect(() => {
@@ -146,7 +146,7 @@ const Timeline = () => {
                                         maxWidth: '100%',
                                         // height: '50px',
                                         overflow: 'hidden',
-                                        whiteSpace: 'nowrap',
+                                        // whiteSpace: 'nowrap',
                                         textOverflow: 'ellipsis',
                                     }}
                                 >

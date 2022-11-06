@@ -27,18 +27,6 @@ AOS.init({
 });
 function Home() {
     // const navigate = useNavigate();
-    const location = useLocation();
-    const [searchParams] = useSearchParams(location);
-    const token = searchParams.get('token') || '';
-    const success = searchParams.get('success') || '';
-
-    if (token) {
-        localStorage.setItem('token', token);
-        return <Navigate to="/" />;
-    } else if (success) {
-        toastError('Invalid Account, Please Sign Up again, Use FPT Education Mail');
-        <Navigate to="/" />;
-    }
 
     return (
         <>

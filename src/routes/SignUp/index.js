@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation, useSearchParams, Navigate } from 'react-router-dom';
 
 import GoogleIcon from '../../assets/logo/google.png';
 import { Button as Buttonregister } from '../../components/Header/header.style';
+import { toastError } from '../../components/ToastNorification';
 import { API_URL } from '../../config';
 import { getStep } from '../../utils/productAPI';
 import ProgressBar from './progress';
@@ -17,19 +18,18 @@ import {
     GoogleContainer,
     ButtonLogOut,
 } from './styled';
-import Title from './title';
 
 import LogoutIcon from '@mui/icons-material/Logout';
 import SvgIcon from '@mui/material/SvgIcon';
-import { margin } from '@mui/system';
 
 function SingUp() {
     const navigate = useNavigate();
     const [step, setStep] = useState({ step: 0 });
-    let token = localStorage.getItem('token');
+    const location = useLocation();
+    const [searchParams] = useSearchParams(location);
+    let token = localStorage.getItem('token') || searchParams.get('token') || '';
 
     useEffect(() => {
-        let token = localStorage.getItem('token');
         if (token) {
             getStep()
                 .then((res) => {
@@ -38,6 +38,17 @@ function SingUp() {
                 .catch((err) => {
                     console.log('err progress: ', err);
                 });
+        }
+    }, []);
+    useEffect(() => {
+        token = localStorage.getItem('token') || searchParams.get('token') || '';
+        const success = searchParams.get('success') || '';
+        if (token) {
+            localStorage.setItem('token', token);
+            navigate('/signup');
+        } else if (success) {
+            toastError('Invalid Account, Please Sign Up again, Use FPT Education Mail');
+            navigate('/signup');
         }
     }, []);
     const progress = [
@@ -90,7 +101,8 @@ function SingUp() {
                             type="button"
                             onClick={() => {
                                 localStorage.removeItem('token');
-                                navigate('/');
+                                setStep(0);
+                                navigate('/signup');
                             }}
                         >
                             <SvgIcon sx={{ marginRight: '10px' }} component={LogoutIcon}></SvgIcon>
