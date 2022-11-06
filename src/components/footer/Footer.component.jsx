@@ -13,12 +13,6 @@ const Footer = () => {
 
             <Styled.Copyright>
                 <p>
-                    Sponsored by{' '}
-                    <strong>
-                        <a href="https://hosting.ltvnshop.com/">LTVNHosting</a>
-                    </strong>
-                </p>
-                <p>
                     © 2022 <strong>F-Code</strong>. All rights reserved
                 </p>
             </Styled.Copyright>
