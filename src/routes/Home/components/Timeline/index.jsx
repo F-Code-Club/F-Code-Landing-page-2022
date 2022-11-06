@@ -57,19 +57,19 @@ const CARD_LIST = [
 
 var localTime = moment().format('YYYY-MM-DD'); // store localTime
 var proposedDate = localTime + 'T00:00:00.000Z';
-console.log(proposedDate);
+// console.log(proposedDate);
 // if
 const Timeline = () => {
     const [open, setOpen] = useState(false);
     const [itemIdx, setItemIdx] = useState(-1);
-    const [challenges, setChallenges] = useState(CARD_LIST);
+    const [challenges, setChallenges] = useState([]);
     const [active, setActive] = useState('');
 
     useEffect(() => {
         // Call API to get all the challenges
         getChallenge()
             .then((res) => {
-                console.log(res);
+                // console.log(res);
                 let titleChallenge = [
                     'FORM REGISTRATION',
                     'FIRST CHALLENGE',
@@ -146,7 +146,7 @@ const Timeline = () => {
                                         maxWidth: '100%',
                                         // height: '50px',
                                         overflow: 'hidden',
-                                        // whiteSpace: 'nowrap',
+                                        whiteSpace: 'nowrap',
                                         textOverflow: 'ellipsis',
                                     }}
                                 >

@@ -10,7 +10,6 @@ const Footer = () => {
                 <Styled.Icon src={FCode} alt="F-Code" />
                 <Styled.LogoTitle>F-Code Information Portal</Styled.LogoTitle>
             </Styled.Info>
-
             <Styled.Copyright>
                 <p>
                     © 2022 <strong>F-Code</strong>. All rights reserved
