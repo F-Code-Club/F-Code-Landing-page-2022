@@ -1,9 +1,6 @@
 import ImgRegister1 from '../../../assets/FormRegistration/formRegis1.jpg';
 import ImgRegister2 from '../../../assets/FormRegistration/formRegis2.jpg';
 import ImgRegister3 from '../../../assets/FormRegistration/formRegis3.jpg';
-import netcompany from '../../../assets/images/telescope/netcompany.jpg';
-import poster from '../../../assets/images/telescope/poster.jpg';
-import recap from '../../../assets/images/telescope/recap.jpg';
 import Glass from '../../Activities/components/Glass/index';
 import * as Styled from '../../Activities/components/Hero/Hero.styled';
 
@@ -18,10 +15,9 @@ const RightContent = () => {
             <Styled.GlassLeft style={{ left: '50px' }}>
                 <Glass length="60px" />
             </Styled.GlassLeft>
-
             <Styled.TopImg style={{ width: '320px', height: '320px' }} img={IMG_LIST[2]} />
             <Styled.LeftImg
-                style={{ width: '230px', height: '230px', left: '60px' }}
+                style={{ width: '230px', height: '230px', left: '0px' }}
                 img={IMG_LIST[1]}
             />
             <Styled.RightImg style={{ width: '270px', height: '270px' }} img={IMG_LIST[0]} />

@@ -380,6 +380,9 @@ export const SubTitle = styled.h6`
 
     letter-spacing: -0.01em;
     color: #111928;
+    ${down('xl')} {
+        font-size: 30px;
+    }
 `;
 export const Content = styled.div`
     display: flex;
@@ -444,5 +447,8 @@ export const Description = styled.p`
 
     ${up('lg')} {
         width: 800px;
+    }
+    ${down('sm')} {
+        width: 400px;
     }
 `;

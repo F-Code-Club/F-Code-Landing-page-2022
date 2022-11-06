@@ -31,16 +31,16 @@ const FormRegister = () => {
     const { setSuccess } = useContext(UserContext);
     const navigate = useNavigate();
     const optionSemester = [
-        { key: 'LUK1', value: 0 },
-        { key: 'LUK2', value: 1 },
-        { key: 'LUK3', value: 2 },
-        { key: 'LUK4', value: 3 },
-        { key: 'TRS4', value: 4 },
-        { key: 'TRS5', value: 5 },
-        { key: 'TRS6', value: 6 },
-        { key: 'CN1', value: 7 },
-        { key: 'CN2', value: 8 },
-        { key: 'CN3', value: 9 },
+        { key: 'LUK1', value: 'LUK1' },
+        { key: 'LUK2', value: 'LUK2' },
+        { key: 'LUK3', value: 'LUK3' },
+        { key: 'LUK4', value: 'LUK4' },
+        { key: 'TRS4', value: 'TRS4' },
+        { key: 'TRS5', value: 'TRS5' },
+        { key: 'TRS6', value: 'TRS6' },
+        { key: 'CN1', value: 'CN1' },
+        { key: 'CN2', value: 'CN2' },
+        { key: 'CN3', value: 'CN3' },
     ];
     const optionsMajor = [
         { key: 'Software Engineering', value: 'Software Engineering' },
