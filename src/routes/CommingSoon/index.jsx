@@ -14,7 +14,7 @@ const CommingSoon = () => {
 export default CommingSoon;
 export const Styles = styled.h1`
     margin-top: 120px;
-    font-size: 60px;
+    font-size: 40px;
     margin-bottom: 6px;
     ${down('sm')} {
         font-size: 40px;
