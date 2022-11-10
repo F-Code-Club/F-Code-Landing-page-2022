@@ -90,10 +90,10 @@ const FormRegister = () => {
                 setSuccess(data.data.success);
                 if (data.data.status.code == 400) {
                     toastError(data.data.status.message);
-                    navigate('/signUp');
+                    navigate('/*');
                 } else if (data.data.status.code == 200) {
                     toastSuccess(data.data.status.message);
-                    navigate('/signUp');
+                    navigate('/*');
                 }
             })
             .catch((err) => {

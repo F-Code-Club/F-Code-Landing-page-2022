@@ -62,7 +62,7 @@ var proposedDate = localTime + 'T00:00:00.000Z';
 const Timeline = () => {
     const [open, setOpen] = useState(false);
     const [itemIdx, setItemIdx] = useState(-1);
-    const [challenges, setChallenges] = useState([]);
+    const [chall, setChallenges] = useState([]);
     const [active, setActive] = useState('');
 
     useEffect(() => {
@@ -126,7 +126,7 @@ const Timeline = () => {
                     </Styled.Subheading>
                 </Styled.Header>
                 <div>
-                    {challenges.map((item, idx) => (
+                    {chall.map((item, idx) => (
                         <Styled.Card
                             key={item._id}
                             status={item.status}
@@ -166,7 +166,7 @@ const Timeline = () => {
                                     <Popup
                                         open={open}
                                         handleClose={handleClose}
-                                        data={challenges[itemIdx]}
+                                        data={chall[itemIdx]}
                                     />
                                 </Styled.Right>
                             )}

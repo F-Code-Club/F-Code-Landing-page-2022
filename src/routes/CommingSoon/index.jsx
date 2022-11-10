@@ -8,8 +8,8 @@ const CommingSoon = () => {
     const styles2 = { color: '#6B7280', marginBottom: '120px' };
     return (
         <div style={{ textAlign: 'center' }}>
-            <h1 style={styles}>404</h1>
-            <p style={styles2}>Oops. Something Wrong!</p>
+            <h1 style={styles}>Ending Registration</h1>
+            <p style={styles2}>Thanks for Joining</p>
         </div>
     );
 };

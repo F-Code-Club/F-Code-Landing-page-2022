@@ -93,7 +93,7 @@ function SingUp() {
                 </GoogleContainer>
             ) : (
                 <div style={{ marginTop: '40px' }}>
-                    <Buttonregister style={{ width: '200px', margin: 'auto' }} to="/register">
+                    <Buttonregister style={{ width: '200px', margin: 'auto' }} to="/*">
                         Register
                     </Buttonregister>
                     <GoogleContainer>
