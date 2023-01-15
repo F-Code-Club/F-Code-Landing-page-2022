@@ -1,4 +1,4 @@
-import { up, down } from 'styled-breakpoints';
+import { up, down, between } from 'styled-breakpoints';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -16,7 +16,9 @@ export const Content = styled.div`
         width: 1100px;
     }
 `;
-
+export const ContentRegister = styled(Content)`
+    align-items: flex-start;
+`;
 export const LeftContent = styled.div``;
 
 export const RightContent = styled.div`
@@ -28,6 +30,10 @@ export const RightContent = styled.div`
 
     ${down('lg')} {
         display: none;
+    }
+
+    ${between('lg', 'xl')} {
+        min-width: 525px;
     }
 `;
 
@@ -59,6 +65,7 @@ export const SupportingText = styled.p`
     color: #6b7280;
 
     margin-bottom: 60px;
+    margin-top: 18px;
 
     ${down('sm')} {
         width: auto;

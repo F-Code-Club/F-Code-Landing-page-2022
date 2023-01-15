@@ -1,5 +1,6 @@
 import AOS from 'aos';
 
+import HightLight from '../Home/components/HightLight/HightLight';
 import Hero from './components/Hero';
 import RODE from './components/RODE';
 import Teambuilding from './components/Teambuilding';
@@ -28,6 +29,7 @@ const Activities = () => {
         <>
             <Hero />
             <Telescope />
+            <HightLight anniversary />
             <Teambuilding />
             <RODE />
             <h1 style={{ textAlign: 'center' }}>And more activities are waiting for you!!!</h1>

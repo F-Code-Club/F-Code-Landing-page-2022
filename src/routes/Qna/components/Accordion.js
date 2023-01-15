@@ -43,10 +43,10 @@ export default function SimpleAccordion() {
                 <AccordionDetails>
                     <StyledTypography>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                            malesuada lacus ex, sit amet blandit leo lobortis eget.
+                            F-Code is a community of students who share common IT habits and want to
+                            share and learn. We encourage students to participate if your department
+                            is Information Technology
                         </p>
-                        .
                     </StyledTypography>
                 </AccordionDetails>
             </StyledAccordion>
@@ -63,8 +63,10 @@ export default function SimpleAccordion() {
                 <AccordionDetails>
                     <StyledTypography>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                            malesuada lacus ex, sit amet blandit leo lobortis eget.
+                            English is the key to unlocking new opportunities. The majority of good
+                            IT materials are written in English. As a result, we recommend that you
+                            try to improve your English skills in order to have access to more
+                            information.
                         </p>
                     </StyledTypography>
                 </AccordionDetails>
@@ -83,8 +85,10 @@ export default function SimpleAccordion() {
                 <AccordionDetails>
                     <StyledTypography>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                            malesuada lacus ex, sit amet blandit leo lobortis eget.
+                            F-CODE is a good learning environment for students that are passionate
+                            about technology. When you join this community, you have the option of
+                            following the crew. We have four crew for members in our Club: BACKEND
+                            CREW FRONT END CREW AI CREWnd and SECURITY CREW (Will emerge this year)
                         </p>
                     </StyledTypography>
                 </AccordionDetails>

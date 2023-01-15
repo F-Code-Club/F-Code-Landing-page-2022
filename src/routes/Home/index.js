@@ -1,5 +1,7 @@
 import AOS from 'aos';
+import { Navigate, useNavigate, useLocation, useParams, useSearchParams } from 'react-router-dom';
 
+import { toastError, toastSuccess } from '../../components/ToastNorification';
 import AboutUs from './components/AboutUs/AboutUs';
 import Hero from './components/Hero/Hero';
 import HightLight from './components/HightLight/HightLight';
@@ -24,6 +26,8 @@ AOS.init({
     anchorPlacement: 'top-bottom', // Which position that the element should be triggered
 });
 function Home() {
+    // const navigate = useNavigate();
+
     return (
         <>
             <Hero />

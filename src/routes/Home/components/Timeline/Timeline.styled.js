@@ -15,7 +15,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0px;
-    gap: 96px;
+    gap: 64px;
 
     ${up('xl')} {
         width: 1100px;
@@ -52,6 +52,7 @@ export const Subheading = styled.h1`
     font-weight: 300;
     font-size: 18px;
     line-height: 150%;
+    text-align: center;
 
     color: #6b7280;
 `;
@@ -63,8 +64,20 @@ export const Card = styled.div`
     align-items: center;
     padding: 30px 40px;
     gap: 10px;
-
+    ${down('lg')} {
+        width: 500px;
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
     ${down('xl')} {
+        width: 600px;
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
+
+    ${down('md')} {
+        width: 300px;
+        overflow: hidden;
         flex-wrap: wrap;
     }
 
@@ -84,7 +97,7 @@ export const Card = styled.div`
         margin-bottom: 40px;
     }
 
-    ${(props) => props.status === 'disabled' && 'filter: grayscale(100%); opacity: 0.75'};
+    ${(props) => props.status !== 'ACTIVE' && 'filter: grayscale(100%); opacity: 0.75'};
 
     &:hover {
         transform: translateX(14px);
@@ -98,7 +111,7 @@ export const Left = styled.div`
     align-items: flex-start;
     padding: 0px;
     gap: 5px;
-
+    overflow: hidden;
     ${up('xl')} {
         width: 537px;
     }
@@ -108,14 +121,10 @@ export const Left = styled.div`
 export const Right = styled.div``;
 
 export const CardHeading = styled.div`
-    font-style: normal;
+    font-family: 'GT Walsheim Pro Black';
     font-weight: 800;
     font-size: 26px;
     line-height: 150%;
-    /* identical to box height, or 39px */
-
-    /* Green/500 */
-
     color: #00c464;
 `;
 
@@ -125,4 +134,10 @@ export const CardSubheading = styled.p`
     font-weight: 600;
     font-size: 16px;
     line-height: 150%;
+`;
+
+export const WrapperButton = styled.div`
+    padding: 0 24px 16px;
+    display: flex;
+    justify-content: flex-end;
 `;

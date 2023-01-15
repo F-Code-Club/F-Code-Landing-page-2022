@@ -14,7 +14,6 @@ export const Nav = styled.div`
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    z-index: 99;
     img {
         margin-right: 32px;
         width: ${px2vw(71)};
@@ -43,6 +42,7 @@ export const LeftNav = styled.div`
     align-items: center;
 
     h2 {
+        font-family: 'GT Walsheim Pro';
         font-weight: 700;
         font-size: 24px;
         line-height: 150%;
@@ -99,5 +99,9 @@ export const Button = styled.div`
     flex-grow: 0;
     &:hover {
         background-color: #37a463;
+    }
+    a {
+        margin-right: 0 !important;
+        color: #fff !important;
     }
 `;

@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom';
 
+import hero2 from '../../../../assets/images/activities-hero/activities-hero-2.jpg';
+import hero3 from '../../../../assets/images/activities-hero/activities-hero-3.jpg';
+import hero1 from '../../../../assets/images/rode/rode1.png';
 import Button from '../../../Home/components/Button';
 import Glass from '../Glass';
 import * as Styled from './Hero.styled';
 
-const IMG_LIST = [
-    'https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/310512874_3241145429435347_1307646043115394265_n.png?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=8s87CROrdrwAX910aPv&_nc_ht=scontent.fhan2-3.fna&oh=00_AT9DZCgLaXTgRvpT8DVHSdVqCjRGwLyOUadz-dSQrImIQw&oe=63485241',
-    'https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/310512874_3241145429435347_1307646043115394265_n.png?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=8s87CROrdrwAX910aPv&_nc_ht=scontent.fhan2-3.fna&oh=00_AT9DZCgLaXTgRvpT8DVHSdVqCjRGwLyOUadz-dSQrImIQw&oe=63485241',
-    'https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/310512874_3241145429435347_1307646043115394265_n.png?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=8s87CROrdrwAX910aPv&_nc_ht=scontent.fhan2-3.fna&oh=00_AT9DZCgLaXTgRvpT8DVHSdVqCjRGwLyOUadz-dSQrImIQw&oe=63485241',
-];
+const IMG_LIST = [hero1, hero2, hero3];
 
 const Hero = () => {
     return (
@@ -25,8 +24,8 @@ const Hero = () => {
                         <Styled.HighLight> F-Code.</Styled.HighLight> Let’s become a member and
                         participate these activities now.
                     </Styled.SupportingText>
-                    <Link to="/register" style={{ textDecoration: 'none' }}>
-                        <Button data-aos="fade-up">Register Now</Button>
+                    <Link to="/signup" style={{ textDecoration: 'none' }}>
+                        <Button>Sign Up Now</Button>
                     </Link>
                 </Styled.LeftContent>
 

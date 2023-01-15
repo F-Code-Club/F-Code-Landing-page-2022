@@ -16,7 +16,10 @@ const Navbar = () => {
                     <NavLink to="/activities">Activites</NavLink>
                     <NavLink to="/timeline">Timeline</NavLink>
                     <NavLink to="/faq">FAQ</NavLink>
-                    <Button>Register</Button>
+                    <NavLink to="/blog">Blog</NavLink>
+                    <Button>
+                        <NavLink to="/signup">Sign Up</NavLink>
+                    </Button>
                 </ul>
             </RightNav>
         </Nav>

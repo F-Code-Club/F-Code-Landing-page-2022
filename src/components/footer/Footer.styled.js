@@ -44,6 +44,10 @@ export const Copyright = styled.div`
     /* gray/500 */
 
     color: #6b7280;
+
+    & a {
+        color: #6b7280;
+    }
 `;
 
 export const SocialLinks = styled.div`

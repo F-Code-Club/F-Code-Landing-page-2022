@@ -1,11 +1,16 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Layout from '../components/layout/Layout.component';
+import ScrollToTop from '../utils/helper/ScrollToTop';
 import Activities from './Activities';
+import Blog from './Blog';
+import CommingSoon from './CommingSoon';
 import Home from './Home';
+import Timeline from './Home/components/Timeline';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 import Qna from './Qna';
+import RegistrationForm from './Registration Form';
 import SignUp from './SignUp';
 
 const publicRoute = [
@@ -28,8 +33,20 @@ const publicRoute = [
         restrict: true,
     },
     {
-        path: '/qna',
+        path: '/faq',
         component: <Qna />,
+        exact: true,
+        restrict: true,
+    },
+    {
+        path: '/timeline',
+        component: <Timeline />,
+        exact: true,
+        restrict: true,
+    },
+    {
+        path: '/blog',
+        component: <Blog />,
         exact: true,
         restrict: true,
     },
@@ -37,8 +54,8 @@ const publicRoute = [
 
 const privateRoute = [
     {
-        path: '/private',
-        component: <Home />,
+        path: '/register',
+        component: <RegistrationForm />,
         exact: true,
         restrict: true,
     },
@@ -47,6 +64,7 @@ const privateRoute = [
 const RouterComponent = () => {
     return (
         <BrowserRouter>
+            <ScrollToTop />
             <Layout>
                 <Routes>
                     <Route exact element={<PrivateRoute />}>
@@ -71,7 +89,7 @@ const RouterComponent = () => {
                             />
                         ))}
                     </Route>
-                    <Route path="*" element={<p>404</p>} />
+                    <Route path="*" element={<CommingSoon />} />
                 </Routes>
             </Layout>
         </BrowserRouter>

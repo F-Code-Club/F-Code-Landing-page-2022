@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    overflow: overlay;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
         'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -34,4 +35,75 @@ code {
 
 h1 {
     font-family: 'GT Walsheim Pro Black', Arial, Helvetica, sans-serif;
+}
+
+.slick-slide img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: transparent;
+}
+
+/* Selection */
+::selection {
+    color: #fff;
+    background: #45ce7c;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: transparent;
+}
+
+/* Selection */
+::selection {
+    color: #fff;
+    background: #45ce7c;
+}
+
+a {
+    text-decoration: none;
+}
+@keyframes bounce {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
