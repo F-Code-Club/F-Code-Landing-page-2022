@@ -57,6 +57,12 @@ export const Content = styled.div`
     figure {
         display: flex;
         justify-content: center;
+
+        img {
+            max-width: 800px;
+            object-fit: contain;
+            border-radius: 5px;
+        }
     }
 `;
 
@@ -89,7 +95,9 @@ export const RelatedTopic = styled(Link)`
     color: #1b1b1b;
 
     & > img {
+        width: 300px;
         height: 200px;
+        border-radius: 10px;
         margin-right: 30px;
     }
 
@@ -106,6 +114,12 @@ export const RelatedTopic = styled(Link)`
         font-size: 16px;
         line-height: 150%;
         margin-bottom: 24px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
     }
 
     .author {
