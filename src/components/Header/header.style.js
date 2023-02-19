@@ -151,7 +151,7 @@ export const Button = styled(NavLinkStyle)`
 `;
 export const ButtonHeader = styled(Link)`
     /* Auto layout */
-
+    margin-left: 5px;
     display: flex;
     flex-direction: row;
     color: white;

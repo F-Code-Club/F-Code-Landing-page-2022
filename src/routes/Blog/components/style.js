@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom';
 import { down, up } from 'styled-breakpoints';
 import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
     margin-bottom: 40px;
+    cursor: pointer;
     ${down('lg')} {
         flex-direction: column;
         align-items: center;
@@ -64,6 +66,7 @@ export const Category = styled.div`
     font-weight: 600;
     font-size: 14px;
     line-height: 150%;
+    text-transform: uppercase;
 `;
 export const Title = styled.div`
     font-family: 'GT Walsheim Pro';
@@ -117,4 +120,8 @@ export const Space = styled.div`
     ${down('sm')} {
         display: none;
     }
+`;
+export const StyleLink = styled(Link)`
+    text-decoration: none;
+    color: inherit;
 `;
