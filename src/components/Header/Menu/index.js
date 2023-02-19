@@ -27,6 +27,9 @@ const Menu = (props) => {
                 <NavLinkStyle onClick={handleClose} to="/faq">
                     FAQ
                 </NavLinkStyle>
+                <NavLinkStyle onClick={handleClose} to="/blog">
+                    Blog
+                </NavLinkStyle>
                 <Button onClick={handleClose} to="/signUp">
                     Sign Up
                 </Button>

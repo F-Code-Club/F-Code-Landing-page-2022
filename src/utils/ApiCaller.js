@@ -5,7 +5,7 @@ import { API_URL } from '../config/index';
 
 export const request = (endpoint, method, headers = {}, params = {}, body = {}) => {
     return Axios({
-        url: API_URL + endpoint,
+        url: 'https://backend.f-code.tech' + endpoint,
         method: method,
         headers: objectAssign({}, headers),
         params: objectAssign(params),
