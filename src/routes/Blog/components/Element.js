@@ -27,7 +27,7 @@ function Element({ blog }) {
         setGenre(path.data.data.name);
     };
     return (
-        <StyleLink to={'/hi'}>
+        <StyleLink to={`/blog/${blog.id}`}>
             <Container>
                 <Img
                     data-aos="fade-up-right"
