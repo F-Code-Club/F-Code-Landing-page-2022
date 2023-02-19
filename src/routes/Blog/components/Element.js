@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+import fallback from '../../../assets/fallback.png';
 import { getGenreById } from '../../../utils/productAPI';
 import {
     Container,
@@ -35,6 +36,10 @@ function Element({ blog }) {
                         blog.imageUrl ||
                         'https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-6/320350910_541602290953750_2748185547163871846_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=BxNV1B94zkcAX_J6ubS&tn=1HBnLczPW52L_h4j&_nc_ht=scontent.fdad2-1.fna&oh=00_AfDphRWVePqIZztsJ4aBMEqV9j79j1jR3nGIK3eh6xVyLQ&oe=63C60F7F'
                     }
+                    onError={({ currentTarget }) => {
+                        currentTarget.onerror = null; // prevents looping
+                        currentTarget.src = fallback;
+                    }}
                 ></Img>
                 <RightContent data-aos="fade-up-left">
                     <Header>

@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 
 export const Hero = styled.div`
-    font-family: 'GT Walsheim Pro';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 900;
     font-size: 60px;
     line-height: 65px;
     margin-bottom: 60px;
     span {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 900;
         color: #45ce7c;
     }
 `;

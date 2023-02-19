@@ -4,6 +4,7 @@ import Layout from '../components/layout/Layout.component';
 import ScrollToTop from '../utils/helper/ScrollToTop';
 import Activities from './Activities';
 import Blog from './Blog';
+import BlogDetail from './BlogDetail';
 import CommingSoon from './CommingSoon';
 import Home from './Home';
 import Timeline from './Home/components/Timeline';
@@ -47,6 +48,12 @@ const publicRoute = [
     {
         path: '/blog',
         component: <Blog />,
+        exact: true,
+        restrict: true,
+    },
+    {
+        path: '/blog/:id',
+        component: <BlogDetail />,
         exact: true,
         restrict: true,
     },
