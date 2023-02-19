@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { down } from 'styled-breakpoints';
 import styled from 'styled-components';
 
 export const RelatedTopic = styled(Link)`
@@ -11,6 +12,10 @@ export const RelatedTopic = styled(Link)`
         height: 200px;
         border-radius: 10px;
         margin-right: 30px;
+
+        ${down('sm')} {
+            margin: auto;
+        }
     }
 
     h2 {
@@ -45,5 +50,9 @@ export const RelatedTopic = styled(Link)`
             border-radius: 20px;
             margin-right: 10px;
         }
+    }
+
+    ${down('sm')} {
+        flex-direction: column;
     }
 `;

@@ -1,3 +1,4 @@
+import { down } from 'styled-breakpoints';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
@@ -7,6 +8,10 @@ export const Wrapper = styled.div`
 
     & > * {
         margin-bottom: 20px;
+    }
+
+    ${down('md')} {
+        width: 100%;
     }
 `;
 
