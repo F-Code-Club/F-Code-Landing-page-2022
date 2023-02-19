@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from '../components/layout/Layout.component';
 import ScrollToTop from '../utils/helper/ScrollToTop';
 import Activities from './Activities';
+import Blog from './Blog';
 import BlogDetail from './BlogDetail';
 import CommingSoon from './CommingSoon';
 import Home from './Home';
@@ -41,6 +42,12 @@ const publicRoute = [
     {
         path: '/timeline',
         component: <Timeline />,
+        exact: true,
+        restrict: true,
+    },
+    {
+        path: '/blog',
+        component: <Blog />,
         exact: true,
         restrict: true,
     },

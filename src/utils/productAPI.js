@@ -31,3 +31,11 @@ export const getChallenge = () => {
     const url = `/api/challenges`;
     return get(url, {}, {});
 };
+export const getAllBlog = () => {
+    const url = `/article/all`;
+    return get(url);
+};
+export const getGenreById = (id) => {
+    const url = `/article/genre/${id}`;
+    return get(url);
+};
