@@ -4,7 +4,7 @@ import { Editor } from 'react-draft-wysiwyg';
 import { useParams } from 'react-router';
 
 import avatar from '../../assets/avatar.png';
-import fallback from '../../assets/fallback.png';
+import BlogItem from '../../components/BlogItem';
 import { HTMLToEditorState } from '../../utils/DraftJSConversion';
 import { getArticleByID, getArticlesByGenreID, getGenreByID } from '../../utils/blogAPI';
 import * as St from './styles';
@@ -28,7 +28,7 @@ const BlogDetail = () => {
         (async () => {
             const { data } = await getArticlesByGenreID(blog?.genreId);
             const newData = data.data
-                .filter((item) => item.id !== Number.parseInt(id))
+                // .filter((item) => item.id !== Number.parseInt(id))
                 .splice(0, 5);
             setRelatedBlogs(newData);
         })();
@@ -78,32 +78,7 @@ const BlogDetail = () => {
             <St.RelatedTopics>
                 <h2>Related Topics</h2>
                 {relatedBlogs.map((blog) => (
-                    <St.RelatedTopic key={blog.id} to={`/blog/${blog.id}`}>
-                        <img
-                            src={blog.imageUrl}
-                            alt={blog.title}
-                            onError={({ currentTarget }) => {
-                                currentTarget.onerror = null; // prevents looping
-                                currentTarget.src = fallback;
-                            }}
-                        />
-                        <div>
-                            <span>{genre}</span> • <span>{blog.updatedTime}</span>
-                            <h2>{blog.title}</h2>
-                            <p>{blog.description}</p>
-                            <div className="author">
-                                <img
-                                    src=""
-                                    alt=""
-                                    onError={({ currentTarget }) => {
-                                        currentTarget.onerror = null; // prevents looping
-                                        currentTarget.src = avatar;
-                                    }}
-                                />
-                                <span>{blog.author}</span>
-                            </div>
-                        </div>
-                    </St.RelatedTopic>
+                    <BlogItem blog={blog} key={blog.id} />
                 ))}
             </St.RelatedTopics>
         </St.Wrapper>
