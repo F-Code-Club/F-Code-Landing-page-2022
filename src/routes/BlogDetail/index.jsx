@@ -9,6 +9,9 @@ import { HTMLToEditorState } from '../../utils/DraftJSConversion';
 import { getArticleByID, getArticlesByGenreID, getGenreByID } from '../../utils/blogAPI';
 import * as St from './styles';
 
+import 'draft-js/dist/Draft.css';
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+
 const BlogDetail = () => {
     const { id } = useParams();
     const [blog, setBlog] = useState({});
@@ -78,7 +81,7 @@ const BlogDetail = () => {
             <St.RelatedTopics>
                 <h2>Related Topics</h2>
                 {relatedBlogs.map((blog) => (
-                    <BlogItem blog={blog} key={blog.id} />
+                    <BlogItem blog={blog} key={blog.id} genre={genre} />
                 ))}
             </St.RelatedTopics>
         </St.Wrapper>

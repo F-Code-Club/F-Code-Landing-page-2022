@@ -23,14 +23,17 @@ export const Header = styled.div`
     }
 `;
 export const Img = styled.img`
-    width: 320px;
+    width: 300px;
     height: 200px;
     border-radius: 10px;
     margin-right: 30px;
+    object-fit: contain;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
     ${down('lg')} {
         width: 100%;
         height: 300px;
-        object-fit: cover;
         margin: 0;
     }
     ${down('sm')} {

@@ -8,10 +8,15 @@ export const RelatedTopic = styled(Link)`
     color: #1b1b1b;
 
     & > img {
+        min-width: 300px;
+        max-width: 300px;
         width: 300px;
         height: 200px;
         border-radius: 10px;
         margin-right: 30px;
+        object-fit: contain;
+        background-color: #fff;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
         ${down('sm')} {
             margin: auto;
@@ -19,7 +24,7 @@ export const RelatedTopic = styled(Link)`
     }
 
     h2 {
-        font-family: 'Inter';
+        font-family: 'Inter' !important;
         font-weight: 900;
         font-size: 26px;
         line-height: 120%;

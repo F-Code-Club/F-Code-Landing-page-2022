@@ -27,5 +27,4 @@ const Background = styled.div`
     min-height: 100vh;
     background: url(${bg});
     background-size: cover;
-    background-repeat: no-repeat;
 `;
