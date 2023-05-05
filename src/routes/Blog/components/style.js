@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { down, up } from 'styled-breakpoints';
+import { down } from 'styled-breakpoints';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -72,7 +72,7 @@ export const Category = styled.div`
     text-transform: uppercase;
 `;
 export const Title = styled.div`
-    font-family: 'GT Walsheim Pro';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 800;
     font-size: 26px;
