@@ -6,7 +6,7 @@ export const Hero = styled.div`
     font-weight: 900;
     font-size: 60px;
     line-height: 65px;
-    margin-bottom: 60px;
+    margin: 30px 0 90px 0;
     span {
         font-family: 'Inter';
         font-style: normal;
