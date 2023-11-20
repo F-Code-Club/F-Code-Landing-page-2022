@@ -22,7 +22,7 @@ export const Container = styled.section`
     max-width: 1100px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 84px 0;
     ${down('lg')} {
         flex-direction: column;
