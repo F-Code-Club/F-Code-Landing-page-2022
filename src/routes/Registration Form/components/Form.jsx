@@ -75,9 +75,10 @@ const FormRegister = () => {
 
         let FormData = {};
 
-        FormData.name = firstName + ' ' + lastName;
+        FormData.firstName = firstName;
+        FormData.lastName = lastName;
         FormData.major = Major;
-        FormData.personalMail = personalMail;
+        FormData.personalEmail = personalMail;
         FormData.phone = phoneNumber;
         FormData.studentId = studentId;
         FormData.semester = currentSemester;
@@ -98,7 +99,6 @@ const FormRegister = () => {
                 toastError(error.response ? error.response.data : error.message);
             });
     };
-
     return (
         <Formik
             initialValues={initialValues}

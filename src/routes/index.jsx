@@ -45,18 +45,18 @@ const publicRoute = [
         exact: true,
         restrict: true,
     },
-    {
-        path: '/blog',
-        component: <Blog />,
-        exact: true,
-        restrict: true,
-    },
-    {
-        path: '/blog/:id',
-        component: <BlogDetail />,
-        exact: true,
-        restrict: true,
-    },
+    // {
+    //     path: '/blog',
+    //     component: <Blog />,
+    //     exact: true,
+    //     restrict: true,
+    // },
+    // {
+    //     path: '/blog/:id',
+    //     component: <BlogDetail />,
+    //     exact: true,
+    //     restrict: true,
+    // },
     {
         path: '/register',
         component: <RegistrationForm />,
