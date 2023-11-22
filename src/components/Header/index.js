@@ -48,7 +48,8 @@ const Headernew = () => {
                             <NavLinkStyle to="/activities">Activites</NavLinkStyle>
                             <NavLinkStyle to="/timeline">Timeline</NavLinkStyle>
                             <NavLinkStyle to="/faq">FAQ</NavLinkStyle>
-                            <NavLinkStyle to="/blog"> Blog </NavLinkStyle>
+                            {/* <NavLinkStyle to="/blog"> Blog </NavLinkStyle> */}
+                            <NavLinkStyle to="/register"> Register </NavLinkStyle>
                             {/* <ButtonHeader to="/signup">Sign Up</ButtonHeader> */}
                         </ul>
                     </RightNav>

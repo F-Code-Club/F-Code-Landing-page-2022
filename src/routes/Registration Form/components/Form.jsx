@@ -20,10 +20,9 @@ const initialValues = {
     firstName: '',
     lastName: '',
     Major: '',
-    rollNumber: '',
+    studentId: '',
     currentSemester: '',
-    emailFpt: '',
-    emailPersonal: '',
+    personalMail: '',
     acceptChallenge: false,
     phoneNumber: '',
 };
@@ -68,21 +67,20 @@ const FormRegister = () => {
             firstName,
             lastName,
             Major,
-            rollNumber,
+            studentId,
             currentSemester,
-            emailFpt,
-            emailPersonal,
+            personalMail,
             phoneNumber,
         } = values;
 
         let FormData = {};
 
-        FormData.name = firstName + ' ' + lastName;
+        FormData.firstName = firstName;
+        FormData.lastName = lastName;
         FormData.major = Major;
-        FormData.personalMail = emailPersonal;
-        FormData.schoolMail = emailFpt;
+        FormData.personalEmail = personalMail;
         FormData.phone = phoneNumber;
-        FormData.rollNumber = rollNumber;
+        FormData.studentId = studentId;
         FormData.semester = currentSemester;
 
         const response = postRegister(FormData)
@@ -96,11 +94,11 @@ const FormRegister = () => {
                     navigate('/*');
                 }
             })
-            .catch((err) => {
-                console.log(err);
+            .catch((error) => {
+                console.log(error);
+                toastError(error.response ? error.response.data : error.message);
             });
     };
-
     return (
         <Formik
             initialValues={initialValues}
@@ -171,21 +169,8 @@ const FormRegister = () => {
                                             borderRadius: '10px',
                                         },
                                     }}
-                                    label="FPT Email"
-                                    name="emailFpt"
-                                />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <FormikControl
-                                    control="MuiInput"
-                                    sx={{
-                                        width: { xs: '100%', sm: '433px', lg: '433px' },
-                                        '& .MuiOutlinedInput-root': {
-                                            borderRadius: '10px',
-                                        },
-                                    }}
                                     label="Personal Email"
-                                    name="emailPersonal"
+                                    name="personalMail"
                                 />
                             </Grid>
                             <Grid item xs={12}>
@@ -212,7 +197,7 @@ const FormRegister = () => {
                                         },
                                     }}
                                     placeholder="SE180000"
-                                    name="rollNumber"
+                                    name="studentId"
                                 />
                             </Grid>
 

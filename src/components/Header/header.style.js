@@ -47,7 +47,7 @@ export const RightNav = styled.div`
     align-items: center;
 
     ul {
-        width: 450px;
+        width: 550px;
         text-align: center;
         display: flex;
         align-items: center;

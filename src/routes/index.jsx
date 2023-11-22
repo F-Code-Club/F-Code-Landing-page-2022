@@ -45,21 +45,18 @@ const publicRoute = [
         exact: true,
         restrict: true,
     },
-    {
-        path: '/blog',
-        component: <Blog />,
-        exact: true,
-        restrict: true,
-    },
-    {
-        path: '/blog/:id',
-        component: <BlogDetail />,
-        exact: true,
-        restrict: true,
-    },
-];
-
-const privateRoute = [
+    // {
+    //     path: '/blog',
+    //     component: <Blog />,
+    //     exact: true,
+    //     restrict: true,
+    // },
+    // {
+    //     path: '/blog/:id',
+    //     component: <BlogDetail />,
+    //     exact: true,
+    //     restrict: true,
+    // },
     {
         path: '/register',
         component: <RegistrationForm />,
@@ -68,13 +65,22 @@ const privateRoute = [
     },
 ];
 
+// const privateRoute = [
+//     {
+//         path: '/register',
+//         component: <RegistrationForm />,
+//         exact: true,
+//         restrict: true,
+//     },
+// ];
+
 const RouterComponent = () => {
     return (
         <BrowserRouter>
             <ScrollToTop />
             <Layout>
                 <Routes>
-                    <Route exact element={<PrivateRoute />}>
+                    {/* <Route exact element={<PrivateRoute />}>
                         {privateRoute.map((route) => (
                             <Route
                                 key={route.path}
@@ -84,7 +90,7 @@ const RouterComponent = () => {
                                 restrict={route.restrict}
                             />
                         ))}
-                    </Route>
+                    </Route> */}
                     <Route exact element={<PublicRoute />}>
                         {publicRoute.map((route) => (
                             <Route

@@ -17,7 +17,7 @@ export const getLogin = () => {
 };
 
 export const postRegister = (form) => {
-    const url = `/api/students`;
+    const url = `/student/register`;
     return post(
         url,
         form,

@@ -1,11 +1,11 @@
 import Axios from 'axios';
 import objectAssign from 'object-assign';
 
-import { API_URL } from '../config/index';
+// import { API_URL } from '../config/index';
 
 export const request = (endpoint, method, headers = {}, params = {}, body = {}) => {
     return Axios({
-        url: 'https://backend.f-code.tech' + endpoint,
+        url: 'https://recruit.hdang09.tech' + endpoint,
         method: method,
         headers: objectAssign({}, headers),
         params: objectAssign(params),
