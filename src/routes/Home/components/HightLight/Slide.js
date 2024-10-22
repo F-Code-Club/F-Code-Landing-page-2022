@@ -22,7 +22,14 @@ import anniversary6 from './../../../../assets/images/anniversary/anniversary6.j
 import anniversary7 from './../../../../assets/images/anniversary/anniversary7.jpg';
 import anniversary8 from './../../../../assets/images/anniversary/anniversary8.jpg';
 import anniversary9 from './../../../../assets/images/anniversary/anniversary9.jpg';
-import { clubActiveFix } from './../../../../assets/images/highlight/index';
+import anniversary10 from './../../../../assets/images/anniversary/anniversary10.jpg';
+import anniversary11 from './../../../../assets/images/anniversary/anniversary11.jpg';
+import anniversary12 from './../../../../assets/images/anniversary/anniversary12.jpg';
+import anniversary13 from './../../../../assets/images/anniversary/anniversary13.jpg';
+import anniversary14 from './../../../../assets/images/anniversary/anniversary14.jpg';
+import anniversary15 from './../../../../assets/images/anniversary/anniversary15.jpg';
+import anniversary16 from './../../../../assets/images/anniversary/anniversary16.jpg';
+import { clubActiveImgs } from './../../../../assets/images/highlight/index';
 
 import 'react-multi-carousel/lib/styles.css';
 
@@ -36,7 +43,14 @@ const ANIVERSARY_IMAGES = [
     anniversary7,
     anniversary8,
     anniversary9,
-];
+    anniversary10,
+    anniversary11,
+    anniversary12,
+    anniversary13,
+    anniversary14,
+    anniversary15,
+    anniversary16,
+].reverse();
 
 const responsive = {
     desktop: {
@@ -63,7 +77,7 @@ const responsive = {
 };
 
 const Slider = ({ anniversary }) => {
-    const images = anniversary ? ANIVERSARY_IMAGES : clubActiveFix;
+    const images = anniversary ? ANIVERSARY_IMAGES : clubActiveImgs;
 
     return (
         <Activities>

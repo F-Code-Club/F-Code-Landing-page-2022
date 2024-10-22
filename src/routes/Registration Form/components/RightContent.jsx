@@ -1,10 +1,11 @@
-import ImgRegister1 from '../../../assets/FormRegistration/formRegis1.jpg';
-import ImgRegister2 from '../../../assets/FormRegistration/formRegis2.jpg';
-import ImgRegister3 from '../../../assets/FormRegistration/formRegis3.jpg';
+import ImgRegister1 from '../../../assets/FormRegistration/2024_FormRegis1.jpg';
+import ImgRegister2 from '../../../assets/FormRegistration/2024_FormRegis2.jpg';
+import ImgRegister3 from '../../../assets/FormRegistration/2024_FormRegis3.jpg';
 import Glass from '../../Activities/components/Glass/index';
 import * as Styled from '../../Activities/components/Hero/Hero.styled';
+import SlideShow from './SlideShow';
 
-const IMG_LIST = [ImgRegister3, ImgRegister2, ImgRegister1];
+const IMG_LIST = [ImgRegister1, ImgRegister2, ImgRegister3];
 
 const RightContent = () => {
     return (
@@ -29,6 +30,7 @@ const RightContent = () => {
         //     <Styled.GlassCenter>
         //     <Glass length="135px" />
         // </Styled.GlassCenter>
+        // <SlideShow />
     );
 };
 

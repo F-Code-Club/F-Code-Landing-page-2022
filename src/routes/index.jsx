@@ -57,6 +57,12 @@ const publicRoute = [
         exact: true,
         restrict: true,
     },
+    {
+        path: '/register',
+        component: <RegistrationForm />,
+        exact: true,
+        restrict: true,
+    },
 ];
 
 const privateRoute = [
@@ -74,7 +80,7 @@ const RouterComponent = () => {
             <ScrollToTop />
             <Layout>
                 <Routes>
-                    <Route exact element={<PrivateRoute />}>
+                    {/* <Route exact element={<PrivateRoute />}>
                         {privateRoute.map((route) => (
                             <Route
                                 key={route.path}
@@ -84,7 +90,7 @@ const RouterComponent = () => {
                                 restrict={route.restrict}
                             />
                         ))}
-                    </Route>
+                    </Route> */}
                     <Route exact element={<PublicRoute />}>
                         {publicRoute.map((route) => (
                             <Route
