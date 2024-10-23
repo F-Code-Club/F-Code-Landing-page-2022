@@ -70,7 +70,7 @@ const FormRegister = () => {
             Major,
             rollNumber,
             currentSemester,
-            emailFpt,
+            // emailFpt,
             emailPersonal,
             phoneNumber,
         } = values;
@@ -80,7 +80,7 @@ const FormRegister = () => {
         FormData.name = firstName + ' ' + lastName;
         FormData.major = Major;
         FormData.personalMail = emailPersonal;
-        FormData.schoolMail = emailFpt;
+        // FormData.schoolMail = emailFpt;
         FormData.phone = phoneNumber;
         FormData.rollNumber = rollNumber;
         FormData.semester = currentSemester;
@@ -162,7 +162,7 @@ const FormRegister = () => {
                                     name="lastName"
                                 />
                             </Grid>
-                            <Grid item xs={12}>
+                            {/* <Grid item xs={12}>
                                 <FormikControl
                                     control="MuiInput"
                                     sx={{
@@ -174,7 +174,7 @@ const FormRegister = () => {
                                     label="FPT Email"
                                     name="emailFpt"
                                 />
-                            </Grid>
+                            </Grid> */}
                             <Grid item xs={12}>
                                 <FormikControl
                                     control="MuiInput"
@@ -211,7 +211,7 @@ const FormRegister = () => {
                                             borderRadius: '10px',
                                         },
                                     }}
-                                    placeholder="SE180000"
+                                    placeholder="SE200000"
                                     name="rollNumber"
                                 />
                             </Grid>
