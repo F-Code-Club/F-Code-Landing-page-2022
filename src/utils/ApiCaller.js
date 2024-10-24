@@ -5,7 +5,7 @@ import { API_URL } from '../config/index';
 
 export const request = (endpoint, method, headers = {}, params = {}, body = {}) => {
     return Axios({
-        url: 'https://backend.f-code.tech' + endpoint,
+        url: 'http://127.0.0.1:8080/api/v1' + endpoint,
         method: method,
         headers: objectAssign({}, headers),
         params: objectAssign(params),

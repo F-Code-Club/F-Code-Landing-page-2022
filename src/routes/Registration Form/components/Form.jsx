@@ -77,21 +77,24 @@ const FormRegister = () => {
 
         let FormData = {};
 
-        FormData.name = firstName + ' ' + lastName;
+        FormData.firstName = firstName;
+        FormData.lastName = lastName;
         FormData.major = Major;
-        FormData.personalMail = emailPersonal;
-        FormData.schoolMail = emailFpt;
+        FormData.personalEmail = emailPersonal;
+        FormData.schoolEmail = emailFpt;
         FormData.phone = phoneNumber;
-        FormData.rollNumber = rollNumber;
+        FormData.studentId = rollNumber;
         FormData.semester = currentSemester;
+        console.log(FormData);
 
         const response = postRegister(FormData)
             .then((data) => {
+                console.log(data.response.status);
                 setSuccess(data.data.success);
-                if (data.data.status.code == 400) {
+                if (data.response.status == 400) {
                     toastError(data.data.status.message);
                     navigate('/*');
-                } else if (data.data.status.code == 200) {
+                } else if (data.response.status == 200) {
                     toastSuccess(data.data.status.message);
                     navigate('/*');
                 }
