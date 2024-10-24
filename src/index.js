@@ -8,6 +8,9 @@ import reportWebVitals from './reportWebVitals';
 import RouterComponent from './routes';
 import { UserProvider } from './utils/userContext';
 
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>

@@ -7,8 +7,11 @@ const importClubActivities = (r) => {
      return images;
 }
 
-export const clubActiveImgs = importClubActivities(require.context('./', false, /\.jpeg/));
+// export const clubActiveImgs = importClubActivities(require.context('./', false, /\.jpeg/));
 
-export const clubActiveFix = importClubActivities(require.context('./', false, /\.png/));
+// export const clubActiveFix = importClubActivities(require.context('./', false, /\.png/));
 
-export default clubActiveImgs;
+export const clubActiveImgs = importClubActivities(
+   require.context('./fcode-2024', false, /\.(jpg|jpeg|png)$/)
+ ).reverse();
+export default clubActiveImgs

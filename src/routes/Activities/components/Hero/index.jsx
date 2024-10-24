@@ -24,7 +24,7 @@ const Hero = () => {
                         <Styled.HighLight> F-Code.</Styled.HighLight> Let’s become a member and
                         participate these activities now.
                     </Styled.SupportingText>
-                    <Link to="/signup" style={{ textDecoration: 'none' }}>
+                    <Link to="/register" style={{ textDecoration: 'none' }}>
                         <Button>Sign Up Now</Button>
                     </Link>
                 </Styled.LeftContent>

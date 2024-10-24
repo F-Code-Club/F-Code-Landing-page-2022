@@ -45,3 +45,43 @@ export const ButtonWrapper = styled.div`
         }
     }
 `;
+
+export const SliderWrapper = styled.div`
+    width: 750px;
+    height: 550px;
+    position: relative;
+    padding: 0 20px;
+    margin-left: 50px;
+    border-radius: 10px;
+    .slick-slide img {
+        border-radius: 10px;
+    }
+
+    .slick-dots {
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        li {
+            margin: 0 5px;
+            button:before {
+                font-size: 20px;
+                color: #dff696;
+                opacity: 1;
+            }
+            &.slick-active button:before {
+                color: #92fa7a;
+            }
+        }
+    }
+`;
+
+export const Slide = styled.div`
+    border-radius: 10px;
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+`;

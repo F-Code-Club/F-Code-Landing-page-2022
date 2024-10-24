@@ -18,6 +18,8 @@ export const Content = styled.div`
 `;
 export const ContentRegister = styled(Content)`
     align-items: flex-start;
+    justify-content: space-between;
+    display: flex;
 `;
 export const LeftContent = styled.div``;
 
