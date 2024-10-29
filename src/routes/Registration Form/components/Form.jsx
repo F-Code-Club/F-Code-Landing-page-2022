@@ -22,7 +22,7 @@ const initialValues = {
     Major: '',
     rollNumber: '',
     currentSemester: '',
-    emailFpt: '',
+    // emailFpt: '',
     emailPersonal: '',
     acceptChallenge: false,
     phoneNumber: '',
@@ -76,23 +76,24 @@ const FormRegister = () => {
         } = values;
 
         let FormData = {};
-
-        FormData.name = firstName + ' ' + lastName;
+        // console.log("Debug");
+        FormData.firstName = firstName;
+        FormData.lastName = lastName;
         FormData.major = Major;
-        FormData.personalMail = emailPersonal;
+        FormData.personalEmail = emailPersonal;
         // FormData.schoolMail = emailFpt;
         FormData.phone = phoneNumber;
-        FormData.rollNumber = rollNumber;
+        FormData.studentId = rollNumber;
         FormData.semester = currentSemester;
 
         const response = postRegister(FormData)
-            .then((data) => {
-                setSuccess(data.data.success);
-                if (data.data.status.code == 400) {
-                    toastError(data.data.status.message);
+            .then((response) => {
+                setSuccess(response);
+                if (response.status == 400) {
+                    toastError(response.data.message);
                     navigate('/*');
-                } else if (data.data.status.code == 200) {
-                    toastSuccess(data.data.status.message);
+                } else if (response.status == 200) {
+                    toastSuccess(response.data.message);
                     navigate('/*');
                 }
             })

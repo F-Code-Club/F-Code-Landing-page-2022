@@ -17,13 +17,13 @@ export const getLogin = () => {
 };
 
 export const postRegister = (form) => {
-    const url = `/api/students`;
+    const url = `/api/v1/students/register`;
     return post(
         url,
         form,
         {},
         {
-            Authorization: 'Bearer ' + localStorage.getItem('token'),
+            'Content-Type': 'application/json',
         }
     );
 };
