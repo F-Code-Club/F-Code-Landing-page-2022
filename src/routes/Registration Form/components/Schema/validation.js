@@ -8,9 +8,6 @@ export const ValidationSchema = Yup.object({
             /^(S|s)[E|A|S|s|e|a]+([0-9]{6})$/,
             'Your roll number must match the following formats'
         ),
-    emailFpt: Yup.string()
-        .required('email cannot be empty')
-        .matches(/^[\w-]+@fpt.edu.vn$/, 'Your email must match the following formats'),
     emailPersonal: Yup.string()
         .required('email cannot be empty')
         .matches(/^[\w.-]+@([\w-]+\.)+[\w-]{2,4}$/, 'Your email must match the following formats'),
