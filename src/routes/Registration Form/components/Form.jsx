@@ -48,6 +48,8 @@ const FormRegister = () => {
         { key: 'Information Assurance', value: 'Information Assurance' },
         { key: 'Information Systems', value: 'Information Systems' },
         { key: 'IoT (Internet of Things)', value: 'IoT (Internet of Things)' },
+        { key: 'Integrated Circuit', value: 'Integrated Circuit' },
+        { key: 'Automotive Software Engineering', value: 'Automotive Software Engineering' },
         { key: 'Digital Art Design', value: 'Digital Art Design' },
         { key: 'International Business', value: 'International Business' },
         { key: 'Business Administration', value: 'Business Administration' },
