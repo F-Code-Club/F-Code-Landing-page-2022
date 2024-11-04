@@ -6,6 +6,7 @@ import Activities from './Activities';
 import Blog from './Blog';
 import BlogDetail from './BlogDetail';
 import CommingSoon from './CommingSoon';
+import PageComingSoon from './CommingSoon/ComingSoon';
 import Home from './Home';
 import Timeline from './Home/components/Timeline';
 import PrivateRoute from './PrivateRoute';
@@ -41,7 +42,7 @@ const publicRoute = [
     },
     {
         path: '/timeline',
-        component: <Timeline />,
+        component: <PageComingSoon />,
         exact: true,
         restrict: true,
     },

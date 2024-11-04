@@ -34,7 +34,6 @@ function Home() {
             <AboutUs />
             <HightLight />
             <Spirit />
-            <Timeline />
         </>
     );
 }

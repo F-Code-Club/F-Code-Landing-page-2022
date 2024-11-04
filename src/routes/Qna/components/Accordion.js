@@ -87,8 +87,8 @@ export default function SimpleAccordion() {
                         <p>
                             F-CODE is a good learning environment for students that are passionate
                             about technology. When you join this community, you have the option of
-                            following the crew. We have four crew for members in our Club: BACKEND
-                            CREW FRONT END CREW AI CREWnd and SECURITY CREW (Will emerge this year)
+                            following the crew. We have four crew for members in our Club: BACK-END
+                            CREW, FRONT-END CREW, AI CREW, GAME CREW and SECURITY CREW.
                         </p>
                     </StyledTypography>
                 </AccordionDetails>
