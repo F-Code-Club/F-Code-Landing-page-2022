@@ -15,12 +15,11 @@ function AboutUs() {
                 <h4>About Us</h4>
                 <h1>F-Code Club</h1>
                 <h3>
-                    <span>F-Code</span>, established in 2014, is the first academic club of FPT
-                    University at Ho Chi Minh City. With the initial aim of creating a community for
-                    Software Engineering major’s students,
-                    <strong> F-Code</strong> allows them to share and improve skills that are
-                    neccesary for developers. After 5 years, <strong>F-Code</strong> has offered
-                    various activites to students.
+                    F-Code, established in 2014, is the first academic club of FPT University at Ho
+                    Chi Minh City. Initially aimed at creating a community for Software Engineering
+                    major students, F-Code allows them to share and improve necessary developer
+                    skills. After {new Date().getFullYear() - 2014} years, F-Code has offered
+                    various activities to students.
                 </h3>
                 <Direct>
                     <a href="https://www.facebook.com/fcodefpt/">

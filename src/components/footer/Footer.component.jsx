@@ -12,7 +12,7 @@ const Footer = () => {
             </Styled.Info>
             <Styled.Copyright>
                 <p>
-                    © 2022 <strong>F-Code</strong>. All rights reserved
+                    © {new Date().getFullYear()} <strong>F-Code</strong>. All rights reserved
                 </p>
             </Styled.Copyright>
 

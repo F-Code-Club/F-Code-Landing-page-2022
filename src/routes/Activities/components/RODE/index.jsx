@@ -20,8 +20,8 @@ const RODE = () => {
                         <strong> Ho Chi Minh City</strong>. With the initial aim of creating a
                         community for Software Engineering major’s students, <strong>F-Code</strong>{' '}
                         allows them to share and improve skills that are neccesary for developers.
-                        After 5 years, <strong>F-Code</strong> has offered various activites to
-                        students.
+                        After {new Date().getFullYear() - 2014} years, <strong>F-Code</strong> has
+                        offered various activites to students.
                     </Styled.Description>
                 </div>
 
